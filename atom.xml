@@ -3,7 +3,7 @@
   <title><![CDATA[Luosky's Playground]]></title>
   <link href="http://luosky.github.com/atom.xml" rel="self"/>
   <link href="http://luosky.github.com/"/>
-  <updated>2012-07-17T08:18:51+08:00</updated>
+  <updated>2012-07-18T00:47:33+08:00</updated>
   <id>http://luosky.github.com/</id>
   <author>
     <name><![CDATA[Luosky]]></name>
@@ -19,9 +19,9 @@
 
 
 <title type="html"><![CDATA[PassKit (PassBook api) 学习笔记]]></title>
-<link href="http://luosky.github.com/2012/06/21/passkit-passbook-api-xue-xi-bi-ji/"/>
+<link href="http://luosky.github.com/2012/06/21/passkit-passbook-api-study-notes/"/>
 <updated>2012-06-21T21:40:00+08:00</updated>
-<id>http://luosky.github.com/2012/06/21/passkit-passbook-api-xue-xi-bi-ji</id>
+<id>http://luosky.github.com/2012/06/21/passkit-passbook-api-study-notes</id>
 
       <content type="html"><![CDATA[<h2>PassKit 学习笔记</h2>
 
@@ -125,7 +125,7 @@
 
 
 <p>附上自己写的 <a href="http://luosky.github.com/images/blog/2012-06-21-passkit-passbook-api-xue-xi-bi-ji/passkit_project.zip">pass工程</a>  (你可能需要换成自己开发者账号签名的pass才能在pass列表中查看已安装的pass,添加pass的话则不需要)</p>
-<p><a rel="bookmark" href="http://luosky.github.com/2012/06/21/passkit-passbook-api-xue-xi-bi-ji/">&#9875; Permalink</a></p>]]></content>
+<p><a rel="bookmark" href="http://luosky.github.com/2012/06/21/passkit-passbook-api-study-notes/">&#9875; Permalink</a></p>]]></content>
     </entry>
   
 </feed>
