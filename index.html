@@ -178,18 +178,13 @@
 <li>webServiceURL token的验证地址,指向用户自己实现的rest服务器,必须实现更新pass所需的各种接口,必须是https…</li>
 <li>relevantDate 提醒用户的时间. 具体显示提醒的时间范围由pass类型决定</li>
 <li>locations 提醒用户的地址.范围大小由pass类型决定</li>
-<li>显示App Store item :</li>
-</ul>
+<li><p>显示App Store item :
+<code>
+"associatedStoreIdentifiers" : [ 375380948 ]
+</code></p>
 
-
-<figure class='code'><div class='highlight'><table><td class='gutter'><pre class='line-numbers'><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='plain'><span class='line'>"associatedStoreIdentifiers" : [ 375380948 ]</span></code></pre></td></tr></table></div></figure>
-
-
-<h3>注意点</h3>
-
-<ul>
-<li>iPad上没有Passbook</li>
+<h3>注意点</h3></li>
+<li><p>iPad上没有Passbook</p></li>
 <li>导出P12时不用选中私钥</li>
 <li>签名和打包pass可用wwdc示例代码提供的签名工具</li>
 <li>BARCODE不支持中文(应该跟用的编码有关)</li>
@@ -201,7 +196,14 @@
 
 
 <figure class='code'><div class='highlight'><table><td class='gutter'><pre class='line-numbers'><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='plain'><span class='line'>    [noteCenter addObserver:self                   selector:@selector(passLibraryDidChange)                       name:PKPassLibraryDidChangeNotification                     object:self.library];</span></code></pre></td></tr></table></div></figure>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class='objective-c'><span class='line'>    <span class="p">[</span><span class="n">noteCenter</span> <span class="nl">addObserver:</span><span class="n">self</span>
+</span><span class='line'>                   <span class="nl">selector:</span><span class="k">@selector</span><span class="p">(</span><span class="n">passLibraryDidChange</span><span class="p">)</span>
+</span><span class='line'>                       <span class="nl">name:</span><span class="n">PKPassLibraryDidChangeNotification</span>
+</span><span class='line'>                     <span class="nl">object:</span><span class="n">self</span><span class="p">.</span><span class="n">library</span><span class="p">];</span>
+</span></code></pre></td></tr></table></div></figure>
 
 
 <p>附上自己写的 <a href="/images/blog/2012-06-21-passkit-passbook-api-xue-xi-bi-ji/passkit_project.zip">pass工程</a>  (你可能需要换成自己开发者账号签名的pass才能在pass列表中查看已安装的pass,添加pass的话则不需要)</p>
