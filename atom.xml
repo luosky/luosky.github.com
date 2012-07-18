@@ -3,7 +3,7 @@
   <title><![CDATA[Luosky's Playground]]></title>
   <link href="http://luosky.github.com/atom.xml" rel="self"/>
   <link href="http://luosky.github.com/"/>
-  <updated>2012-07-18T08:44:29+08:00</updated>
+  <updated>2012-07-19T01:05:33+08:00</updated>
   <id>http://luosky.github.com/</id>
   <author>
     <name><![CDATA[Luosky]]></name>
@@ -126,6 +126,215 @@
 
 <p>附上自己写的 <a href="http://luosky.github.com/images/blog/2012-06-21-passkit-passbook-api-xue-xi-bi-ji/passkit_project.zip">pass工程</a>  (你可能需要换成自己开发者账号签名的pass才能在pass列表中查看已安装的pass,添加pass的话则不需要)</p>
 <p><a rel="bookmark" href="http://luosky.github.com/2012/06/21/passkit-passbook-api-study-notes/">&#9875; Permalink</a></p>]]></content>
+    </entry>
+  
+    <entry>
+      
+
+
+
+
+<title type="html"><![CDATA[iOS模拟器居然还可以监测出来Mac上正在facetime,做得也太细致了]]></title>
+<link href="http://luosky.github.com/2012/02/27/amazing-ios-simulator/"/>
+<updated>2012-02-27T00:36:00+08:00</updated>
+<id>http://luosky.github.com/2012/02/27/amazing-ios-simulator</id>
+
+      <content type="html"><![CDATA[<p><img class="" src="http://photo.luosky.com/wp-content/uploads/2012/02/Screen-Shot-2012-02-27-at-下午8.36.15-262x494.png" title="iOS" ></p>
+<p><a rel="bookmark" href="http://luosky.github.com/2012/02/27/amazing-ios-simulator/">&#9875; Permalink</a></p>]]></content>
+    </entry>
+  
+    <entry>
+      
+
+
+
+
+<title type="html"><![CDATA[我的第二个iOS应用 爱折客 更新了]]></title>
+<link href="http://luosky.github.com/2011/01/06/my-second-ios-app/"/>
+<updated>2011-01-06T00:36:00+08:00</updated>
+<id>http://luosky.github.com/2011/01/06/my-second-ios-app</id>
+
+      <content type="html"><![CDATA[<p>我做的第二个iOS应用[爱折客][]更新了,上海地区的iPhone用户欢迎试用:</p>
+
+<p><a href="http://photo.luosky.com/wp-content/uploads/2011/01/Default.png"><img src="http://photo.luosky.com/wp-content/uploads/2011/01/Default.png" title="Default" alt="" /></a></p>
+
+<h3>显示你附近的优惠券:</h3>
+
+<p><img src="http://a1.phobos.apple.com/us/r1000/002/Purple/58/00/1e/mzl.yzjshxuf.320x480-75.jpg" title="附近" alt="" /></p>
+
+<h3>优惠券页面:</h3>
+
+<p><img src="http://a1.phobos.apple.com/us/r1000/040/Purple/61/c0/b0/mzl.yxnuejnc.320x480-75.jpg" title="优惠券" alt="" /></p>
+
+<h3>你关注的店的动态:</h3>
+
+<p><img src="http://a1.phobos.apple.com/us/r1000/036/Purple/73/64/ff/mzl.dqxvrrxb.320x480-75.jpg" title="我的店" alt="" /></p>
+
+<h3>放入口袋的优惠券:</h3>
+
+<p><img src="http://a1.phobos.apple.com/us/r1000/044/Purple/58/9f/6d/mzl.jlaqcrzy.320x480-75.jpg" title="口袋" alt="" /></p>
+
+<h3>评论箱:</h3>
+
+<p><img src="http://a1.phobos.apple.com/us/r1000/056/Purple/6e/39/ee/mzl.yvnvogck.320x480-75.jpg" title="评论箱" alt="" /></p>
+<p><a rel="bookmark" href="http://luosky.github.com/2011/01/06/my-second-ios-app/">&#9875; Permalink</a></p>]]></content>
+    </entry>
+  
+    <entry>
+      
+
+
+
+
+<title type="html"><![CDATA[我是同步控]]></title>
+<link href="http://luosky.github.com/2011/01/01/my-sync-solution/"/>
+<updated>2011-01-01T00:36:00+08:00</updated>
+<id>http://luosky.github.com/2011/01/01/my-sync-solution</id>
+
+      <content type="html"><![CDATA[<p>我的同步方案：</p>
+
+<p>同步照片：</p>
+
+<ul>
+<li><p>instagram</p>
+
+<ul>
+<li>twitter</li>
+<li>facebook</li>
+<li><p>flickr</p>
+
+<ul>
+<li><p>wordpress(via <a href="http://devthought.com/wp-o-matic-the-wordpress-rss-agreggator/">WP-o-Matic</a>)</p>
+
+<ul>
+<li>qzone （via <a href="http://liguoliang.com/2010/wordpress-post-to-qzone/">post2Qzone</a>）</li>
+<li><a href="http://renjian.com/">renjian.com</a>(via <a href="http://www.smyx.net/wp-connect.html">WordPress连接微博</a>)</li>
+<li>sina微博(via <a href="http://www.smyx.net/wp-connect.html">WordPress连接微博</a>)</li>
+<li><p>digu (via <a href="http://www.smyx.net/wp-connect.html">WordPress连接微博</a>)</p>
+
+<ul>
+<li>kaixin001（via 嘀神）</li>
+<li>douban（via 嘀神）</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+
+<p>同步微薄：</p>
+
+<ul>
+<li><p>qq签名</p>
+
+<ul>
+<li><p>follow5</p>
+
+<ul>
+<li>sina微博</li>
+<li>twitter</li>
+<li><p>digu</p>
+
+<ul>
+<li>kaixin001（via 嘀神）</li>
+<li>douban (via 嘀神)</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+
+<p>2011-04-09 updated: 图片同步方式中换用<a href="http://www.smyx.net/wp-connect.html">WordPress连接微博</a> 来同步到几个微博</p>
+<p><a rel="bookmark" href="http://luosky.github.com/2011/01/01/my-sync-solution/">&#9875; Permalink</a></p>]]></content>
+    </entry>
+  
+    <entry>
+      
+
+
+
+
+<title type="html"><![CDATA[iOS Notification 学习笔记]]></title>
+<link href="http://luosky.github.com/2010/10/31/ios-notification-study-note/"/>
+<updated>2010-10-31T00:17:00+08:00</updated>
+<id>http://luosky.github.com/2010/10/31/ios-notification-study-note</id>
+
+      <content type="html"><![CDATA[<h2>分类</h2>
+
+<ol>
+<li><p>本地notification</p>
+
+<ul>
+<li>4.0才开始支持</li>
+<li>无需网络,无需走和Apple推送服务器的整个推送流程,一切都在本地发生</li>
+</ul>
+</li>
+<li><p>push notification</p>
+
+<ul>
+<li>3.0开始支持</li>
+<li>对于因为网络原因未发送到用户手机上的notification ,APNs会保留起来,待该device联网后发送.但对每台机器的每个应用只会保留一条,后来的覆盖之前的.</li>
+<li>payload大小不超过256byte</li>
+<li><strong>每次应用程序启动</strong>时都需向APNs注册,获得device token后将其传回应用的provider(application的server端)</li>
+<li>provider要发送notification时,需附带这个device token</li>
+<li>APNs会反馈持续发送失败的device 列表给provider,provider应停止向这些device发送notification</li>
+<li>icon budge上显示的数字就是provider发过来的数字,不会累加.</li>
+</ul>
+</li>
+</ol>
+
+
+<h2>接收到notification时的处理</h2>
+
+<p>本地notification和push notification对用户来讲没什么不同,当用户接收到一个notification时:</p>
+
+<ul>
+<li>若应用在后台运行,或者没有运行时
+
+<ul>
+<li>展现这个notification(提醒,声音和icon badge).若用户点了这个提醒(或是划动解锁了屏幕),则以notification带的payload作为参数调用<code>application:didFinishLaunchingWithOptions:</code>方法启动应用</li>
+</ul>
+</li>
+<li>若正在前台运行
+
+<ul>
+<li>若是push notification,则<code>application:didReceiveRemoteNotification:</code>被调用</li>
+<li>若是本地的notification,则 <code>application:didReceiveLocalNotification:</code> 会被调用</li>
+</ul>
+</li>
+</ul>
+
+
+<h2>建立推送服务器</h2>
+
+<p>要发送notification的provider需先获取SSL证书.一个证书只能用于一个应用.且有测试(sandbox)证书和正式证书之分:</p>
+
+<ul>
+<li>测试(sandbox):<a href="http://gateway.sandbox.push.apple.com">gateway.sandbox.push.apple.com</a>, outbound TCP port 2195.</li>
+<li>正式:<a href="http://gateway.push.apple.com">gateway.push.apple.com</a>, outbound TCP port 2195.</li>
+</ul>
+
+
+<p>iOS Develop Program的用户有三种角色:</p>
+
+<ol>
+<li>team agent</li>
+<li>team admin</li>
+<li>team member.</li>
+</ol>
+
+
+<p>只有team agent可以创建SSL证书<br/>
+team agent 和team admin可以创建provisioning profile<br/>
+team member只能下载和安装证书及profile</p>
+<p><a rel="bookmark" href="http://luosky.github.com/2010/10/31/ios-notification-study-note/">&#9875; Permalink</a></p>]]></content>
     </entry>
   
 </feed>

@@ -1,6 +1,22 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <urlset xmlns='http://www.sitemaps.org/schemas/sitemap/0.9'>
     <url>
+        <loc>http://luosky.github.com/2010/10/31/ios-notification-study-note/</loc>
+        <lastmod>2012-07-19T00:31:30+08:00</lastmod>
+    </url>
+    <url>
+        <loc>http://luosky.github.com/2011/01/01/my-sync-solution/</loc>
+        <lastmod>2012-07-19T00:39:11+08:00</lastmod>
+    </url>
+    <url>
+        <loc>http://luosky.github.com/2011/01/06/my-second-ios-app/</loc>
+        <lastmod>2012-07-19T01:04:06+08:00</lastmod>
+    </url>
+    <url>
+        <loc>http://luosky.github.com/2012/02/27/amazing-ios-simulator/</loc>
+        <lastmod>2012-07-19T00:57:10+08:00</lastmod>
+    </url>
+    <url>
         <loc>http://luosky.github.com/2012/06/21/passkit-passbook-api-study-notes/</loc>
         <lastmod>2012-07-17T08:18:51+08:00</lastmod>
     </url>
@@ -10,10 +26,10 @@
     </url>
     <url>
         <loc>http://luosky.github.com/archives/</loc>
-        <lastmod>2012-07-17T08:18:51+08:00</lastmod>
+        <lastmod>2012-07-19T01:04:06+08:00</lastmod>
     </url>
     <url>
         <loc>http://luosky.github.com/</loc>
-        <lastmod>2012-07-17T08:18:51+08:00</lastmod>
+        <lastmod>2012-07-19T01:04:06+08:00</lastmod>
     </url>
 </urlset>
