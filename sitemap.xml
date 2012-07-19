@@ -2,23 +2,47 @@
 <urlset xmlns='http://www.sitemaps.org/schemas/sitemap/0.9'>
     <url>
         <loc>http://luosky.github.com/2010/10/31/ios-notification-study-note/</loc>
-        <lastmod>2012-07-19T00:31:30+08:00</lastmod>
+        <lastmod>2012-07-19T01:44:01+08:00</lastmod>
     </url>
     <url>
         <loc>http://luosky.github.com/2011/01/01/my-sync-solution/</loc>
         <lastmod>2012-07-19T00:39:11+08:00</lastmod>
     </url>
     <url>
+        <loc>http://luosky.github.com/2011/01/04/ios-in-app-sms/</loc>
+        <lastmod>2012-07-19T01:17:01+08:00</lastmod>
+    </url>
+    <url>
         <loc>http://luosky.github.com/2011/01/06/my-second-ios-app/</loc>
         <lastmod>2012-07-19T01:04:06+08:00</lastmod>
+    </url>
+    <url>
+        <loc>http://luosky.github.com/2011/01/15/mary-and-max/</loc>
+        <lastmod>2012-07-19T20:57:11+08:00</lastmod>
+    </url>
+    <url>
+        <loc>http://luosky.github.com/2011/04/03/first-week-on-xcode-4/</loc>
+        <lastmod>2012-07-19T01:27:17+08:00</lastmod>
     </url>
     <url>
         <loc>http://luosky.github.com/2012/02/27/amazing-ios-simulator/</loc>
         <lastmod>2012-07-19T00:57:10+08:00</lastmod>
     </url>
     <url>
+        <loc>http://luosky.github.com/2012/03/23/first-time-handle-pull-request-on-github/</loc>
+        <lastmod>2012-07-19T01:40:30+08:00</lastmod>
+    </url>
+    <url>
+        <loc>http://luosky.github.com/2012/03/23/programmer-saver/</loc>
+        <lastmod>2012-07-19T01:31:41+08:00</lastmod>
+    </url>
+    <url>
+        <loc>http://luosky.github.com/2012/05/10/wireless-music-solution/</loc>
+        <lastmod>2012-07-19T20:05:18+08:00</lastmod>
+    </url>
+    <url>
         <loc>http://luosky.github.com/2012/06/21/passkit-passbook-api-study-notes/</loc>
-        <lastmod>2012-07-17T08:18:51+08:00</lastmod>
+        <lastmod>2012-07-19T01:41:57+08:00</lastmod>
     </url>
     <url>
         <loc>http://luosky.github.com/about/</loc>
@@ -26,10 +50,10 @@
     </url>
     <url>
         <loc>http://luosky.github.com/archives/</loc>
-        <lastmod>2012-07-19T01:04:06+08:00</lastmod>
+        <lastmod>2012-07-19T20:57:11+08:00</lastmod>
     </url>
     <url>
         <loc>http://luosky.github.com/</loc>
-        <lastmod>2012-07-19T01:04:06+08:00</lastmod>
+        <lastmod>2012-07-19T20:57:11+08:00</lastmod>
     </url>
 </urlset>

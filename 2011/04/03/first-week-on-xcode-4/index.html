@@ -5,7 +5,7 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>Category: programming - Luosky's Playground</title>
+  <title>First Week on Xcode  - Luosky's Playground</title>
   <meta name="author" content="Luosky">
   <meta name="Generator" content="Jekyll & Octopress (http://octopress.org)">
 
@@ -18,7 +18,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://luosky.github.comblog/categories/programming/">
+  <link rel="canonical" href="http://luosky.github.com/2011/04/03/first-week-on-xcode-4/">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <script src="/javascripts/octopress.min.js" type="text/javascript"></script>
   <link href="/feed" rel="alternate" title="Luosky's Playground" type="application/atom+xml">
@@ -46,7 +46,7 @@
   <link href="/octopress-favicon.png" rel="icon">
 </head>
 
-<body  id="archive"   >
+<body   >
   <header role="banner"><hgroup>
   <h1><a href="/">Luosky's Playground</a></h1>
   
@@ -77,251 +77,143 @@
   <div id="main">
     <div id="content">
       <div>
-<article role="article">
+
+
+
+
+
+
+
+
+
+
+
+<article class="hentry " role="article">
   
   <header>
-    <h1 class="entry-title">Category: Programming</h1>
+    <h1 class="entry-title">
+
+First Week on Xcode
+
+</h1>
+
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-04-03T00:36:00+08:00" pubdate data-updated="true">Apr 3<span>rd</span>, 2011</time>
+         &bull; <a rel="bookmark" href="/2011/04/03/first-week-on-xcode-4/">Permalink</a>
+      </p>
     
   </header>
+
+<div class="entry-content"><p>经历了上周的one week on rails,这周又切换回iOS了.自从更新了Xcode 4之后,就跑去做支付宝连接和学习Ruby on Rails去了,一直没有碰Xcode.</p>
+
+<p>Xcode 4相比Xcode 3变化好大,这一周花了N多时间在熟悉和折腾Xcode 4上.</p>
+
+<p>Xcode 4亮点很多,比如Interface Builder现在和Xcode整合在一起了,创建outlet只要拖动到代码里就搞定了,非常方便,让我不禁又重回xib的怀抱.还有其他不少改进.</p>
+
+<p>相关的文章已经很多了.这里就仅记录下碰到的问题,方便后来者:</p>
+
+<h3>无法自动补全 / 没有语法高亮 的问题:</h3>
+
+<p>在build settings里将precompile prefix header设为NO,删掉Derived Data目录(在Organizer里可以找到),等index完之后再看看</p>
+
+<h3>打开static library时出现 &#8220;workspace integrity&#8221;错误:</h3>
+
+<p>这一般是在打开了引用这个static library的项目的情况下打开这个static library项目导致的.关掉那个项目的xcode窗口即可.</p>
+
+<h3>按照文档创建workspace后将static library项目拖进workspace结果只是认成是一个文件的问题:</h3>
+
+<p>同上.因为这个static library 项目已经在别的xcode窗口中打开了.</p>
+
+<h3>带有static library的项目找不到lib的问题:</h3>
+
+<p>检查static library项目和主项目的building setting是否一致.比如主项目的building setting用的是自建的Distribution而不是Release,那么在static library里也得有这个Distribution名字的setting(并且由于前面的workspace integrity问题当时还没解决,无法打开该library项目,使得这个问题花了我n多时间才解决)</p>
+
+<h3>带有static library的项目用Organizer提交到app store时无法verify/share/submit的问题:</h3>
+
+<p>在static library的building settings里将skip install设为YES</p>
+</div>
+
+
+  <footer>
+    <p class="meta">
+      
   
-  <div id="blog-archives" class="category">
 
+<span class="byline author vcard">Posted by <span class="fn">Luosky</span></span>
 
 
-  
-  <h2>2012</h2>
 
 
 
 
 
-
-
-
-
-
-
-
-<article >
-  
-<h1 class="entry-title">
-
-<a href="/2012/06/21/passkit-passbook-api-study-notes/">PassKit (PassBook Api) 学习笔记</a>
-
-</h1>
-
-<time datetime="2012-06-21T21:40:00+08:00" pubdate><span class='month'>Jun</span> <span class='day'>21</span> <span class='year'>2012</span></time>
-<footer>
-  
-  
-  
-  <span class="categories">posted in <a class='category' href='/blog/categories/ios/'>iOS</a>, <a class='category' href='/blog/categories/programming/'>programming</a></span>
-  
-</footer>
-
-</article>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<article >
-  
-<h1 class="entry-title">
-
-<a href="/2012/03/23/programmer-saver/">程序员的福音</a>
-
-</h1>
-
-<time datetime="2012-03-23T00:36:00+08:00" pubdate><span class='month'>Mar</span> <span class='day'>23</span> <span class='year'>2012</span></time>
-<footer>
-  
-  
-  
-  <span class="categories">posted in <a class='category' href='/blog/categories/life/'>life</a>, <a class='category' href='/blog/categories/programming/'>programming</a></span>
-  
-</footer>
-
-</article>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<article >
-  
-<h1 class="entry-title">
-
-<a href="/2012/03/23/first-time-handle-pull-request-on-github/">第一次处理Github的Pull Request</a>
-
-</h1>
-
-<time datetime="2012-03-23T00:36:00+08:00" pubdate><span class='month'>Mar</span> <span class='day'>23</span> <span class='year'>2012</span></time>
-<footer>
-  
-  
-  
-  <span class="categories">posted in <a class='category' href='/blog/categories/life/'>life</a>, <a class='category' href='/blog/categories/programming/'>programming</a></span>
-  
-</footer>
-
-</article>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<article >
-  
-<h1 class="entry-title">
-
-<a href="/2012/02/27/amazing-ios-simulator/">iOS模拟器居然还可以监测出来Mac上正在facetime,做得也太细致了</a>
-
-</h1>
-
-<time datetime="2012-02-27T00:36:00+08:00" pubdate><span class='month'>Feb</span> <span class='day'>27</span> <span class='year'>2012</span></time>
-<footer>
-  
-  
-  
-  <span class="categories">posted in <a class='category' href='/blog/categories/life/'>life</a>, <a class='category' href='/blog/categories/programming/'>programming</a></span>
-  
-</footer>
-
-</article>
 
 
 
   
-  <h2>2011</h2>
 
 
+<time datetime="2011-04-03T00:36:00+08:00" pubdate data-updated="true">Apr 3<span>rd</span>, 2011</time>
 
 
-
-
-
-
-
-
-
-
-<article >
+<span class="categories">
   
-<h1 class="entry-title">
-
-<a href="/2011/04/03/first-week-on-xcode-4/">First Week on Xcode</a>
-
-</h1>
-
-<time datetime="2011-04-03T00:36:00+08:00" pubdate><span class='month'>Apr</span> <span class='day'>03</span> <span class='year'>2011</span></time>
-<footer>
+    <a class='category' href='/blog/categories/ios/'>iOS</a>, <a class='category' href='/blog/categories/programming/'>programming</a>
   
+</span>
+
+
+
+      
+
+    </p>
+    
+      <div class="sharing">
   
-  
-  <span class="categories">posted in <a class='category' href='/blog/categories/ios/'>iOS</a>, <a class='category' href='/blog/categories/programming/'>programming</a></span>
-  
-</footer>
-
-</article>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<article >
-  
-<h1 class="entry-title">
-
-<a href="/2011/01/04/ios-in-app-sms/">iOS App内发送短信</a>
-
-</h1>
-
-<time datetime="2011-01-04T00:36:00+08:00" pubdate><span class='month'>Jan</span> <span class='day'>04</span> <span class='year'>2011</span></time>
-<footer>
+    
+      <a href="http://twitter.com/share" title="Tweet this" class="twitter-share" target="_blank">Tweet</a>
+    
   
   
   
-  <span class="categories">posted in <a class='category' href='/blog/categories/ios/'>iOS</a>, <a class='category' href='/blog/categories/programming/'>programming</a></span>
   
-</footer>
-
-</article>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<article >
-  
-<h1 class="entry-title">
-
-<a href="/2011/01/01/my-sync-solution/">我是同步控</a>
-
-</h1>
-
-<time datetime="2011-01-01T00:36:00+08:00" pubdate><span class='month'>Jan</span> <span class='day'>01</span> <span class='year'>2011</span></time>
-<footer>
-  
-  
-  
-  <span class="categories">posted in <a class='category' href='/blog/categories/life/'>life</a>, <a class='category' href='/blog/categories/programming/'>programming</a></span>
-  
-</footer>
-
-</article>
 
 </div>
 
-  
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/2011/01/15/mary-and-max/" title="Previous Post: Mary and Max">&laquo; Mary and Max</a>
+      
+      
+        <a class="basic-alignment right" href="/2012/02/27/amazing-ios-simulator/" title="Next Post: iOS模拟器居然还可以监测出来Mac上正在facetime,做得也太细致了">iOS模拟器居然还可以监测出来Mac上正在facetime,做得也太细致了 &raquo;</a>
+      
+    </p>
+  </footer>
 </article>
 
+<section>
+  <h1>Comments</h1>
+  
 
+  
+    <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+  
+</section>
 
 </div>
 
@@ -393,7 +285,10 @@
 			var disqus_developer = '1';
       
         
-        var disqus_script = 'count.js';
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://luosky.github.com/2011/04/03/first-week-on-xcode-4/';
+        var disqus_url = 'http://luosky.github.com/2011/04/03/first-week-on-xcode-4/';
+        var disqus_script = 'embed.js';
       
     (function () {
       var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;

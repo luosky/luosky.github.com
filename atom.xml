@@ -3,7 +3,7 @@
   <title><![CDATA[Luosky's Playground]]></title>
   <link href="http://luosky.github.com/atom.xml" rel="self"/>
   <link href="http://luosky.github.com/"/>
-  <updated>2012-07-19T01:05:33+08:00</updated>
+  <updated>2012-07-19T20:57:13+08:00</updated>
   <id>http://luosky.github.com/</id>
   <author>
     <name><![CDATA[Luosky]]></name>
@@ -134,6 +134,108 @@
 
 
 
+<title type="html"><![CDATA[家庭无线音乐方案]]></title>
+<link href="http://luosky.github.com/2012/05/10/wireless-music-solution/"/>
+<updated>2012-05-10T00:36:00+08:00</updated>
+<id>http://luosky.github.com/2012/05/10/wireless-music-solution</id>
+
+      <content type="html"><![CDATA[<ul>
+<li><p>AirPlay</p>
+
+<ul>
+<li><p>优点:</p>
+
+<ul>
+<li>有了苹果的推广,前景有不小的想象空间</li>
+<li>支持视频</li>
+</ul>
+</li>
+<li><p>缺点:</p>
+
+<ul>
+<li>需要一个master设备来输出多媒体数据,一个slave设备来展现多媒体</li>
+<li>目前只能一对一</li>
+</ul>
+</li>
+<li><p>入门体验:</p>
+
+<ul>
+<li>正道:买个Airport Express,既可以用作无线路由器,插在离音箱近的地方用音频线连接音响即可无线播放音乐了</li>
+<li>歪道:使用破解了AirPlay密钥的开源方案,如Shairport,将电脑变成AirPlay的音频输出端.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>Sonos</p>
+
+<ul>
+<li>优点:支持多个输出点,如果你需要多个房间无线同步播放音乐,Sonos适合你</li>
+<li><p>缺点:</p>
+
+<ul>
+<li>相比AirPlay来讲,前景没那么乐观</li>
+<li>入门价格较贵</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+<p><a rel="bookmark" href="http://luosky.github.com/2012/05/10/wireless-music-solution/">&#9875; Permalink</a></p>]]></content>
+    </entry>
+  
+    <entry>
+      
+
+
+
+
+<title type="html"><![CDATA[程序员的福音]]></title>
+<link href="http://luosky.github.com/2012/03/23/programmer-saver/"/>
+<updated>2012-03-23T00:36:00+08:00</updated>
+<id>http://luosky.github.com/2012/03/23/programmer-saver</id>
+
+      <content type="html"><![CDATA[<p><a href="http://www.classnamer.com/"><img class="" src="http://luosky.com/wp-content/uploads/2012/03/Screen-Shot-2012-03-23-at-下午1.38.45-494x249.png" title="(classnamer)" ></a></p>
+
+<p>以后不知道取什么名字的时候就来<a href="http://www.classnamer.com/">这网站</a>捞一个</p>
+
+<p>btw,图中这个类名碉堡了</p>
+<p><a rel="bookmark" href="http://luosky.github.com/2012/03/23/programmer-saver/">&#9875; Permalink</a></p>]]></content>
+    </entry>
+  
+    <entry>
+      
+
+
+
+
+<title type="html"><![CDATA[第一次处理Github的Pull Request]]></title>
+<link href="http://luosky.github.com/2012/03/23/first-time-handle-pull-request-on-github/"/>
+<updated>2012-03-23T00:36:00+08:00</updated>
+<id>http://luosky.github.com/2012/03/23/first-time-handle-pull-request-on-github</id>
+
+      <content type="html"><![CDATA[<p><img class="" src="http://luosky.com/wp-content/uploads/2012/03/Screen-Shot-2012-03-23-at-下午5.15.34-494x338.png" title="(merge pull request)" ></p>
+
+<p>第一次处理Github的Pull Request,还是<a href="https://github.com/CocoaPods/CocoaPods">CocoaPods</a>这样的项目,要点Merge pull request时不禁有点手抖…</p>
+
+<p><img class="" src="http://luosky.com/wp-content/uploads/2012/03/4D08QFI206-494x187.jpg" title="(merge)" ></p>
+
+<p>算是对<a href="https://github.com/CocoaPods/CocoaPods">CocoaPods</a>做了点小贡献.</p>
+
+<p>============== 我是分隔线 ==============</p>
+
+<p><a href="https://github.com/CocoaPods/CocoaPods">CocoaPods</a>很活跃, 我的pull request提交没多久, 管理员就提了<a href="https://github.com/CocoaPods/Specs/pull/78#issuecomment-4656168">修改建议</a>,并且把我加入到了成员组里,同时还有另外一个人也提了别的<a href="https://github.com/CocoaPods/Specs/pull/78#issuecomment-4656168">建议</a>.</p>
+
+<p>关注了这个框架挺久了, 因为改动太大,之前一直不敢用. 现在算是已经挺成熟的了,这几天正在把<a href="http://itunes.apple.com/cn/app/id408827748?mt=8#">爱折客</a>换成用它来管理用到的组件.强烈推荐iOS和 Mac开发者也试试,要升级你用到的组件的版本真的非常方便.</p>
+<p><a rel="bookmark" href="http://luosky.github.com/2012/03/23/first-time-handle-pull-request-on-github/">&#9875; Permalink</a></p>]]></content>
+    </entry>
+  
+    <entry>
+      
+
+
+
+
 <title type="html"><![CDATA[iOS模拟器居然还可以监测出来Mac上正在facetime,做得也太细致了]]></title>
 <link href="http://luosky.github.com/2012/02/27/amazing-ios-simulator/"/>
 <updated>2012-02-27T00:36:00+08:00</updated>
@@ -141,6 +243,89 @@
 
       <content type="html"><![CDATA[<p><img class="" src="http://photo.luosky.com/wp-content/uploads/2012/02/Screen-Shot-2012-02-27-at-下午8.36.15-262x494.png" title="iOS" ></p>
 <p><a rel="bookmark" href="http://luosky.github.com/2012/02/27/amazing-ios-simulator/">&#9875; Permalink</a></p>]]></content>
+    </entry>
+  
+    <entry>
+      
+
+
+
+
+<title type="html"><![CDATA[First Week on Xcode ]]></title>
+<link href="http://luosky.github.com/2011/04/03/first-week-on-xcode-4/"/>
+<updated>2011-04-03T00:36:00+08:00</updated>
+<id>http://luosky.github.com/2011/04/03/first-week-on-xcode-4</id>
+
+      <content type="html"><![CDATA[<p>经历了上周的one week on rails,这周又切换回iOS了.自从更新了Xcode 4之后,就跑去做支付宝连接和学习Ruby on Rails去了,一直没有碰Xcode.</p>
+
+<p>Xcode 4相比Xcode 3变化好大,这一周花了N多时间在熟悉和折腾Xcode 4上.</p>
+
+<p>Xcode 4亮点很多,比如Interface Builder现在和Xcode整合在一起了,创建outlet只要拖动到代码里就搞定了,非常方便,让我不禁又重回xib的怀抱.还有其他不少改进.</p>
+
+<p>相关的文章已经很多了.这里就仅记录下碰到的问题,方便后来者:</p>
+
+<h3>无法自动补全 / 没有语法高亮 的问题:</h3>
+
+<p>在build settings里将precompile prefix header设为NO,删掉Derived Data目录(在Organizer里可以找到),等index完之后再看看</p>
+
+<h3>打开static library时出现 &#8220;workspace integrity&#8221;错误:</h3>
+
+<p>这一般是在打开了引用这个static library的项目的情况下打开这个static library项目导致的.关掉那个项目的xcode窗口即可.</p>
+
+<h3>按照文档创建workspace后将static library项目拖进workspace结果只是认成是一个文件的问题:</h3>
+
+<p>同上.因为这个static library 项目已经在别的xcode窗口中打开了.</p>
+
+<h3>带有static library的项目找不到lib的问题:</h3>
+
+<p>检查static library项目和主项目的building setting是否一致.比如主项目的building setting用的是自建的Distribution而不是Release,那么在static library里也得有这个Distribution名字的setting(并且由于前面的workspace integrity问题当时还没解决,无法打开该library项目,使得这个问题花了我n多时间才解决)</p>
+
+<h3>带有static library的项目用Organizer提交到app store时无法verify/share/submit的问题:</h3>
+
+<p>在static library的building settings里将skip install设为YES</p>
+<p><a rel="bookmark" href="http://luosky.github.com/2011/04/03/first-week-on-xcode-4/">&#9875; Permalink</a></p>]]></content>
+    </entry>
+  
+    <entry>
+      
+
+
+
+
+<title type="html"><![CDATA[Mary and Max]]></title>
+<link href="http://luosky.github.com/2011/01/15/mary-and-max/"/>
+<updated>2011-01-15T00:36:00+08:00</updated>
+<id>http://luosky.github.com/2011/01/15/mary-and-max</id>
+
+      <content type="html"><![CDATA[<p><img src="http://luosky.com/wp-content/uploads/2011/01/s4034827.jpg" title="s4034827" alt="" /></p>
+
+<p>@caoxg 推荐的治愈系电影,周六的午后边吃着披萨,边把它看完了.虽然疗的不是我的伤,看了还是感觉很温暖.五星级.</p>
+
+<h3>Quotes:</h3>
+
+<p><img class="right" src="http://luosky.com/wp-content/uploads/2011/01/p496809861-300x168.jpg"></p>
+
+<blockquote><p>When I was young, I wanted to be anybody but myself.</p><footer><strong>Max</strong> <cite>Mary and Max</cite></footer></blockquote>
+
+
+<p></p>
+
+<p><img class="right" src="http://luosky.com/wp-content/uploads/2011/01/p589868900-300x166.jpg">
+<img class="right" src="http://luosky.com/wp-content/uploads/2011/01/p589869194-300x166.jpg"></p>
+
+<blockquote><p>Love yourself first.</p><footer><strong>Max</strong> <cite>Mary and Max</cite></footer></blockquote>
+
+
+<p></p>
+
+<blockquote><p>Whatever will be , will be.</p><footer><strong>Max</strong> <cite>Mary and Max</cite></footer></blockquote>
+
+
+<h3>最后Max给Mary的信的全文:</h3>
+
+<blockquote><p>Dear Mary</p><p>Please find enclosed my entire Noblet collection as a sign that I forgive you.</p><p>When I received your book, the emotions inside my brain felt like they were in a tumble dryer, smashing into each other. The hurt felt like when I accidentally stapled my lips together. </p><p>The reason I forgive you is because you are not perfect.   <br/>You are imperfect and so am I.   <br/>All humans are imperfect, even the men outside my apartment who litters. </p><p>When I was young, I wanted to be anybody but myself.   <br/>Dr. Bernard Hazelhof said if I was on a desert island then I would have to get used to my own company, just me and the coconuts. He said I would have to accept myself, my warts and all, and that we don&#8217;t get to choose our warts. They are a part of us and we have to live with them.   </p><p>We can, however, choose our friends and I am glad I have chosen you.</p><p>Dr. Bernard Hazelhof also said that everyone&#8217;s lives are like a very long sidewalk. Some are well paved. Others, like mine, have cracks, banana skins and cigarette butts. Your sidewalk is like mine but probably not as many cracks. Hopefully, one day, our sidewalk will meet and we can share a can of condensed milk. </p><p>You are my best friends.   <br/>You are my only friend.</p><p>Your American penpal, Max Jerry Horowitz.</p><footer><strong>Max</strong> <cite>Mary and Max</cite></footer></blockquote>
+
+<p><a rel="bookmark" href="http://luosky.github.com/2011/01/15/mary-and-max/">&#9875; Permalink</a></p>]]></content>
     </entry>
   
     <entry>
@@ -178,6 +363,171 @@
 
 <p><img src="http://a1.phobos.apple.com/us/r1000/056/Purple/6e/39/ee/mzl.yvnvogck.320x480-75.jpg" title="评论箱" alt="" /></p>
 <p><a rel="bookmark" href="http://luosky.github.com/2011/01/06/my-second-ios-app/">&#9875; Permalink</a></p>]]></content>
+    </entry>
+  
+    <entry>
+      
+
+
+
+
+<title type="html"><![CDATA[iOS app内发送短信]]></title>
+<link href="http://luosky.github.com/2011/01/04/ios-in-app-sms/"/>
+<updated>2011-01-04T00:36:00+08:00</updated>
+<id>http://luosky.github.com/2011/01/04/ios-in-app-sms</id>
+
+      <content type="html"><![CDATA[<p>iOS4.0新加入了<code>MFMessageComposeViewController</code>和<code>MFMessageComposeViewControllerDelegate</code>,提供了发送短信的接口,可以像发送邮件那样不用跳出程序来发送短信. 介绍可参阅Message UI Framework Reference</p>
+
+<p>一些笔记:</p>
+
+<h3>MFMessageComposeViewController</h3>
+
+<ul>
+<li>提供了操作界面</li>
+<li>使用前必须检查canSendText方法,若返回NO则不应将这个controller展现出来,而应该提示用户不支持发送短信功能.</li>
+<li>界面不能自行定制</li>
+<li>要发送的短信的内容(body)和收件人(recipients)在展现这个controller前需初始化好,展现了之后短信内容不能通过程序来进行修改.不过用户仍然可以手工修改短信内容和选择收件人</li>
+<li>用户点了发送或者取消,或者发送失败时,MFMessageComposeViewControllerDelegate 的- messageComposeViewController:didFinishWithResult:方法都能得到通知,在这里进行相应的处理</li>
+</ul>
+
+
+<p>若在iOS3.0上运行的话,会提示<code>dyld: Symbol not found: _OBJC_CLASS_$_MFMessageComposeViewController</code> 解决方案:</p>
+
+<ol>
+<li>MessageUI.framework的引入类型应选择weak(在target -> Get Info -> General -> Linked Libraries -> MessageUI.framework -> Type 里修改)</li>
+<li>不要在.h文件里直接import MessageUI/MFMessageComposeViewController.h,改为import &lt;MessageUI/MessageUI.h></li>
+</ol>
+
+
+<p>具体的发送代码:</p>
+
+<figure class='code'><div class='highlight'><table><td class='gutter'><pre class='line-numbers'><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+<span class='line-number'>26</span>
+<span class='line-number'>27</span>
+<span class='line-number'>28</span>
+<span class='line-number'>29</span>
+<span class='line-number'>30</span>
+<span class='line-number'>31</span>
+<span class='line-number'>32</span>
+<span class='line-number'>33</span>
+<span class='line-number'>34</span>
+<span class='line-number'>35</span>
+<span class='line-number'>36</span>
+<span class='line-number'>37</span>
+<span class='line-number'>38</span>
+<span class='line-number'>39</span>
+<span class='line-number'>40</span>
+<span class='line-number'>41</span>
+<span class='line-number'>42</span>
+<span class='line-number'>43</span>
+<span class='line-number'>44</span>
+<span class='line-number'>45</span>
+<span class='line-number'>46</span>
+<span class='line-number'>47</span>
+<span class='line-number'>48</span>
+<span class='line-number'>49</span>
+<span class='line-number'>50</span>
+<span class='line-number'>51</span>
+<span class='line-number'>52</span>
+<span class='line-number'>53</span>
+<span class='line-number'>54</span>
+<span class='line-number'>55</span>
+<span class='line-number'>56</span>
+<span class='line-number'>57</span>
+<span class='line-number'>58</span>
+<span class='line-number'>59</span>
+<span class='line-number'>60</span>
+<span class='line-number'>61</span>
+</pre></td><td class='code'><pre><code class='objective-c'><span class='line'><span class="cp">    </span>
+</span><span class='line'><span class="cp">    #pragma mark -</span>
+</span><span class='line'><span class="cp">    #pragma mark SMS</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="o">-</span><span class="p">(</span><span class="kt">IBAction</span><span class="p">)</span><span class="nl">showSMSPicker:</span><span class="p">(</span><span class="kt">id</span><span class="p">)</span><span class="n">sender</span> <span class="p">{</span>
+</span><span class='line'>      <span class="c1">// The MFMessageComposeViewController class is only available in iPhone OS 4.0 or later.</span>
+</span><span class='line'>      <span class="c1">// So, we must verify the existence of the above class and log an error message for devices</span>
+</span><span class='line'>      <span class="c1">//     running earlier versions of the iPhone OS. Set feedbackMsg if device doesn&#39;t support</span>
+</span><span class='line'>      <span class="c1">//     MFMessageComposeViewController API.</span>
+</span><span class='line'>      <span class="n">Class</span> <span class="n">messageClass</span> <span class="o">=</span> <span class="p">(</span><span class="n">NSClassFromString</span><span class="p">(</span><span class="s">@&quot;MFMessageComposeViewController&quot;</span><span class="p">));</span>
+</span><span class='line'>
+</span><span class='line'>      <span class="k">if</span> <span class="p">(</span><span class="n">messageClass</span> <span class="o">!=</span> <span class="nb">nil</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>          <span class="c1">// Check whether the current device is configured for sending SMS messages</span>
+</span><span class='line'>          <span class="k">if</span> <span class="p">([</span><span class="n">messageClass</span> <span class="n">canSendText</span><span class="p">])</span> <span class="p">{</span>
+</span><span class='line'>              <span class="p">[</span><span class="n">self</span> <span class="n">displaySMSComposerSheet</span><span class="p">];</span>
+</span><span class='line'>          <span class="p">}</span>
+</span><span class='line'>          <span class="k">else</span> <span class="p">{</span>
+</span><span class='line'>              <span class="p">[</span><span class="n">UIAlertView</span> <span class="nl">quickAlertWithTitle:</span><span class="s">@&quot;设备没有短信功能&quot;</span> <span class="nl">messageTitle:</span><span class="nb">nil</span> <span class="nl">dismissTitle:</span><span class="s">@&quot;关闭&quot;</span><span class="p">];</span>
+</span><span class='line'>          <span class="p">}</span>
+</span><span class='line'>      <span class="p">}</span>
+</span><span class='line'>      <span class="k">else</span> <span class="p">{</span>
+</span><span class='line'>          <span class="p">[</span><span class="n">UIAlertView</span> <span class="nl">quickAlertWithTitle:</span><span class="s">@&quot;iOS版本过低,iOS4.0以上才支持程序内发送短信&quot;</span> <span class="nl">messageTitle:</span><span class="nb">nil</span> <span class="nl">dismissTitle:</span><span class="s">@&quot;关闭&quot;</span><span class="p">];</span>
+</span><span class='line'>      <span class="p">}</span>
+</span><span class='line'>    <span class="p">}</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="o">-</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="n">displaySMSComposerSheet</span>
+</span><span class='line'>    <span class="p">{</span>
+</span><span class='line'>      <span class="n">MFMessageComposeViewController</span> <span class="o">*</span><span class="n">picker</span> <span class="o">=</span> <span class="p">[[</span><span class="n">MFMessageComposeViewController</span> <span class="n">alloc</span><span class="p">]</span> <span class="n">init</span><span class="p">];</span>
+</span><span class='line'>      <span class="n">picker</span><span class="p">.</span><span class="n">messageComposeDelegate</span> <span class="o">=</span> <span class="n">self</span><span class="p">;</span>
+</span><span class='line'>
+</span><span class='line'>      <span class="n">NSMutableString</span><span class="o">*</span> <span class="n">absUrl</span> <span class="o">=</span> <span class="p">[[</span><span class="n">NSMutableString</span> <span class="n">alloc</span><span class="p">]</span> <span class="nl">initWithString:</span><span class="n">web</span><span class="p">.</span><span class="n">request</span><span class="p">.</span><span class="n">URL</span><span class="p">.</span><span class="n">absoluteString</span><span class="p">];</span>
+</span><span class='line'>      <span class="p">[</span><span class="n">absUrl</span> <span class="nl">replaceOccurrencesOfString:</span><span class="s">@&quot;http://i.aizheke.com&quot;</span> <span class="nl">withString:</span><span class="s">@&quot;http://m.aizheke.com&quot;</span> <span class="nl">options:</span><span class="n">NSCaseInsensitiveSearch</span> <span class="nl">range:</span><span class="n">NSMakeRange</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="p">[</span><span class="n">absUrl</span> <span class="n">length</span><span class="p">])];</span>
+</span><span class='line'>
+</span><span class='line'>      <span class="n">picker</span><span class="p">.</span><span class="n">body</span><span class="o">=</span><span class="p">[</span><span class="n">NSString</span> <span class="nl">stringWithFormat:</span><span class="s">@&quot;我在爱折客上看到：%@ 可能对你有用，推荐给你！link：%@&quot;</span>
+</span><span class='line'>                                          <span class="p">,[</span><span class="n">web</span> <span class="nl">stringByEvaluatingJavaScriptFromString:</span><span class="s">@&quot;document.title&quot;</span><span class="p">]</span>
+</span><span class='line'>                                          <span class="p">,</span><span class="n">absUrl</span><span class="p">];</span>
+</span><span class='line'>      <span class="p">[</span><span class="n">absUrl</span> <span class="n">release</span><span class="p">];</span>
+</span><span class='line'>      <span class="p">[</span><span class="n">self</span> <span class="nl">presentModalViewController:</span><span class="n">picker</span> <span class="nl">animated:</span><span class="n">YES</span><span class="p">];</span>
+</span><span class='line'>      <span class="p">[</span><span class="n">picker</span> <span class="n">release</span><span class="p">];</span>
+</span><span class='line'>    <span class="p">}</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="o">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nl">messageComposeViewController:</span><span class="p">(</span><span class="n">MFMessageComposeViewController</span> <span class="o">*</span><span class="p">)</span><span class="n">controller</span>
+</span><span class='line'>                   <span class="nl">didFinishWithResult:</span><span class="p">(</span><span class="n">MessageComposeResult</span><span class="p">)</span><span class="n">result</span> <span class="p">{</span>
+</span><span class='line'>
+</span><span class='line'>      <span class="k">switch</span> <span class="p">(</span><span class="n">result</span><span class="p">)</span>
+</span><span class='line'>      <span class="p">{</span>
+</span><span class='line'>          <span class="k">case</span> <span class="nl">MessageComposeResultCancelled:</span>
+</span><span class='line'>              <span class="n">LOG_EXPR</span><span class="p">(</span><span class="s">@&quot;Result: SMS sending canceled&quot;</span><span class="p">);</span>
+</span><span class='line'>              <span class="k">break</span><span class="p">;</span>
+</span><span class='line'>          <span class="k">case</span> <span class="nl">MessageComposeResultSent:</span>
+</span><span class='line'>              <span class="n">LOG_EXPR</span><span class="p">(</span><span class="s">@&quot;Result: SMS sent&quot;</span><span class="p">);</span>
+</span><span class='line'>              <span class="k">break</span><span class="p">;</span>
+</span><span class='line'>          <span class="k">case</span> <span class="nl">MessageComposeResultFailed:</span>
+</span><span class='line'>              <span class="p">[</span><span class="n">UIAlertView</span> <span class="nl">quickAlertWithTitle:</span><span class="s">@&quot;短信发送失败&quot;</span> <span class="nl">messageTitle:</span><span class="nb">nil</span> <span class="nl">dismissTitle:</span><span class="s">@&quot;关闭&quot;</span><span class="p">];</span>
+</span><span class='line'>              <span class="k">break</span><span class="p">;</span>
+</span><span class='line'>          <span class="k">default</span><span class="o">:</span>
+</span><span class='line'>              <span class="n">LOG_EXPR</span><span class="p">(</span><span class="s">@&quot;Result: SMS not sent&quot;</span><span class="p">);</span>
+</span><span class='line'>              <span class="k">break</span><span class="p">;</span>
+</span><span class='line'>      <span class="p">}</span>
+</span><span class='line'>      <span class="p">[</span><span class="n">self</span> <span class="nl">dismissModalViewControllerAnimated:</span><span class="n">YES</span><span class="p">];</span>
+</span><span class='line'>    <span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+
+<p><a rel="bookmark" href="http://luosky.github.com/2011/01/04/ios-in-app-sms/">&#9875; Permalink</a></p>]]></content>
     </entry>
   
     <entry>
