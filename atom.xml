@@ -3,7 +3,7 @@
   <title><![CDATA[Luosky's Playground]]></title>
   <link href="http://luosky.github.com/atom.xml" rel="self"/>
   <link href="http://luosky.github.com/"/>
-  <updated>2012-07-19T21:08:45+08:00</updated>
+  <updated>2012-07-19T22:31:09+08:00</updated>
   <id>http://luosky.github.com/</id>
   <author>
     <name><![CDATA[Luosky]]></name>
@@ -139,25 +139,24 @@
 <updated>2012-05-10T00:36:00+08:00</updated>
 <id>http://luosky.github.com/2012/05/10/wireless-music-solution</id>
 
-      <content type="html"><![CDATA[<ul>
-<li><p>AirPlay</p>
+      <content type="html"><![CDATA[<h2>AirPlay</h2>
 
 <ul>
-<li><p>优点:</p>
+<li>优点:
 
 <ul>
 <li>有了苹果的推广,前景有不小的想象空间</li>
 <li>支持视频</li>
 </ul>
 </li>
-<li><p>缺点:</p>
+<li>缺点:
 
 <ul>
 <li>需要一个master设备来输出多媒体数据,一个slave设备来展现多媒体</li>
 <li>目前只能一对一</li>
 </ul>
 </li>
-<li><p>入门体验:</p>
+<li>入门体验:
 
 <ul>
 <li>正道:买个Airport Express,既可以用作无线路由器,插在离音箱近的地方用音频线连接音响即可无线播放音乐了</li>
@@ -165,18 +164,17 @@
 </ul>
 </li>
 </ul>
-</li>
-<li><p>Sonos</p>
+
+
+<h2>Sonos</h2>
 
 <ul>
 <li>优点:支持多个输出点,如果你需要多个房间无线同步播放音乐,Sonos适合你</li>
-<li><p>缺点:</p>
+<li>缺点:
 
 <ul>
 <li>相比AirPlay来讲,前景没那么乐观</li>
 <li>入门价格较贵</li>
-</ul>
-</li>
 </ul>
 </li>
 </ul>
@@ -541,26 +539,26 @@
 <updated>2011-01-01T00:36:00+08:00</updated>
 <id>http://luosky.github.com/2011/01/01/my-sync-solution</id>
 
-      <content type="html"><![CDATA[<p>我的同步方案：</p>
+      <content type="html"><![CDATA[<h2>我的同步方案：</h2>
 
-<p>同步照片：</p>
+<h3>同步照片：</h3>
 
 <ul>
-<li><p>instagram</p>
+<li>instagram
 
 <ul>
 <li>twitter</li>
 <li>facebook</li>
-<li><p>flickr</p>
+<li>flickr
 
 <ul>
-<li><p>wordpress(via <a href="http://devthought.com/wp-o-matic-the-wordpress-rss-agreggator/">WP-o-Matic</a>)</p>
+<li>wordpress(via <a href="http://devthought.com/wp-o-matic-the-wordpress-rss-agreggator/">WP-o-Matic</a>)
 
 <ul>
 <li>qzone （via <a href="http://liguoliang.com/2010/wordpress-post-to-qzone/">post2Qzone</a>）</li>
 <li><a href="http://renjian.com/">renjian.com</a>(via <a href="http://www.smyx.net/wp-connect.html">WordPress连接微博</a>)</li>
 <li>sina微博(via <a href="http://www.smyx.net/wp-connect.html">WordPress连接微博</a>)</li>
-<li><p>digu (via <a href="http://www.smyx.net/wp-connect.html">WordPress连接微博</a>)</p>
+<li>digu (via <a href="http://www.smyx.net/wp-connect.html">WordPress连接微博</a>)
 
 <ul>
 <li>kaixin001（via 嘀神）</li>
@@ -576,18 +574,18 @@
 </ul>
 
 
-<p>同步微薄：</p>
+<h3>同步微薄：</h3>
 
 <ul>
-<li><p>qq签名</p>
+<li>qq签名
 
 <ul>
-<li><p>follow5</p>
+<li>follow5
 
 <ul>
 <li>sina微博</li>
 <li>twitter</li>
-<li><p>digu</p>
+<li>digu
 
 <ul>
 <li>kaixin001（via 嘀神）</li>
@@ -601,8 +599,61 @@
 </ul>
 
 
-<p>2011-04-09 updated: 图片同步方式中换用<a href="http://www.smyx.net/wp-connect.html">WordPress连接微博</a> 来同步到几个微博</p>
+<p><em>2011-04-09 updated: 图片同步方式中换用<a href="http://www.smyx.net/wp-connect.html">WordPress连接微博</a> 来同步到几个微博</em></p>
 <p><a rel="bookmark" href="http://luosky.github.com/2011/01/01/my-sync-solution/">&#9875; Permalink</a></p>]]></content>
+    </entry>
+  
+    <entry>
+      
+
+
+
+
+<title type="html"><![CDATA[SD2.0大会笔记]]></title>
+<link href="http://luosky.github.com/2010/12/10/sd2.0-conference/"/>
+<updated>2010-12-10T00:36:00+08:00</updated>
+<id>http://luosky.github.com/2010/12/10/sd2.0-conference</id>
+
+      <content type="html"><![CDATA[<h3>理性的设计</h3>
+
+<p>by 西乔</p>
+
+<ul>
+<li>一个设计只有一个重心</li>
+<li>利用视觉习惯引导用户行为</li>
+<li>人们喜欢数据,哪怕用不同的字号将其突出出来</li>
+<li>空白是好设计的肺部</li>
+<li>好的设计并非源于审美,而是源于对受众的理解</li>
+</ul>
+
+
+<hr />
+
+<h3>LBS应用之道</h3>
+
+<p>by 大众点评</p>
+
+<ul>
+<li>超过100万商家,16million评论</li>
+<li>80个开发者,手机团队10几个</li>
+<li>geocoding</li>
+<li>recerse geocoding</li>
+<li>local business solution</li>
+<li>app 10年1月上线 170万装机量</li>
+<li>lesson learned
+
+<ul>
+<li>数据协议在各种网络和硬件的情况下表现不佳 - 序列化和压缩</li>
+<li>定位偏移 - 辅助定位,反向偏移 各城市非线性偏移</li>
+<li>地图和政策问题 - 内嵌web地图</li>
+<li>多机型兼容问题 -</li>
+</ul>
+</li>
+<li>各个页面定义私有url</li>
+<li>遵循规范,比如维度在前,精度在后</li>
+</ul>
+
+<p><a rel="bookmark" href="http://luosky.github.com/2010/12/10/sd2.0-conference/">&#9875; Permalink</a></p>]]></content>
     </entry>
   
     <entry>
