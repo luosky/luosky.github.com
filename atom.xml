@@ -3,7 +3,7 @@
   <title><![CDATA[Luosky's Playground]]></title>
   <link href="http://luosky.github.com/atom.xml" rel="self"/>
   <link href="http://luosky.github.com/"/>
-  <updated>2012-07-20T10:44:58+08:00</updated>
+  <updated>2012-07-20T11:29:30+08:00</updated>
   <id>http://luosky.github.com/</id>
   <author>
     <name><![CDATA[Luosky]]></name>
@@ -26,7 +26,14 @@
       <content type="html"><![CDATA[<h2>Oh My Zsh 的优点</h2>
 
 <ul>
-<li> 各种补全</li>
+<li> 各种补全
+
+<ul>
+<li>目录补全可以只输入目录的中间部分进行补全</li>
+<li>命令可以补全参数,并且可以显示参数对应的说明</li>
+</ul>
+</li>
+<li> 各种主题</li>
 <li> 目录切换:
 
 <ul>
