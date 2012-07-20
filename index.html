@@ -95,6 +95,108 @@
   <header>
     <h1 class="entry-title">
 
+<a href="/2012/07/20/switch-to-oh-my-zsh/">切换到Oh My Zsh</a>
+
+</h1>
+
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-07-20T10:39:00+08:00" pubdate data-updated="true">Jul 20<span>th</span>, 2012</time>
+         &bull; <a rel="bookmark" href="/2012/07/20/switch-to-oh-my-zsh/">Permalink</a>
+      </p>
+    
+  </header>
+
+<div class="entry-content"><h2>Oh My Zsh 的优点</h2>
+
+<ul>
+<li> 各种补全</li>
+<li> 目录切换:
+
+<ul>
+<li>d : 显示最近使用过的几个目录,按1-9可以直接切换过去</li>
+<li>1-9 : 切换至最近使用过的前n个目录</li>
+<li>.. 等于 cd ..</li>
+<li>… 等于 cd ../..</li>
+<li>mcd xxx    mkdir xxx &amp; cd xxx</li>
+<li>使用~xxx快捷目录来通过 cd ~xxx 甚至是 ~xxx 快速进入对应的目录
+
+<ul>
+<li>在.zshrc里加上 hash -d xxx=&#8221;/Users/Luosky/Documents/xxx&#8221;</li>
+</ul>
+</li>
+</ul>
+</li>
+<li> 各种插件:
+
+<ul>
+<li>extract 直接extract filename ,支持各种tar.gz, bz2, 7z等各种压缩格式</li>
+<li>terminalapp  让OS X Lion下的Terminal 启动时打开上次的目录</li>
+<li>osx
+
+<ul>
+<li>pfd    打印finder的当前路径</li>
+<li>cdf    cd到finder的当前路径</li>
+<li>pushdf pushd 到finder的当前路径</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+
+<h2>一些问题:</h2>
+
+<ul>
+<li>换用zsh后出现ssh到服务器上按tab出现 <code>warning: setlocale: LC_CTYPE: cannot change locale (zh_CN.UTF-8)</code>的问题
+
+<ul>
+<li>解决:
+在~.zshrc内加上
+<code>export LANG=en_US.UTF-8
+export LC_ALL=en_US.UTF-8</code></li>
+</ul>
+</li>
+</ul>
+
+</div>
+
+  <footer>
+    
+    
+  </footer>
+
+
+    </article>
+  
+    
+
+
+
+
+
+
+
+
+
+
+    <article >
+      
+  <header>
+    <h1 class="entry-title">
+
 <a href="/2012/06/21/passkit-passbook-api-study-notes/">PassKit (PassBook Api) 学习笔记</a>
 
 </h1>
@@ -919,117 +1021,6 @@
 
     </article>
   
-    
-
-
-
-
-
-
-
-
-
-
-    <article >
-      
-  <header>
-    <h1 class="entry-title">
-
-<a href="/2011/01/01/my-sync-solution/">我是同步控</a>
-
-</h1>
-
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2011-01-01T00:36:00+08:00" pubdate data-updated="true">Jan 1<span>st</span>, 2011</time>
-         &bull; <a rel="bookmark" href="/2011/01/01/my-sync-solution/">Permalink</a>
-      </p>
-    
-  </header>
-
-<div class="entry-content"><h2>我的同步方案：</h2>
-
-<h3>同步照片：</h3>
-
-<ul>
-<li>instagram
-
-<ul>
-<li>twitter</li>
-<li>facebook</li>
-<li>flickr
-
-<ul>
-<li>wordpress(via <a href="http://devthought.com/wp-o-matic-the-wordpress-rss-agreggator/">WP-o-Matic</a>)
-
-<ul>
-<li>qzone （via <a href="http://liguoliang.com/2010/wordpress-post-to-qzone/">post2Qzone</a>）</li>
-<li><a href="http://renjian.com/">renjian.com</a>(via <a href="http://www.smyx.net/wp-connect.html">WordPress连接微博</a>)</li>
-<li>sina微博(via <a href="http://www.smyx.net/wp-connect.html">WordPress连接微博</a>)</li>
-<li>digu (via <a href="http://www.smyx.net/wp-connect.html">WordPress连接微博</a>)
-
-<ul>
-<li>kaixin001（via 嘀神）</li>
-<li>douban（via 嘀神）</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-
-
-<h3>同步微薄：</h3>
-
-<ul>
-<li>qq签名
-
-<ul>
-<li>follow5
-
-<ul>
-<li>sina微博</li>
-<li>twitter</li>
-<li>digu
-
-<ul>
-<li>kaixin001（via 嘀神）</li>
-<li>douban (via 嘀神)</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-
-
-<p><em>2011-04-09 updated: 图片同步方式中换用<a href="http://www.smyx.net/wp-connect.html">WordPress连接微博</a> 来同步到几个微博</em></p>
-</div>
-
-  <footer>
-    
-    
-  </footer>
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/blog/page/2/">&larr; Older</a>
@@ -1046,6 +1037,10 @@
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/2012/07/20/switch-to-oh-my-zsh/">切换到Oh My Zsh</a>
+      </li>
+    
+      <li class="post">
         <a href="/2012/06/21/passkit-passbook-api-study-notes/">PassKit (PassBook api) 学习笔记</a>
       </li>
     
@@ -1059,10 +1054,6 @@
     
       <li class="post">
         <a href="/2012/03/23/first-time-handle-pull-request-on-github/">第一次处理Github的Pull Request</a>
-      </li>
-    
-      <li class="post">
-        <a href="/2012/02/27/amazing-ios-simulator/">iOS模拟器居然还可以监测出来Mac上正在facetime,做得也太细致了</a>
       </li>
     
   </ul>

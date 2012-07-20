@@ -5,7 +5,7 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>iOS模拟器居然还可以监测出来Mac上正在facetime,做得也太细致了 - Luosky's Playground</title>
+  <title>切换到Oh My Zsh - Luosky's Playground</title>
   <meta name="author" content="Luosky">
   <meta name="Generator" content="Jekyll & Octopress (http://octopress.org)">
 
@@ -18,7 +18,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://luosky.github.com/2012/02/27/amazing-ios-simulator/">
+  <link rel="canonical" href="http://luosky.github.com/2012/07/20/switch-to-oh-my-zsh/">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <script src="/javascripts/octopress.min.js" type="text/javascript"></script>
   <link href="/feed" rel="alternate" title="Luosky's Playground" type="application/atom+xml">
@@ -94,7 +94,7 @@
   <header>
     <h1 class="entry-title">
 
-iOS模拟器居然还可以监测出来Mac上正在facetime,做得也太细致了
+切换到Oh My Zsh
 
 </h1>
 
@@ -112,13 +112,64 @@ iOS模拟器居然还可以监测出来Mac上正在facetime,做得也太细致�
   
 
 
-<time datetime="2012-02-27T00:36:00+08:00" pubdate data-updated="true">Feb 27<span>th</span>, 2012</time>
-         &bull; <a rel="bookmark" href="/2012/02/27/amazing-ios-simulator/">Permalink</a>
+<time datetime="2012-07-20T10:39:00+08:00" pubdate data-updated="true">Jul 20<span>th</span>, 2012</time>
+         &bull; <a rel="bookmark" href="/2012/07/20/switch-to-oh-my-zsh/">Permalink</a>
       </p>
     
   </header>
 
-<div class="entry-content"><p><img class="" src="http://photo.luosky.com/wp-content/uploads/2012/02/Screen-Shot-2012-02-27-at-下午8.36.15-262x494.png" title="iOS" ></p>
+<div class="entry-content"><h2>Oh My Zsh 的优点</h2>
+
+<ul>
+<li> 各种补全</li>
+<li> 目录切换:
+
+<ul>
+<li>d : 显示最近使用过的几个目录,按1-9可以直接切换过去</li>
+<li>1-9 : 切换至最近使用过的前n个目录</li>
+<li>.. 等于 cd ..</li>
+<li>… 等于 cd ../..</li>
+<li>mcd xxx    mkdir xxx &amp; cd xxx</li>
+<li>使用~xxx快捷目录来通过 cd ~xxx 甚至是 ~xxx 快速进入对应的目录
+
+<ul>
+<li>在.zshrc里加上 hash -d xxx=&#8221;/Users/Luosky/Documents/xxx&#8221;</li>
+</ul>
+</li>
+</ul>
+</li>
+<li> 各种插件:
+
+<ul>
+<li>extract 直接extract filename ,支持各种tar.gz, bz2, 7z等各种压缩格式</li>
+<li>terminalapp  让OS X Lion下的Terminal 启动时打开上次的目录</li>
+<li>osx
+
+<ul>
+<li>pfd    打印finder的当前路径</li>
+<li>cdf    cd到finder的当前路径</li>
+<li>pushdf pushd 到finder的当前路径</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+
+<h2>一些问题:</h2>
+
+<ul>
+<li>换用zsh后出现ssh到服务器上按tab出现 <code>warning: setlocale: LC_CTYPE: cannot change locale (zh_CN.UTF-8)</code>的问题
+
+<ul>
+<li>解决:
+在~.zshrc内加上
+<code>export LANG=en_US.UTF-8
+export LC_ALL=en_US.UTF-8</code></li>
+</ul>
+</li>
+</ul>
+
 </div>
 
 
@@ -141,12 +192,12 @@ iOS模拟器居然还可以监测出来Mac上正在facetime,做得也太细致�
   
 
 
-<time datetime="2012-02-27T00:36:00+08:00" pubdate data-updated="true">Feb 27<span>th</span>, 2012</time>
+<time datetime="2012-07-20T10:39:00+08:00" pubdate data-updated="true">Jul 20<span>th</span>, 2012</time>
 
 
 <span class="categories">
   
-    <a class='category' href='/blog/categories/life/'>life</a>, <a class='category' href='/blog/categories/programming/'>programming</a>
+    <a class='category' href='/blog/categories/programing/'>programing</a>
   
 </span>
 
@@ -171,10 +222,8 @@ iOS模拟器居然还可以监测出来Mac上正在facetime,做得也太细致�
     
     <p class="meta">
       
-        <a class="basic-alignment left" href="/2011/04/03/first-week-on-xcode-4/" title="Previous Post: First Week on Xcode ">&laquo; First Week on Xcode </a>
+        <a class="basic-alignment left" href="/2012/06/21/passkit-passbook-api-study-notes/" title="Previous Post: PassKit (PassBook api) 学习笔记">&laquo; PassKit (PassBook api) 学习笔记</a>
       
-      
-        <a class="basic-alignment right" href="/2012/03/23/first-time-handle-pull-request-on-github/" title="Next Post: 第一次处理Github的Pull Request">第一次处理Github的Pull Request &raquo;</a>
       
     </p>
   </footer>
@@ -261,8 +310,8 @@ iOS模拟器居然还可以监测出来Mac上正在facetime,做得也太细致�
       
         
         // var disqus_developer = 1;
-        var disqus_identifier = 'http://luosky.github.com/2012/02/27/amazing-ios-simulator/';
-        var disqus_url = 'http://luosky.github.com/2012/02/27/amazing-ios-simulator/';
+        var disqus_identifier = 'http://luosky.github.com/2012/07/20/switch-to-oh-my-zsh/';
+        var disqus_url = 'http://luosky.github.com/2012/07/20/switch-to-oh-my-zsh/';
         var disqus_script = 'embed.js';
       
     (function () {
