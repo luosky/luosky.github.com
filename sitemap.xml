@@ -1,6 +1,10 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <urlset xmlns='http://www.sitemaps.org/schemas/sitemap/0.9'>
     <url>
+        <loc>http://luosky.github.com/2004/12/11/warlock/</loc>
+        <lastmod>2012-07-21T19:08:09+08:00</lastmod>
+    </url>
+    <url>
         <loc>http://luosky.github.com/2004/12/19/a-long-downtime/</loc>
         <lastmod>2012-07-21T00:11:25+08:00</lastmod>
     </url>
@@ -117,19 +121,19 @@
         <lastmod>2012-07-20T23:34:55+08:00</lastmod>
     </url>
     <url>
+        <loc>http://luosky.github.com/2012/07/22/migrated-to-octopress/</loc>
+        <lastmod>2012-07-22T14:47:35+08:00</lastmod>
+    </url>
+    <url>
         <loc>http://luosky.github.com/about/</loc>
         <lastmod>2012-07-18T00:19:07+08:00</lastmod>
     </url>
     <url>
         <loc>http://luosky.github.com/archives/</loc>
-        <lastmod>2012-07-21T00:32:59+08:00</lastmod>
-    </url>
-    <url>
-        <loc>http://luosky.github.com/feed</loc>
-        <lastmod>2012-07-22T10:45:43+08:00</lastmod>
+        <lastmod>2012-07-22T14:47:35+08:00</lastmod>
     </url>
     <url>
         <loc>http://luosky.github.com/</loc>
-        <lastmod>2012-07-21T00:32:59+08:00</lastmod>
+        <lastmod>2012-07-22T14:47:35+08:00</lastmod>
     </url>
 </urlset>

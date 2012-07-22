@@ -95,6 +95,57 @@
   <header>
     <h1 class="entry-title">
 
+<a href="/2012/07/22/migrated-to-octopress/">Migrated to Octopress</a>
+
+</h1>
+
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-07-22T14:46:00+08:00" pubdate data-updated="true">Jul 22<span>nd</span>, 2012</time>
+         &bull; <a rel="bookmark" href="/2012/07/22/migrated-to-octopress/">Permalink</a>
+      </p>
+    
+  </header>
+
+<div class="entry-content"><p> as title</p>
+</div>
+
+  <footer>
+    
+    
+  </footer>
+
+
+    </article>
+  
+    
+
+
+
+
+
+
+
+
+
+
+    <article >
+      
+  <header>
+    <h1 class="entry-title">
+
 <a href="/2012/07/20/switch-to-oh-my-zsh/">切换到Oh My Zsh</a>
 
 </h1>
@@ -827,207 +878,6 @@ export LC_ALL=en_US.UTF-8</code></li>
 
     </article>
   
-    
-
-
-
-
-
-
-
-
-
-
-    <article >
-      
-  <header>
-    <h1 class="entry-title">
-
-<a href="/2011/01/04/ios-in-app-sms/">iOS App内发送短信</a>
-
-</h1>
-
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2011-01-04T00:36:00+08:00" pubdate data-updated="true">Jan 4<span>th</span>, 2011</time>
-         &bull; <a rel="bookmark" href="/2011/01/04/ios-in-app-sms/">Permalink</a>
-      </p>
-    
-  </header>
-
-<div class="entry-content"><p>iOS4.0新加入了<code>MFMessageComposeViewController</code>和<code>MFMessageComposeViewControllerDelegate</code>,提供了发送短信的接口,可以像发送邮件那样不用跳出程序来发送短信. 介绍可参阅Message UI Framework Reference</p>
-
-<p>一些笔记:</p>
-
-<h3>MFMessageComposeViewController</h3>
-
-<ul>
-<li>提供了操作界面</li>
-<li>使用前必须检查canSendText方法,若返回NO则不应将这个controller展现出来,而应该提示用户不支持发送短信功能.</li>
-<li>界面不能自行定制</li>
-<li>要发送的短信的内容(body)和收件人(recipients)在展现这个controller前需初始化好,展现了之后短信内容不能通过程序来进行修改.不过用户仍然可以手工修改短信内容和选择收件人</li>
-<li>用户点了发送或者取消,或者发送失败时,MFMessageComposeViewControllerDelegate 的- messageComposeViewController:didFinishWithResult:方法都能得到通知,在这里进行相应的处理</li>
-</ul>
-
-
-<p>若在iOS3.0上运行的话,会提示<code>dyld: Symbol not found: _OBJC_CLASS_$_MFMessageComposeViewController</code> 解决方案:</p>
-
-<ol>
-<li>MessageUI.framework的引入类型应选择weak(在target -> Get Info -> General -> Linked Libraries -> MessageUI.framework -> Type 里修改)</li>
-<li>不要在.h文件里直接import MessageUI/MFMessageComposeViewController.h,改为import &lt;MessageUI/MessageUI.h></li>
-</ol>
-
-
-<p>具体的发送代码:</p>
-
-<figure class='code'><div class='highlight'><table><td class='gutter'><pre class='line-numbers'><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-<span class='line-number'>14</span>
-<span class='line-number'>15</span>
-<span class='line-number'>16</span>
-<span class='line-number'>17</span>
-<span class='line-number'>18</span>
-<span class='line-number'>19</span>
-<span class='line-number'>20</span>
-<span class='line-number'>21</span>
-<span class='line-number'>22</span>
-<span class='line-number'>23</span>
-<span class='line-number'>24</span>
-<span class='line-number'>25</span>
-<span class='line-number'>26</span>
-<span class='line-number'>27</span>
-<span class='line-number'>28</span>
-<span class='line-number'>29</span>
-<span class='line-number'>30</span>
-<span class='line-number'>31</span>
-<span class='line-number'>32</span>
-<span class='line-number'>33</span>
-<span class='line-number'>34</span>
-<span class='line-number'>35</span>
-<span class='line-number'>36</span>
-<span class='line-number'>37</span>
-<span class='line-number'>38</span>
-<span class='line-number'>39</span>
-<span class='line-number'>40</span>
-<span class='line-number'>41</span>
-<span class='line-number'>42</span>
-<span class='line-number'>43</span>
-<span class='line-number'>44</span>
-<span class='line-number'>45</span>
-<span class='line-number'>46</span>
-<span class='line-number'>47</span>
-<span class='line-number'>48</span>
-<span class='line-number'>49</span>
-<span class='line-number'>50</span>
-<span class='line-number'>51</span>
-<span class='line-number'>52</span>
-<span class='line-number'>53</span>
-<span class='line-number'>54</span>
-<span class='line-number'>55</span>
-<span class='line-number'>56</span>
-<span class='line-number'>57</span>
-<span class='line-number'>58</span>
-<span class='line-number'>59</span>
-<span class='line-number'>60</span>
-<span class='line-number'>61</span>
-</pre></td><td class='code'><pre><code class='objective-c'><span class='line'><span class="cp">    </span>
-</span><span class='line'><span class="cp">    #pragma mark -</span>
-</span><span class='line'><span class="cp">    #pragma mark SMS</span>
-</span><span class='line'>
-</span><span class='line'>    <span class="o">-</span><span class="p">(</span><span class="kt">IBAction</span><span class="p">)</span><span class="nl">showSMSPicker:</span><span class="p">(</span><span class="kt">id</span><span class="p">)</span><span class="n">sender</span> <span class="p">{</span>
-</span><span class='line'>      <span class="c1">// The MFMessageComposeViewController class is only available in iPhone OS 4.0 or later.</span>
-</span><span class='line'>      <span class="c1">// So, we must verify the existence of the above class and log an error message for devices</span>
-</span><span class='line'>      <span class="c1">//     running earlier versions of the iPhone OS. Set feedbackMsg if device doesn&#39;t support</span>
-</span><span class='line'>      <span class="c1">//     MFMessageComposeViewController API.</span>
-</span><span class='line'>      <span class="n">Class</span> <span class="n">messageClass</span> <span class="o">=</span> <span class="p">(</span><span class="n">NSClassFromString</span><span class="p">(</span><span class="s">@&quot;MFMessageComposeViewController&quot;</span><span class="p">));</span>
-</span><span class='line'>
-</span><span class='line'>      <span class="k">if</span> <span class="p">(</span><span class="n">messageClass</span> <span class="o">!=</span> <span class="nb">nil</span><span class="p">)</span> <span class="p">{</span>
-</span><span class='line'>          <span class="c1">// Check whether the current device is configured for sending SMS messages</span>
-</span><span class='line'>          <span class="k">if</span> <span class="p">([</span><span class="n">messageClass</span> <span class="n">canSendText</span><span class="p">])</span> <span class="p">{</span>
-</span><span class='line'>              <span class="p">[</span><span class="n">self</span> <span class="n">displaySMSComposerSheet</span><span class="p">];</span>
-</span><span class='line'>          <span class="p">}</span>
-</span><span class='line'>          <span class="k">else</span> <span class="p">{</span>
-</span><span class='line'>              <span class="p">[</span><span class="n">UIAlertView</span> <span class="nl">quickAlertWithTitle:</span><span class="s">@&quot;设备没有短信功能&quot;</span> <span class="nl">messageTitle:</span><span class="nb">nil</span> <span class="nl">dismissTitle:</span><span class="s">@&quot;关闭&quot;</span><span class="p">];</span>
-</span><span class='line'>          <span class="p">}</span>
-</span><span class='line'>      <span class="p">}</span>
-</span><span class='line'>      <span class="k">else</span> <span class="p">{</span>
-</span><span class='line'>          <span class="p">[</span><span class="n">UIAlertView</span> <span class="nl">quickAlertWithTitle:</span><span class="s">@&quot;iOS版本过低,iOS4.0以上才支持程序内发送短信&quot;</span> <span class="nl">messageTitle:</span><span class="nb">nil</span> <span class="nl">dismissTitle:</span><span class="s">@&quot;关闭&quot;</span><span class="p">];</span>
-</span><span class='line'>      <span class="p">}</span>
-</span><span class='line'>    <span class="p">}</span>
-</span><span class='line'>
-</span><span class='line'>    <span class="o">-</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="n">displaySMSComposerSheet</span>
-</span><span class='line'>    <span class="p">{</span>
-</span><span class='line'>      <span class="n">MFMessageComposeViewController</span> <span class="o">*</span><span class="n">picker</span> <span class="o">=</span> <span class="p">[[</span><span class="n">MFMessageComposeViewController</span> <span class="n">alloc</span><span class="p">]</span> <span class="n">init</span><span class="p">];</span>
-</span><span class='line'>      <span class="n">picker</span><span class="p">.</span><span class="n">messageComposeDelegate</span> <span class="o">=</span> <span class="n">self</span><span class="p">;</span>
-</span><span class='line'>
-</span><span class='line'>      <span class="n">NSMutableString</span><span class="o">*</span> <span class="n">absUrl</span> <span class="o">=</span> <span class="p">[[</span><span class="n">NSMutableString</span> <span class="n">alloc</span><span class="p">]</span> <span class="nl">initWithString:</span><span class="n">web</span><span class="p">.</span><span class="n">request</span><span class="p">.</span><span class="n">URL</span><span class="p">.</span><span class="n">absoluteString</span><span class="p">];</span>
-</span><span class='line'>      <span class="p">[</span><span class="n">absUrl</span> <span class="nl">replaceOccurrencesOfString:</span><span class="s">@&quot;http://i.aizheke.com&quot;</span> <span class="nl">withString:</span><span class="s">@&quot;http://m.aizheke.com&quot;</span> <span class="nl">options:</span><span class="n">NSCaseInsensitiveSearch</span> <span class="nl">range:</span><span class="n">NSMakeRange</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="p">[</span><span class="n">absUrl</span> <span class="n">length</span><span class="p">])];</span>
-</span><span class='line'>
-</span><span class='line'>      <span class="n">picker</span><span class="p">.</span><span class="n">body</span><span class="o">=</span><span class="p">[</span><span class="n">NSString</span> <span class="nl">stringWithFormat:</span><span class="s">@&quot;我在爱折客上看到：%@ 可能对你有用，推荐给你！link：%@&quot;</span>
-</span><span class='line'>                                          <span class="p">,[</span><span class="n">web</span> <span class="nl">stringByEvaluatingJavaScriptFromString:</span><span class="s">@&quot;document.title&quot;</span><span class="p">]</span>
-</span><span class='line'>                                          <span class="p">,</span><span class="n">absUrl</span><span class="p">];</span>
-</span><span class='line'>      <span class="p">[</span><span class="n">absUrl</span> <span class="n">release</span><span class="p">];</span>
-</span><span class='line'>      <span class="p">[</span><span class="n">self</span> <span class="nl">presentModalViewController:</span><span class="n">picker</span> <span class="nl">animated:</span><span class="n">YES</span><span class="p">];</span>
-</span><span class='line'>      <span class="p">[</span><span class="n">picker</span> <span class="n">release</span><span class="p">];</span>
-</span><span class='line'>    <span class="p">}</span>
-</span><span class='line'>
-</span><span class='line'>    <span class="o">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nl">messageComposeViewController:</span><span class="p">(</span><span class="n">MFMessageComposeViewController</span> <span class="o">*</span><span class="p">)</span><span class="n">controller</span>
-</span><span class='line'>                   <span class="nl">didFinishWithResult:</span><span class="p">(</span><span class="n">MessageComposeResult</span><span class="p">)</span><span class="n">result</span> <span class="p">{</span>
-</span><span class='line'>
-</span><span class='line'>      <span class="k">switch</span> <span class="p">(</span><span class="n">result</span><span class="p">)</span>
-</span><span class='line'>      <span class="p">{</span>
-</span><span class='line'>          <span class="k">case</span> <span class="nl">MessageComposeResultCancelled:</span>
-</span><span class='line'>              <span class="n">LOG_EXPR</span><span class="p">(</span><span class="s">@&quot;Result: SMS sending canceled&quot;</span><span class="p">);</span>
-</span><span class='line'>              <span class="k">break</span><span class="p">;</span>
-</span><span class='line'>          <span class="k">case</span> <span class="nl">MessageComposeResultSent:</span>
-</span><span class='line'>              <span class="n">LOG_EXPR</span><span class="p">(</span><span class="s">@&quot;Result: SMS sent&quot;</span><span class="p">);</span>
-</span><span class='line'>              <span class="k">break</span><span class="p">;</span>
-</span><span class='line'>          <span class="k">case</span> <span class="nl">MessageComposeResultFailed:</span>
-</span><span class='line'>              <span class="p">[</span><span class="n">UIAlertView</span> <span class="nl">quickAlertWithTitle:</span><span class="s">@&quot;短信发送失败&quot;</span> <span class="nl">messageTitle:</span><span class="nb">nil</span> <span class="nl">dismissTitle:</span><span class="s">@&quot;关闭&quot;</span><span class="p">];</span>
-</span><span class='line'>              <span class="k">break</span><span class="p">;</span>
-</span><span class='line'>          <span class="k">default</span><span class="o">:</span>
-</span><span class='line'>              <span class="n">LOG_EXPR</span><span class="p">(</span><span class="s">@&quot;Result: SMS not sent&quot;</span><span class="p">);</span>
-</span><span class='line'>              <span class="k">break</span><span class="p">;</span>
-</span><span class='line'>      <span class="p">}</span>
-</span><span class='line'>      <span class="p">[</span><span class="n">self</span> <span class="nl">dismissModalViewControllerAnimated:</span><span class="n">YES</span><span class="p">];</span>
-</span><span class='line'>    <span class="p">}</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-
-</div>
-
-  <footer>
-    
-    
-  </footer>
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/blog/page/2/">&larr; Older</a>
@@ -1044,6 +894,10 @@ export LC_ALL=en_US.UTF-8</code></li>
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/2012/07/22/migrated-to-octopress/">Migrated to Octopress</a>
+      </li>
+    
+      <li class="post">
         <a href="/2012/07/20/switch-to-oh-my-zsh/">切换到Oh My Zsh</a>
       </li>
     
@@ -1057,10 +911,6 @@ export LC_ALL=en_US.UTF-8</code></li>
     
       <li class="post">
         <a href="/2012/03/23/programmer-saver/">程序员的福音</a>
-      </li>
-    
-      <li class="post">
-        <a href="/2012/03/23/first-time-handle-pull-request-on-github/">第一次处理Github的Pull Request</a>
       </li>
     
   </ul>
