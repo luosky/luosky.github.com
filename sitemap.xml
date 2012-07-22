@@ -1,6 +1,70 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <urlset xmlns='http://www.sitemaps.org/schemas/sitemap/0.9'>
     <url>
+        <loc>http://luosky.github.com/2004/12/19/a-long-downtime/</loc>
+        <lastmod>2012-07-21T00:11:25+08:00</lastmod>
+    </url>
+    <url>
+        <loc>http://luosky.github.com/2005/01/05/amazing-eq2/</loc>
+        <lastmod>2012-07-20T23:41:42+08:00</lastmod>
+    </url>
+    <url>
+        <loc>http://luosky.github.com/2005/01/08/badger-badger-badger/</loc>
+        <lastmod>2012-07-20T23:28:04+08:00</lastmod>
+    </url>
+    <url>
+        <loc>http://luosky.github.com/2005/01/13/md5-collision/</loc>
+        <lastmod>2012-07-20T23:34:00+08:00</lastmod>
+    </url>
+    <url>
+        <loc>http://luosky.github.com/2005/01/19/how-vitality-works/</loc>
+        <lastmod>2012-07-20T23:41:25+08:00</lastmod>
+    </url>
+    <url>
+        <loc>http://luosky.github.com/2005/05/01/boulevard-of-broken-dreams/</loc>
+        <lastmod>2012-07-20T23:45:59+08:00</lastmod>
+    </url>
+    <url>
+        <loc>http://luosky.github.com/2005/06/02/sth-about-orz/</loc>
+        <lastmod>2012-07-20T23:48:13+08:00</lastmod>
+    </url>
+    <url>
+        <loc>http://luosky.github.com/2005/06/29/time-to-graduate/</loc>
+        <lastmod>2012-07-20T23:51:54+08:00</lastmod>
+    </url>
+    <url>
+        <loc>http://luosky.github.com/2005/07/13/delicious-back-to-school+/</loc>
+        <lastmod>2012-07-20T23:54:48+08:00</lastmod>
+    </url>
+    <url>
+        <loc>http://luosky.github.com/2005/07/21/no-title/</loc>
+        <lastmod>2012-07-21T00:02:14+08:00</lastmod>
+    </url>
+    <url>
+        <loc>http://luosky.github.com/2005/11/16/sayonara_norrath/</loc>
+        <lastmod>2012-07-21T00:05:07+08:00</lastmod>
+    </url>
+    <url>
+        <loc>http://luosky.github.com/2005/11/30/seven-myth-in-china-it+/</loc>
+        <lastmod>2012-07-21T00:08:25+08:00</lastmod>
+    </url>
+    <url>
+        <loc>http://luosky.github.com/2005/12/12/best-friend-in-toilet/</loc>
+        <lastmod>2012-07-21T00:11:01+08:00</lastmod>
+    </url>
+    <url>
+        <loc>http://luosky.github.com/2006/01/05/raid-to-death/</loc>
+        <lastmod>2012-07-21T00:13:36+08:00</lastmod>
+    </url>
+    <url>
+        <loc>http://luosky.github.com/2006/02/09/zz-from-xys/</loc>
+        <lastmod>2012-07-21T00:30:50+08:00</lastmod>
+    </url>
+    <url>
+        <loc>http://luosky.github.com/2006/03/19/leaving-on-a-griffon/</loc>
+        <lastmod>2012-07-21T00:32:59+08:00</lastmod>
+    </url>
+    <url>
         <loc>http://luosky.github.com/2010/10/31/ios-notification-study-note/</loc>
         <lastmod>2012-07-19T01:44:01+08:00</lastmod>
     </url>
@@ -50,7 +114,7 @@
     </url>
     <url>
         <loc>http://luosky.github.com/2012/07/20/switch-to-oh-my-zsh/</loc>
-        <lastmod>2012-07-20T11:29:30+08:00</lastmod>
+        <lastmod>2012-07-20T23:34:55+08:00</lastmod>
     </url>
     <url>
         <loc>http://luosky.github.com/about/</loc>
@@ -58,10 +122,10 @@
     </url>
     <url>
         <loc>http://luosky.github.com/archives/</loc>
-        <lastmod>2012-07-20T11:29:30+08:00</lastmod>
+        <lastmod>2012-07-21T00:32:59+08:00</lastmod>
     </url>
     <url>
         <loc>http://luosky.github.com/</loc>
-        <lastmod>2012-07-20T11:29:30+08:00</lastmod>
+        <lastmod>2012-07-21T00:32:59+08:00</lastmod>
     </url>
 </urlset>

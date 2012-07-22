@@ -5,7 +5,7 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>iOS Notification 学习笔记 - Luosky's Playground</title>
+  <title>Category: life,other - Luosky's Playground</title>
   <meta name="author" content="Luosky">
   <meta name="Generator" content="Jekyll & Octopress (http://octopress.org)">
 
@@ -18,7 +18,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://luosky.github.com/2010/10/31/ios-notification-study-note/">
+  <link rel="canonical" href="http://luosky.github.comblog/categories/life-other/">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <script src="/javascripts/octopress.min.js" type="text/javascript"></script>
   <link href="/feed" rel="alternate" title="Luosky's Playground" type="application/atom+xml">
@@ -46,7 +46,7 @@
   <link href="/octopress-favicon.png" rel="icon">
 </head>
 
-<body   >
+<body  id="archive"   >
   <header role="banner"><hgroup>
   <h1><a href="/">Luosky's Playground</a></h1>
   
@@ -78,184 +78,56 @@
   <div id="main">
     <div id="content">
       <div>
-
-
-
-
-
-
-
-
-
-
-
-<article class="hentry " role="article">
+<article role="article">
   
   <header>
-    <h1 class="entry-title">
+    <h1 class="entry-title">Category: Life,other</h1>
+    
+  </header>
+  
+  <div id="blog-archives" class="category">
 
-iOS Notification 学习笔记
+
+
+  
+  <h2>2005</h2>
+
+
+
+
+
+
+
+
+
+
+
+
+<article >
+  
+<h1 class="entry-title">
+
+<a href="/2005/12/12/best-friend-in-toilet/">厕上极品</a>
 
 </h1>
 
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2010-10-31T00:17:00+08:00" pubdate data-updated="true">Oct 31<span>st</span>, 2010</time>
-         &bull; <a rel="bookmark" href="/2010/10/31/ios-notification-study-note/">Permalink</a>
-      </p>
-    
-  </header>
-
-<div class="entry-content"><h2>分类</h2>
-
-<ol>
-<li><p>本地notification</p>
-
-<ul>
-<li>4.0才开始支持</li>
-<li>无需网络,无需走和Apple推送服务器的整个推送流程,一切都在本地发生</li>
-</ul>
-</li>
-<li><p>push notification</p>
-
-<ul>
-<li>3.0开始支持</li>
-<li>对于因为网络原因未发送到用户手机上的notification ,APNs会保留起来,待该device联网后发送.但对每台机器的每个应用只会保留一条,后来的覆盖之前的.</li>
-<li>payload大小不超过256byte</li>
-<li><strong>每次应用程序启动</strong>时都需向APNs注册,获得device token后将其传回应用的provider(application的server端)</li>
-<li>provider要发送notification时,需附带这个device token</li>
-<li>APNs会反馈持续发送失败的device 列表给provider,provider应停止向这些device发送notification</li>
-<li>icon budge上显示的数字就是provider发过来的数字,不会累加.</li>
-</ul>
-</li>
-</ol>
-
-
-<h2>接收到notification时的处理</h2>
-
-<p>本地notification和push notification对用户来讲没什么不同,当用户接收到一个notification时:</p>
-
-<ul>
-<li>若应用在后台运行,或者没有运行时
-
-<ul>
-<li>展现这个notification(提醒,声音和icon badge).若用户点了这个提醒(或是划动解锁了屏幕),则以notification带的payload作为参数调用<code>application:didFinishLaunchingWithOptions:</code>方法启动应用</li>
-</ul>
-</li>
-<li>若正在前台运行
-
-<ul>
-<li>若是push notification,则<code>application:didReceiveRemoteNotification:</code>被调用</li>
-<li>若是本地的notification,则 <code>application:didReceiveLocalNotification:</code> 会被调用</li>
-</ul>
-</li>
-</ul>
-
-
-<h2>建立推送服务器</h2>
-
-<p>要发送notification的provider需先获取SSL证书.一个证书只能用于一个应用.且有测试(sandbox)证书和正式证书之分:</p>
-
-<ul>
-<li>测试(sandbox):<a href="http://gateway.sandbox.push.apple.com">gateway.sandbox.push.apple.com</a>, outbound TCP port 2195.</li>
-<li>正式:<a href="http://gateway.push.apple.com">gateway.push.apple.com</a>, outbound TCP port 2195.</li>
-</ul>
-
-
-<p>iOS Develop Program的用户有三种角色:</p>
-
-<ol>
-<li>team agent</li>
-<li>team admin</li>
-<li>team member.</li>
-</ol>
-
-
-<p>只有team agent可以创建SSL证书<br/>
-team agent 和team admin可以创建provisioning profile<br/>
-team member只能下载和安装证书及profile</p>
-</div>
-
-
-  <footer>
-    <p class="meta">
-      
-  
-
-<span class="byline author vcard">Posted by <span class="fn">Luosky</span></span>
-
-
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2010-10-31T00:17:00+08:00" pubdate data-updated="true">Oct 31<span>st</span>, 2010</time>
-
-
-<span class="categories">
-  
-    <a class='category' href='/blog/categories/ios-programming/'>iOS,programming</a>
-  
-</span>
-
-
-
-      
-
-    </p>
-    
-      <div class="sharing">
-  
-    
-      <a href="http://twitter.com/share" title="Tweet this" class="twitter-share" target="_blank">Tweet</a>
-    
+<time datetime="2005-12-12T18:48:00+08:00" pubdate><span class='month'>Dec</span> <span class='day'>12</span> <span class='year'>2005</span></time>
+<footer>
   
   
   
+  <span class="categories">posted in <a class='category' href='/blog/categories/life-other/'>life,other</a></span>
   
+</footer>
 
-</div>
-
-    
-    <p class="meta">
-      
-        <a class="basic-alignment left" href="/2006/03/19/leaving-on-a-griffon/" title="Previous Post: Leaving On A Griffon">&laquo; Leaving On A Griffon</a>
-      
-      
-        <a class="basic-alignment right" href="/2010/12/10/sd2.0-conference/" title="Next Post: SD2.0大会笔记">SD2.0大会笔记 &raquo;</a>
-      
-    </p>
-  </footer>
 </article>
 
-<section>
-  <h1>Comments</h1>
-  
+</div>
 
   
-    <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-</div>
-  
-</section>
+</article>
+
+
 
 </div>
 
@@ -327,10 +199,7 @@ team member只能下载和安装证书及profile</p>
 			var disqus_developer = '1';
       
         
-        // var disqus_developer = 1;
-        var disqus_identifier = 'http://luosky.github.com/2010/10/31/ios-notification-study-note/';
-        var disqus_url = 'http://luosky.github.com/2010/10/31/ios-notification-study-note/';
-        var disqus_script = 'embed.js';
+        var disqus_script = 'count.js';
       
     (function () {
       var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
