@@ -95,6 +95,148 @@
   <header>
     <h1 class="entry-title">
 
+<a href="/2012/07/24/create-custom-rss-feed-for-octopress-to-be-compatible-with-your-previous-blog/">Create Custom Rss Feed for Octopress to Be Compatible With Your Previous Blog</a>
+
+</h1>
+
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-07-24T22:27:00+08:00" pubdate data-updated="true">Jul 24<span>th</span>, 2012</time>
+         &bull; <a rel="bookmark" href="/2012/07/24/create-custom-rss-feed-for-octopress-to-be-compatible-with-your-previous-blog/">Permalink</a>
+      </p>
+    
+  </header>
+
+<div class="entry-content"><p>Octopress offers an atom.xml feed only. But many other blog providers&#8217; default feed is different from this, such as /feed on wordpress. So how to move your existing blog subscribers smoothly from your old blog to Octopress?</p>
+
+<p>Rss feed address can be change by modifying the <code>subscribe_rss</code> value in _config.yml. But this only change the url for the feed link on your page. It won&#8217;t generate a feed there. Then how do you generate a feed there?</p>
+
+<h2>If you have ssh access to your blog server:</h2>
+
+<p>just ssh to the server and do   <code>$ ln -s atom.xml $your_rss_file</code>, then you are done.</p>
+
+<h2>If you don&#8217;t have ssh access:</h2>
+
+<p>If you host your Octopress on heroku or github, then you have no ssh access to the server.</p>
+
+<h3>For heroku user</h3>
+
+<p>You can redirect the request. Details can be found in the redirect part of this <a href="http://approache.com/blog/migrating-from-blogger-to-octopress/">article</a>, and code can be found <a href="https://github.com/dnagir/approache-redirects/blob/master/app.rb">here</a>.</p>
+
+<h3>For github user</h3>
+
+<h4>Simple method:</h4>
+
+<p>You can simply copy the atom.xml in your source(not public) directory to any location in the source directory or its sub-directory.</p>
+
+<p>But this method has a little disadvantage, that due to your have two(or more) same feed source files now, Octopress will generate the rss feed more than one time. But that would not be a problem.</p>
+
+<h4>Better method:</h4>
+
+<p>To eliminate this disadvantage, I added a rake task to copy the generated atom.xml to other feed files in the Rakefile as follow:</p>
+
+<figure class='code'><div class='highlight'><table><td class='gutter'><pre class='line-numbers'><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="c1"># Feed files other than atom.xml that needed to be compatible with previous blog</span>
+</span><span class='line'><span class="n">feed_files</span> <span class="o">=</span> <span class="o">[</span><span class="s2">&quot;feed&quot;</span><span class="o">]</span>
+</span><span class='line'>
+</span><span class='line'><span class="n">desc</span> <span class="s2">&quot;copy atom.xml to feed_files&quot;</span>
+</span><span class='line'><span class="n">task</span> <span class="ss">:copyfeeds</span> <span class="k">do</span>
+</span><span class='line'>  <span class="n">feed_files</span><span class="o">.</span><span class="n">each</span> <span class="k">do</span> <span class="o">|</span><span class="n">filename</span><span class="o">|</span>
+</span><span class='line'>    <span class="n">cp</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">#{</span><span class="n">public_dir</span><span class="si">}</span><span class="s2">/atom.xml&quot;</span><span class="p">,</span><span class="s2">&quot;</span><span class="si">#{</span><span class="n">public_dir</span><span class="si">}</span><span class="s2">/</span><span class="si">#{</span><span class="n">filename</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</span><span class='line'>  <span class="k">end</span>
+</span><span class='line'><span class="k">end</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>And invoke the task before push to github by modify the deploy task in Rakefile:</p>
+
+<figure class='code'><div class='highlight'><table><td class='gutter'><pre class='line-numbers'><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">desc</span> <span class="s2">&quot;Default deploy task&quot;</span>
+</span><span class='line'><span class="n">task</span> <span class="ss">:deploy</span> <span class="k">do</span>
+</span><span class='line'>  <span class="no">Rake</span><span class="o">::</span><span class="no">Task</span><span class="o">[</span><span class="ss">:copydot</span><span class="o">].</span><span class="n">invoke</span><span class="p">(</span><span class="n">source_dir</span><span class="p">,</span> <span class="n">public_dir</span><span class="p">)</span>
+</span><span class='line'>  <span class="no">Rake</span><span class="o">::</span><span class="no">Task</span><span class="o">[</span><span class="ss">:copyfeeds</span><span class="o">].</span><span class="n">invoke</span>
+</span><span class='line'>  <span class="no">Rake</span><span class="o">::</span><span class="no">Task</span><span class="o">[</span><span class="s2">&quot;</span><span class="si">#{</span><span class="n">deploy_default</span><span class="si">}</span><span class="s2">&quot;</span><span class="o">].</span><span class="n">execute</span>
+</span><span class='line'><span class="k">end</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<h4>A little problem and how to work around:</h4>
+
+<p>Methods above serve well if the feed you want is somehing like rss.xml. But there is still a little problem if your old feed url is like /feed.</p>
+
+<p>Since in github pages, the content-type of a file is determinate by the file extension. The response content-type of the request to /feed is application/octet-stream rather than text/xml as a normal rss feed. When user clicked on the /feed clink, it eventual downloads the feed file other than displaying the feed content or bringing up the Rss subscribe interface. And even if you add the address to google reader manually , although it can read the content first time you import this feed, you can&#8217;t get further updates.</p>
+
+<p>What is worse is that github has no support for .htaccess
+ or other ways to redirect /feed to atom.xml.</p>
+
+<p>After searching a long time and no solution was found, I almost gave up. But suddenly I came up with an idea: how about look /feed as a directory rather than a file? Then the /feed request eventually redirect to /feed/index.html, and the content-type can be specified in the html.</p>
+
+<p>I tried that. And it DID WORK!</p>
+
+<p>So the solution is :</p>
+
+<ul>
+<li>copy your source/atom.xml to source/feed/index.xml if you use the simple method</li>
+</ul>
+
+
+<p>or</p>
+
+<ul>
+<li>set the feed_files = [&#8220;feed/index.html&#8221;] if you use the better method</li>
+</ul>
+
+</div>
+
+  <footer>
+    
+    
+  </footer>
+
+
+    </article>
+  
+    
+
+
+
+
+
+
+
+
+
+
+    <article >
+      
+  <header>
+    <h1 class="entry-title">
+
 <a href="/2012/07/22/migrated-to-octopress/">Migrated to Octopress</a>
 
 </h1>
@@ -805,79 +947,6 @@ export LC_ALL=en_US.UTF-8</code></li>
 
     </article>
   
-    
-
-
-
-
-
-
-
-
-
-
-    <article >
-      
-  <header>
-    <h1 class="entry-title">
-
-<a href="/2011/01/06/my-second-ios-app/">我的第二个iOS应用 爱折客 更新了</a>
-
-</h1>
-
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2011-01-06T00:36:00+08:00" pubdate data-updated="true">Jan 6<span>th</span>, 2011</time>
-         &bull; <a rel="bookmark" href="/2011/01/06/my-second-ios-app/">Permalink</a>
-      </p>
-    
-  </header>
-
-<div class="entry-content"><p>我做的第二个iOS应用[爱折客][]更新了,上海地区的iPhone用户欢迎试用:</p>
-
-<p><a href="http://photo.luosky.com/wp-content/uploads/2011/01/Default.png"><img src="http://photo.luosky.com/wp-content/uploads/2011/01/Default.png" title="Default" alt="" /></a></p>
-
-<h3>显示你附近的优惠券:</h3>
-
-<p><img src="http://a1.phobos.apple.com/us/r1000/002/Purple/58/00/1e/mzl.yzjshxuf.320x480-75.jpg" title="附近" alt="" /></p>
-
-<h3>优惠券页面:</h3>
-
-<p><img src="http://a1.phobos.apple.com/us/r1000/040/Purple/61/c0/b0/mzl.yxnuejnc.320x480-75.jpg" title="优惠券" alt="" /></p>
-
-<h3>你关注的店的动态:</h3>
-
-<p><img src="http://a1.phobos.apple.com/us/r1000/036/Purple/73/64/ff/mzl.dqxvrrxb.320x480-75.jpg" title="我的店" alt="" /></p>
-
-<h3>放入口袋的优惠券:</h3>
-
-<p><img src="http://a1.phobos.apple.com/us/r1000/044/Purple/58/9f/6d/mzl.jlaqcrzy.320x480-75.jpg" title="口袋" alt="" /></p>
-
-<h3>评论箱:</h3>
-
-<p><img src="http://a1.phobos.apple.com/us/r1000/056/Purple/6e/39/ee/mzl.yvnvogck.320x480-75.jpg" title="评论箱" alt="" /></p>
-</div>
-
-  <footer>
-    
-    
-  </footer>
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/blog/page/2/">&larr; Older</a>
@@ -894,6 +963,10 @@ export LC_ALL=en_US.UTF-8</code></li>
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/2012/07/24/create-custom-rss-feed-for-octopress-to-be-compatible-with-your-previous-blog/">Create Custom Rss Feed for Octopress to be Compatible with Your Previous Blog</a>
+      </li>
+    
+      <li class="post">
         <a href="/2012/07/22/migrated-to-octopress/">Migrated to Octopress</a>
       </li>
     
@@ -907,10 +980,6 @@ export LC_ALL=en_US.UTF-8</code></li>
     
       <li class="post">
         <a href="/2012/05/10/wireless-music-solution/">家庭无线音乐方案</a>
-      </li>
-    
-      <li class="post">
-        <a href="/2012/03/23/programmer-saver/">程序员的福音</a>
       </li>
     
   </ul>
