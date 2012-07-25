@@ -95,7 +95,7 @@
   <header>
     <h1 class="entry-title">
 
-<a href="/2012/07/24/create-custom-rss-feed-for-octopress-to-be-compatible-with-your-previous-blog/">Create Custom Rss Feed for Octopress to Be Compatible With Your Previous Blog</a>
+<a href="/2012/07/24/create-custom-rss-feed-for-octopress/">Create Custom Rss Feed for Octopress</a>
 
 </h1>
 
@@ -114,7 +114,7 @@
 
 
 <time datetime="2012-07-24T22:27:00+08:00" pubdate data-updated="true">Jul 24<span>th</span>, 2012</time>
-         &bull; <a rel="bookmark" href="/2012/07/24/create-custom-rss-feed-for-octopress-to-be-compatible-with-your-previous-blog/">Permalink</a>
+         &bull; <a rel="bookmark" href="/2012/07/24/create-custom-rss-feed-for-octopress/">Permalink</a>
       </p>
     
   </header>
@@ -808,7 +808,7 @@ export LC_ALL=en_US.UTF-8</code></li>
   <header>
     <h1 class="entry-title">
 
-<a href="/2011/04/03/first-week-on-xcode-4/">First Week on Xcode</a>
+<a href="/2012/01/02/my-2011/">2011年小结</a>
 
 </h1>
 
@@ -826,39 +826,67 @@ export LC_ALL=en_US.UTF-8</code></li>
   
 
 
-<time datetime="2011-04-03T00:36:00+08:00" pubdate data-updated="true">Apr 3<span>rd</span>, 2011</time>
-         &bull; <a rel="bookmark" href="/2011/04/03/first-week-on-xcode-4/">Permalink</a>
+<time datetime="2012-01-02T00:36:00+08:00" pubdate data-updated="true">Jan 2<span>nd</span>, 2012</time>
+         &bull; <a rel="bookmark" href="/2012/01/02/my-2011/">Permalink</a>
       </p>
     
   </header>
 
-<div class="entry-content"><p>经历了上周的one week on rails,这周又切换回iOS了.自从更新了Xcode 4之后,就跑去做支付宝连接和学习Ruby on Rails去了,一直没有碰Xcode.</p>
+<div class="entry-content"><h1>2011年小结</h1>
 
-<p>Xcode 4相比Xcode 3变化好大,这一周花了N多时间在熟悉和折腾Xcode 4上.</p>
+<h1>2011年小结</h1>
 
-<p>Xcode 4亮点很多,比如Interface Builder现在和Xcode整合在一起了,创建outlet只要拖动到代码里就搞定了,非常方便,让我不禁又重回xib的怀抱.还有其他不少改进.</p>
+<h2>Blog</h2>
 
-<p>相关的文章已经很多了.这里就仅记录下碰到的问题,方便后来者:</p>
+<blockquote><p>发表了<strong><em>256</em></strong>篇blog (btw,这个数字真不错)<br/>
+<a href="http://luosky.com">link</a></p></blockquote>
 
-<h3>无法自动补全 / 没有语法高亮 的问题:</h3>
+<h2>电影</h2>
 
-<p>在build settings里将precompile prefix header设为NO,删掉Derived Data目录(在Organizer里可以找到),等index完之后再看看</p>
+<blockquote><p>2011 年，看了 <strong><em>58</em></strong> 部电影，打出 <strong><em>8.4</em></strong> 的平均分。电影关键词是： 美剧 电视剧 文艺 暴力 成长 奇幻 浪漫 搞笑 友情 政<br/>
+治<br/>
+<a href="http://movie.douban.com/people/Luosky/collect">link</a></p></blockquote>
 
-<h3>打开static library时出现 &#8220;workspace integrity&#8221;错误:</h3>
+<h2>音乐</h2>
 
-<p>这一般是在打开了引用这个static library的项目的情况下打开这个static library项目导致的.关掉那个项目的xcode窗口即可.</p>
+<blockquote><p>我在虾米的这些年，累计听歌<strong><em>10285</em></strong>首！<br/>
+<a href="http://www.xiami.com/event/threeyears-ufo/userid/35579">link</a></p></blockquote>
 
-<h3>按照文档创建workspace后将static library项目拖进workspace结果只是认成是一个文件的问题:</h3>
+<h2>Google Reader</h2>
 
-<p>同上.因为这个static library 项目已经在别的xcode窗口中打开了.</p>
+<blockquote><p>Since June 22, 2006 you have read a total of <strong><em>101,836</em></strong> articles.</p></blockquote>
 
-<h3>带有static library的项目找不到lib的问题:</h3>
+<h2>电脑使用情况(从下半年开始使用<a href="http://rescuetime.com/ref/87379">RescueTime</a>统计)</h2>
 
-<p>检查static library项目和主项目的building setting是否一致.比如主项目的building setting用的是自建的Distribution而不是Release,那么在static library里也得有这个Distribution名字的setting(并且由于前面的workspace integrity问题当时还没解决,无法打开该library项目,使得这个问题花了我n多时间才解决)</p>
+<h3>Overview</h3>
 
-<h3>带有static library的项目用Organizer提交到app store时无法verify/share/submit的问题:</h3>
+<p><img src="http://luosky.com/wp-content/uploads/2012/01/Overview.jpg" alt="image" /></p>
 
-<p>在static library的building settings里将skip install设为YES</p>
+<h3>All Activities</h3>
+
+<p><img src="http://luosky.com/wp-content/uploads/2012/01/all_activities.jpg" alt="image" /></p>
+
+<p>Finder居然花了33h 42m,位居第七,实在超乎想象.看来是应该找个替代品了. 不知道Alfred的Power Pack能否完全替代Finder?</p>
+
+<h3>Activities by week</h3>
+
+<p><img src="http://luosky.com/wp-content/uploads/2012/01/activities_by_weeks.jpg" alt="image" /></p>
+
+<h2>去过的地方</h2>
+
+<p><img src="/images/blog/Screen-Shot-2012-01-02.png" alt="image" /></p>
+
+<blockquote><p>已行驶 <strong><em>7,537</em></strong> 公里,距月球还有 <strong><em>355,566</em></strong> 多公里</p></blockquote>
+
+<h3>在上海的签到点</h3>
+
+<p><img src="http://luosky.com/wp-content/uploads/2012/01/Where-Do-You-Go-create-a-heat-map-of-your-Foursquare-checkins-1-21.jpg" alt="image" /></p>
+
+<h3>在厦门的签到点</h3>
+
+<p><img src="http://luosky.com/wp-content/uploads/2012/01/xiamen_checkin1.jpg" alt="image" /></p>
+
+<p><a href="http://www.wheredoyougo.net/">link</a></p>
 </div>
 
   <footer>
@@ -885,7 +913,7 @@ export LC_ALL=en_US.UTF-8</code></li>
   <header>
     <h1 class="entry-title">
 
-<a href="/2011/01/15/mary-and-max/">Mary and Max</a>
+<a href="/2011/11/02/road-not-taken/">没走的路</a>
 
 </h1>
 
@@ -903,40 +931,84 @@ export LC_ALL=en_US.UTF-8</code></li>
   
 
 
-<time datetime="2011-01-15T00:36:00+08:00" pubdate data-updated="true">Jan 15<span>th</span>, 2011</time>
-         &bull; <a rel="bookmark" href="/2011/01/15/mary-and-max/">Permalink</a>
+<time datetime="2011-11-02T00:36:00+08:00" pubdate data-updated="true">Nov 2<span>nd</span>, 2011</time>
+         &bull; <a rel="bookmark" href="/2011/11/02/road-not-taken/">Permalink</a>
       </p>
     
   </header>
 
-<div class="entry-content"><p><img src="http://luosky.com/wp-content/uploads/2011/01/s4034827.jpg" title="s4034827" alt="" /></p>
+<div class="entry-content"><h1>没走的路</h1>
 
-<p>@caoxg 推荐的治愈系电影,周六的午后边吃着披萨,边把它看完了.虽然疗的不是我的伤,看了还是感觉很温暖.五星级.</p>
+<p>Posted on <a href="http://luosky.com/2011/11/%e6%b2%a1%e8%b5%b0%e7%9a%84%e8%b7%af.html" title="11:46 pm">2011-11-02</a> by  <a href="http://luosky.com/author/luosky" title="View all posts by luosky">luosky</a></p>
 
-<h3>Quotes:</h3>
+<p>小时候觉得，一个人的一生，如果不能使人类的科技或文明前进哪怕一小步，那人生还有什么意义。</p>
 
-<p><img class="right" src="http://luosky.com/wp-content/uploads/2011/01/p496809861-300x168.jpg"></p>
+<p>当初的一小步，现在想想，却是那么的遥不可及。<br/>
+就连儿时梦想的成为一名天文学家，宇航员或考古学家，现在想想，也已经是风马牛不相及的事了。</p>
 
-<blockquote><p>When I was young, I wanted to be anybody but myself.</p><footer><strong>Max</strong> <cite>Mary and Max</cite></footer></blockquote>
+<p>人生有很多的岔路，选择了一个，就没法选另一个。却总是时不时不经意地想起那些没走的路，以及曾经决心要做的而最终却没做成的事，心怀愧疚。</p>
 
+<p>写到这里突然想起多年前曾经摘抄过的诗，竟然还静静地躺在原来的博客里。多年后重读，有了更深的感悟。</p>
 
-<p></p>
+<p><a href="http://my.opera.com/Luosky/blog/show.dml/389440">http://my.opera.com/Luosky/blog/show.dml/389440</a></p>
 
-<p><img class="right" src="http://luosky.com/wp-content/uploads/2011/01/p589868900-300x166.jpg">
-<img class="right" src="http://luosky.com/wp-content/uploads/2011/01/p589869194-300x166.jpg"></p>
+<blockquote><p>The Road Not Taken</p>
 
-<blockquote><p>Love yourself first.</p><footer><strong>Max</strong> <cite>Mary and Max</cite></footer></blockquote>
+<p>Saturday, August 5, 2006 2:54:09 AM<br/>
+life, poetry</p>
 
+<p>The Road Not Taken<br/>
+-Robert Frost</p>
 
-<p></p>
+<p>Two roads diverged in a yellow wood,<br/>
+And sorry I could not travel both<br/>
+And be one traveler, long I stood<br/>
+And looked down one as far as I could<br/>
+To where it bent in the undergrowth;</p>
 
-<blockquote><p>Whatever will be , will be.</p><footer><strong>Max</strong> <cite>Mary and Max</cite></footer></blockquote>
+<p>Then took the other, as just as fair,<br/>
+And having perhaps the better claim<br/>
+Because it was grassy and wanted wear;<br/>
+Though as for that, the passing there<br/>
+Had worn them really about the same,</p>
 
+<p>And both that morning equally lay<br/>
+In leaves no step had trodden black.<br/>
+Oh, I marked the first for another day!<br/>
+Yet knowing how way leads on to way<br/>
+I doubted if I should ever come back.</p>
 
-<h3>最后Max给Mary的信的全文:</h3>
+<p>I shall be telling this with a sigh<br/>
+Somewhere ages and ages hence:<br/>
+Two roads diverged in a wood, and I,<br/>
+I took the one less traveled by,<br/>
+And that has made all the difference.</p>
 
-<blockquote><p>Dear Mary</p><p>Please find enclosed my entire Noblet collection as a sign that I forgive you.</p><p>When I received your book, the emotions inside my brain felt like they were in a tumble dryer, smashing into each other. The hurt felt like when I accidentally stapled my lips together. </p><p>The reason I forgive you is because you are not perfect.   <br/>You are imperfect and so am I.   <br/>All humans are imperfect, even the men outside my apartment who litters. </p><p>When I was young, I wanted to be anybody but myself.   <br/>Dr. Bernard Hazelhof said if I was on a desert island then I would have to get used to my own company, just me and the coconuts. He said I would have to accept myself, my warts and all, and that we don&#8217;t get to choose our warts. They are a part of us and we have to live with them.   </p><p>We can, however, choose our friends and I am glad I have chosen you.</p><p>Dr. Bernard Hazelhof also said that everyone&#8217;s lives are like a very long sidewalk. Some are well paved. Others, like mine, have cracks, banana skins and cigarette butts. Your sidewalk is like mine but probably not as many cracks. Hopefully, one day, our sidewalk will meet and we can share a can of condensed milk. </p><p>You are my best friends.   <br/>You are my only friend.</p><p>Your American penpal, Max Jerry Horowitz.</p><footer><strong>Max</strong> <cite>Mary and Max</cite></footer></blockquote>
+<p>黄叶林中分出两条小路，<br/>
+可惜我一人不能同时涉足，<br/>
+我在路口伫立良久，<br/>
+向着其中一条翘首极目，<br/>
+直到它消失在丛林深处。</p>
 
+<p>但我选择了另一条路，<br/>
+芳草待踏，分外幽寂，<br/>
+同样显得诱人，美丽，<br/>
+显然这两条路是如此相似，<br/>
+都几乎没有旅人的足迹。</p>
+
+<p>那天清晨落叶满地，<br/>
+两条都是未经脚步踩踏的小径，<br/>
+呵，留下一条路等下次再走，<br/>
+但我知道路径蜿蜒没有尽头，<br/>
+恐怕一走就再难回首。</p>
+
+<p>也许多少年后在某地，<br/>
+我回首往事轻声叹息，<br/>
+两条道路分散在树林里<br/>
+而我选择的那条更少人迹，<br/>
+从此决定了我人生的迥异</p></blockquote>
+
+<p><a href="http://luosky.com/wp-content/uploads/2011/11/20111102-234423.jpg"><img src="http://luosky.com/wp-content/uploads/2011/11/20111102-234423.jpg" alt="20111102-234423.jpg" /></a></p>
 </div>
 
   <footer>
@@ -963,7 +1035,7 @@ export LC_ALL=en_US.UTF-8</code></li>
   <ul id="recent_posts">
     
       <li class="post">
-        <a href="/2012/07/24/create-custom-rss-feed-for-octopress-to-be-compatible-with-your-previous-blog/">Create Custom Rss Feed for Octopress to be Compatible with Your Previous Blog</a>
+        <a href="/2012/07/24/create-custom-rss-feed-for-octopress/">Create Custom Rss Feed for Octopress</a>
       </li>
     
       <li class="post">
