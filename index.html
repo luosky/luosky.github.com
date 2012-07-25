@@ -261,7 +261,26 @@
     
   </header>
 
-<div class="entry-content"><p> as title</p>
+<div class="entry-content"><p>Some Tips:</p>
+
+<ul>
+<li>rake setup_github_pages时出现undefined method `[]&#8217; for nil:NilClass
+
+<ul>
+<li>一般是因为repository地址你填的是http的地址</li>
+<li>填ssh的那个形式如 git@github.com:your_username/your_username.github.com.git 的地址即可</li>
+</ul>
+</li>
+<li>带本地图片的markdown上传
+
+<ol>
+<li>在本地建一个/images 的soft link指向到{octopress}/source/images目录</li>
+<li>将图片放在/images目录下,在markdown文件中以/image/xxx.jpg引用</li>
+</ol>
+</li>
+<li>When you are filling the values in _config.yml. A space need to be added between the value and the colon after the key.</li>
+</ul>
+
 </div>
 
   <footer>

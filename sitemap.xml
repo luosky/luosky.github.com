@@ -173,6 +173,14 @@
         <lastmod>2012-07-25T22:05:05+08:00</lastmod>
     </url>
     <url>
+        <loc>http://luosky.github.com/2007/03/16/paris-i-love-u/</loc>
+        <lastmod>2012-07-25T23:34:13+08:00</lastmod>
+    </url>
+    <url>
+        <loc>http://luosky.github.com/2007/03/18/26/</loc>
+        <lastmod>2012-07-25T23:32:03+08:00</lastmod>
+    </url>
+    <url>
         <loc>http://luosky.github.com/2007/03/22/building/</loc>
         <lastmod>2012-07-25T22:10:01+08:00</lastmod>
     </url>
@@ -258,7 +266,7 @@
     </url>
     <url>
         <loc>http://luosky.github.com/2012/07/22/migrated-to-octopress/</loc>
-        <lastmod>2012-07-22T14:47:35+08:00</lastmod>
+        <lastmod>2012-07-25T23:25:16+08:00</lastmod>
     </url>
     <url>
         <loc>http://luosky.github.com/2012/07/24/create-custom-rss-feed-for-octopress/</loc>
@@ -270,10 +278,10 @@
     </url>
     <url>
         <loc>http://luosky.github.com/archives/</loc>
-        <lastmod>2012-07-25T23:11:48+08:00</lastmod>
+        <lastmod>2012-07-25T23:34:13+08:00</lastmod>
     </url>
     <url>
         <loc>http://luosky.github.com/</loc>
-        <lastmod>2012-07-25T23:11:48+08:00</lastmod>
+        <lastmod>2012-07-25T23:34:13+08:00</lastmod>
     </url>
 </urlset>
