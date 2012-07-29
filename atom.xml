@@ -3,7 +3,7 @@
   <title><![CDATA[Luosky's Playground]]></title>
   <link href="http://luosky.com/atom.xml" rel="self"/>
   <link href="http://luosky.com/"/>
-  <updated>2012-07-29T17:16:01+08:00</updated>
+  <updated>2012-07-29T18:41:39+08:00</updated>
   <id>http://luosky.com/</id>
   <author>
     <name><![CDATA[Luosky]]></name>
@@ -153,6 +153,12 @@
 </ol>
 </li>
 <li>When you are filling the values in _config.yml. A space need to be added between the value and the colon after the key.</li>
+<li>add category list
+
+<ul>
+<li>see this <a href="http://paz.am/blog/blog/2012/06/25/octopress-category-list-plugin/">post</a></li>
+</ul>
+</li>
 </ul>
 
 <p><a rel="bookmark" href="http://luosky.com/2012/07/22/migrated-to-octopress/">&#9875; Permalink</a></p>]]></content>
