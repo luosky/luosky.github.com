@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title><![CDATA[Luosky's Playground]]></title>
-  <link href="http://luosky.github.com/atom.xml" rel="self"/>
-  <link href="http://luosky.github.com/"/>
-  <updated>2012-07-27T00:47:20+08:00</updated>
-  <id>http://luosky.github.com/</id>
+  <link href="http://luosky.com/atom.xml" rel="self"/>
+  <link href="http://luosky.com/"/>
+  <updated>2012-07-29T16:56:49+08:00</updated>
+  <id>http://luosky.com/</id>
   <author>
     <name><![CDATA[Luosky]]></name>
     
@@ -19,9 +19,9 @@
 
 
 <title type="html"><![CDATA[Create Custom Rss Feed for Octopress]]></title>
-<link href="http://luosky.github.com/2012/07/24/create-custom-rss-feed-for-octopress/"/>
+<link href="http://luosky.com/2012/07/24/create-custom-rss-feed-for-octopress/"/>
 <updated>2012-07-24T22:27:00+08:00</updated>
-<id>http://luosky.github.com/2012/07/24/create-custom-rss-feed-for-octopress</id>
+<id>http://luosky.com/2012/07/24/create-custom-rss-feed-for-octopress</id>
 
       <content type="html"><![CDATA[<p>Octopress offers an atom.xml feed only. But many other blog providers&#8217; default feed is different from this, such as /feed on wordpress. So how to move your existing blog subscribers smoothly from your old blog to Octopress?</p>
 
@@ -115,7 +115,7 @@
 <li>set the feed_files = [&#8220;feed/index.html&#8221;] if you use the better method</li>
 </ul>
 
-<p><a rel="bookmark" href="http://luosky.github.com/2012/07/24/create-custom-rss-feed-for-octopress/">&#9875; Permalink</a></p>]]></content>
+<p><a rel="bookmark" href="http://luosky.com/2012/07/24/create-custom-rss-feed-for-octopress/">&#9875; Permalink</a></p>]]></content>
     </entry>
   
     <entry>
@@ -125,9 +125,9 @@
 
 
 <title type="html"><![CDATA[Migrated to Octopress]]></title>
-<link href="http://luosky.github.com/2012/07/22/migrated-to-octopress/"/>
+<link href="http://luosky.com/2012/07/22/migrated-to-octopress/"/>
 <updated>2012-07-22T14:46:00+08:00</updated>
-<id>http://luosky.github.com/2012/07/22/migrated-to-octopress</id>
+<id>http://luosky.com/2012/07/22/migrated-to-octopress</id>
 
       <content type="html"><![CDATA[<p>Some Tips:</p>
 
@@ -149,7 +149,7 @@
 <li>When you are filling the values in _config.yml. A space need to be added between the value and the colon after the key.</li>
 </ul>
 
-<p><a rel="bookmark" href="http://luosky.github.com/2012/07/22/migrated-to-octopress/">&#9875; Permalink</a></p>]]></content>
+<p><a rel="bookmark" href="http://luosky.com/2012/07/22/migrated-to-octopress/">&#9875; Permalink</a></p>]]></content>
     </entry>
   
     <entry>
@@ -159,9 +159,9 @@
 
 
 <title type="html"><![CDATA[切换到Oh My Zsh]]></title>
-<link href="http://luosky.github.com/2012/07/20/switch-to-oh-my-zsh/"/>
+<link href="http://luosky.com/2012/07/20/switch-to-oh-my-zsh/"/>
 <updated>2012-07-20T10:39:00+08:00</updated>
-<id>http://luosky.github.com/2012/07/20/switch-to-oh-my-zsh</id>
+<id>http://luosky.com/2012/07/20/switch-to-oh-my-zsh</id>
 
       <content type="html"><![CDATA[<h2>Oh My Zsh 的优点</h2>
 
@@ -222,7 +222,7 @@ export LC_ALL=en_US.UTF-8</code></li>
 </li>
 </ul>
 
-<p><a rel="bookmark" href="http://luosky.github.com/2012/07/20/switch-to-oh-my-zsh/">&#9875; Permalink</a></p>]]></content>
+<p><a rel="bookmark" href="http://luosky.com/2012/07/20/switch-to-oh-my-zsh/">&#9875; Permalink</a></p>]]></content>
     </entry>
   
     <entry>
@@ -232,9 +232,9 @@ export LC_ALL=en_US.UTF-8</code></li>
 
 
 <title type="html"><![CDATA[PassKit (PassBook api) 学习笔记]]></title>
-<link href="http://luosky.github.com/2012/06/21/passkit-passbook-api-study-notes/"/>
+<link href="http://luosky.com/2012/06/21/passkit-passbook-api-study-notes/"/>
 <updated>2012-06-21T21:40:00+08:00</updated>
-<id>http://luosky.github.com/2012/06/21/passkit-passbook-api-study-notes</id>
+<id>http://luosky.com/2012/06/21/passkit-passbook-api-study-notes</id>
 
       <content type="html"><![CDATA[<h2>PassKit 学习笔记</h2>
 
@@ -287,21 +287,21 @@ export LC_ALL=en_US.UTF-8</code></li>
 
 <h4>颜色:</h4>
 
-<p><img src="http://luosky.github.com/images/blog/2012-06-21-passkit-passbook-api-xue-xi-bi-ji/color.jpg" alt="image" /></p>
+<p><img src="http://luosky.com/images/blog/2012-06-21-passkit-passbook-api-xue-xi-bi-ji/color.jpg" alt="image" /></p>
 
 <h5>样式:</h5>
 
 <p>store card &amp; coupon:</p>
 
-<p><img src="http://luosky.github.com/images/blog/2012-06-21-passkit-passbook-api-xue-xi-bi-ji/logo_bg_storecard.png" alt="image" /></p>
+<p><img src="http://luosky.com/images/blog/2012-06-21-passkit-passbook-api-xue-xi-bi-ji/logo_bg_storecard.png" alt="image" /></p>
 
 <p>event :</p>
 
-<p><img src="http://luosky.github.com/images/blog/2012-06-21-passkit-passbook-api-xue-xi-bi-ji/logo_bg_event.png" alt="image" /></p>
+<p><img src="http://luosky.com/images/blog/2012-06-21-passkit-passbook-api-xue-xi-bi-ji/logo_bg_event.png" alt="image" /></p>
 
 <h3>pass的字段</h3>
 
-<p><img src="http://luosky.github.com/images/blog/2012-06-21-passkit-passbook-api-xue-xi-bi-ji/fields.jpeg" alt="image" /></p>
+<p><img src="http://luosky.com/images/blog/2012-06-21-passkit-passbook-api-xue-xi-bi-ji/fields.jpeg" alt="image" /></p>
 
 <ul>
 <li>serialNumber用来标识pass,同样的pass type identifier 下不能有两个pass的serialNumber相同</li>
@@ -337,8 +337,8 @@ export LC_ALL=en_US.UTF-8</code></li>
 </span></code></pre></td></tr></table></div></figure>
 
 
-<p>附上自己写的 <a href="http://luosky.github.com/images/blog/2012-06-21-passkit-passbook-api-xue-xi-bi-ji/passkit_project.zip">pass工程</a>  (你可能需要换成自己开发者账号签名的pass才能在pass列表中查看已安装的pass,添加pass的话则不需要)</p>
-<p><a rel="bookmark" href="http://luosky.github.com/2012/06/21/passkit-passbook-api-study-notes/">&#9875; Permalink</a></p>]]></content>
+<p>附上自己写的 <a href="http://luosky.com/images/blog/2012-06-21-passkit-passbook-api-xue-xi-bi-ji/passkit_project.zip">pass工程</a>  (你可能需要换成自己开发者账号签名的pass才能在pass列表中查看已安装的pass,添加pass的话则不需要)</p>
+<p><a rel="bookmark" href="http://luosky.com/2012/06/21/passkit-passbook-api-study-notes/">&#9875; Permalink</a></p>]]></content>
     </entry>
   
     <entry>
@@ -348,9 +348,9 @@ export LC_ALL=en_US.UTF-8</code></li>
 
 
 <title type="html"><![CDATA[家庭无线音乐方案]]></title>
-<link href="http://luosky.github.com/2012/05/10/wireless-music-solution/"/>
+<link href="http://luosky.com/2012/05/10/wireless-music-solution/"/>
 <updated>2012-05-10T00:36:00+08:00</updated>
-<id>http://luosky.github.com/2012/05/10/wireless-music-solution</id>
+<id>http://luosky.com/2012/05/10/wireless-music-solution</id>
 
       <content type="html"><![CDATA[<h2>AirPlay</h2>
 
@@ -392,7 +392,7 @@ export LC_ALL=en_US.UTF-8</code></li>
 </li>
 </ul>
 
-<p><a rel="bookmark" href="http://luosky.github.com/2012/05/10/wireless-music-solution/">&#9875; Permalink</a></p>]]></content>
+<p><a rel="bookmark" href="http://luosky.com/2012/05/10/wireless-music-solution/">&#9875; Permalink</a></p>]]></content>
     </entry>
   
     <entry>
@@ -402,16 +402,16 @@ export LC_ALL=en_US.UTF-8</code></li>
 
 
 <title type="html"><![CDATA[程序员的福音]]></title>
-<link href="http://luosky.github.com/2012/03/23/programmer-saver/"/>
+<link href="http://luosky.com/2012/03/23/programmer-saver/"/>
 <updated>2012-03-23T00:36:00+08:00</updated>
-<id>http://luosky.github.com/2012/03/23/programmer-saver</id>
+<id>http://luosky.com/2012/03/23/programmer-saver</id>
 
       <content type="html"><![CDATA[<p><a href="http://www.classnamer.com/"><img class="" src="http://photo.luosky.com/wp-content/uploads/2012/03/Screen-Shot-2012-03-23-at-下午1.38.45-494x249.png" title="(classnamer)" ></a></p>
 
 <p>以后不知道取什么名字的时候就来<a href="http://www.classnamer.com/">这网站</a>捞一个</p>
 
 <p>btw,图中这个类名碉堡了</p>
-<p><a rel="bookmark" href="http://luosky.github.com/2012/03/23/programmer-saver/">&#9875; Permalink</a></p>]]></content>
+<p><a rel="bookmark" href="http://luosky.com/2012/03/23/programmer-saver/">&#9875; Permalink</a></p>]]></content>
     </entry>
   
     <entry>
@@ -421,9 +421,9 @@ export LC_ALL=en_US.UTF-8</code></li>
 
 
 <title type="html"><![CDATA[第一次处理Github的Pull Request]]></title>
-<link href="http://luosky.github.com/2012/03/23/first-time-handle-pull-request-on-github/"/>
+<link href="http://luosky.com/2012/03/23/first-time-handle-pull-request-on-github/"/>
 <updated>2012-03-23T00:36:00+08:00</updated>
-<id>http://luosky.github.com/2012/03/23/first-time-handle-pull-request-on-github</id>
+<id>http://luosky.com/2012/03/23/first-time-handle-pull-request-on-github</id>
 
       <content type="html"><![CDATA[<p><img class="" src="http://photo.luosky.com/wp-content/uploads/2012/03/Screen-Shot-2012-03-23-at-下午5.15.34-494x338.png" title="(merge pull request)" ></p>
 
@@ -438,7 +438,7 @@ export LC_ALL=en_US.UTF-8</code></li>
 <p><a href="https://github.com/CocoaPods/CocoaPods">CocoaPods</a>很活跃, 我的pull request提交没多久, 管理员就提了<a href="https://github.com/CocoaPods/Specs/pull/78#issuecomment-4656168">修改建议</a>,并且把我加入到了成员组里,同时还有另外一个人也提了别的<a href="https://github.com/CocoaPods/Specs/pull/78#issuecomment-4656168">建议</a>.</p>
 
 <p>关注了这个框架挺久了, 因为改动太大,之前一直不敢用. 现在算是已经挺成熟的了,这几天正在把<a href="http://itunes.apple.com/cn/app/id408827748?mt=8#">爱折客</a>换成用它来管理用到的组件.强烈推荐iOS和 Mac开发者也试试,要升级你用到的组件的版本真的非常方便.</p>
-<p><a rel="bookmark" href="http://luosky.github.com/2012/03/23/first-time-handle-pull-request-on-github/">&#9875; Permalink</a></p>]]></content>
+<p><a rel="bookmark" href="http://luosky.com/2012/03/23/first-time-handle-pull-request-on-github/">&#9875; Permalink</a></p>]]></content>
     </entry>
   
     <entry>
@@ -448,12 +448,12 @@ export LC_ALL=en_US.UTF-8</code></li>
 
 
 <title type="html"><![CDATA[iOS模拟器居然还可以监测出来Mac上正在facetime,做得也太细致了]]></title>
-<link href="http://luosky.github.com/2012/02/27/amazing-ios-simulator/"/>
+<link href="http://luosky.com/2012/02/27/amazing-ios-simulator/"/>
 <updated>2012-02-27T00:36:00+08:00</updated>
-<id>http://luosky.github.com/2012/02/27/amazing-ios-simulator</id>
+<id>http://luosky.com/2012/02/27/amazing-ios-simulator</id>
 
       <content type="html"><![CDATA[<p><img class="" src="http://photo.luosky.com/wp-content/uploads/2012/02/Screen-Shot-2012-02-27-at-下午8.36.15-262x494.png" title="iOS" ></p>
-<p><a rel="bookmark" href="http://luosky.github.com/2012/02/27/amazing-ios-simulator/">&#9875; Permalink</a></p>]]></content>
+<p><a rel="bookmark" href="http://luosky.com/2012/02/27/amazing-ios-simulator/">&#9875; Permalink</a></p>]]></content>
     </entry>
   
     <entry>
@@ -463,9 +463,9 @@ export LC_ALL=en_US.UTF-8</code></li>
 
 
 <title type="html"><![CDATA[2011年小结]]></title>
-<link href="http://luosky.github.com/2012/01/02/my-2011/"/>
+<link href="http://luosky.com/2012/01/02/my-2011/"/>
 <updated>2012-01-02T00:36:00+08:00</updated>
-<id>http://luosky.github.com/2012/01/02/my-2011</id>
+<id>http://luosky.com/2012/01/02/my-2011</id>
 
       <content type="html"><![CDATA[<h2>Blog</h2>
 
@@ -505,7 +505,7 @@ export LC_ALL=en_US.UTF-8</code></li>
 
 <h2>去过的地方</h2>
 
-<p><img src="http://luosky.github.com/images/blog/Screen-Shot-2012-01-02.png" alt="image" /></p>
+<p><img src="http://luosky.com/images/blog/Screen-Shot-2012-01-02.png" alt="image" /></p>
 
 <blockquote><p>已行驶 <strong><em>7,537</em></strong> 公里,距月球还有 <strong><em>355,566</em></strong> 多公里</p></blockquote>
 
@@ -518,7 +518,7 @@ export LC_ALL=en_US.UTF-8</code></li>
 <p><img src="http://photo.luosky.com/wp-content/uploads/2012/01/xiamen_checkin1.jpg" alt="image" /></p>
 
 <p><a href="http://www.wheredoyougo.net/">link</a></p>
-<p><a rel="bookmark" href="http://luosky.github.com/2012/01/02/my-2011/">&#9875; Permalink</a></p>]]></content>
+<p><a rel="bookmark" href="http://luosky.com/2012/01/02/my-2011/">&#9875; Permalink</a></p>]]></content>
     </entry>
   
     <entry>
@@ -528,9 +528,9 @@ export LC_ALL=en_US.UTF-8</code></li>
 
 
 <title type="html"><![CDATA[没走的路]]></title>
-<link href="http://luosky.github.com/2011/11/02/road-not-taken/"/>
+<link href="http://luosky.com/2011/11/02/road-not-taken/"/>
 <updated>2011-11-02T00:36:00+08:00</updated>
-<id>http://luosky.github.com/2011/11/02/road-not-taken</id>
+<id>http://luosky.com/2011/11/02/road-not-taken</id>
 
       <content type="html"><![CDATA[<p>Posted on <a href="http://luosky.com/2011/11/%e6%b2%a1%e8%b5%b0%e7%9a%84%e8%b7%af.html" title="11:46 pm">2011-11-02</a> by  <a href="http://luosky.com/author/luosky" title="View all posts by luosky">luosky</a></p>
 
@@ -602,7 +602,7 @@ And that has made all the difference.</p>
 从此决定了我人生的迥异</p></blockquote>
 
 <p><a href="http://photo.luosky.com/wp-content/uploads/2011/11/20111102-234423.jpg"><img src="http://photo.luosky.com/wp-content/uploads/2011/11/20111102-234423.jpg" alt="20111102-234423.jpg" /></a></p>
-<p><a rel="bookmark" href="http://luosky.github.com/2011/11/02/road-not-taken/">&#9875; Permalink</a></p>]]></content>
+<p><a rel="bookmark" href="http://luosky.com/2011/11/02/road-not-taken/">&#9875; Permalink</a></p>]]></content>
     </entry>
   
     <entry>
@@ -612,9 +612,9 @@ And that has made all the difference.</p>
 
 
 <title type="html"><![CDATA[挥别乔布斯]]></title>
-<link href="http://luosky.github.com/2011/10/06/fareware-steve-jobs/"/>
+<link href="http://luosky.com/2011/10/06/fareware-steve-jobs/"/>
 <updated>2011-10-06T00:36:00+08:00</updated>
-<id>http://luosky.github.com/2011/10/06/fareware-steve-jobs</id>
+<id>http://luosky.com/2011/10/06/fareware-steve-jobs</id>
 
       <content type="html"><![CDATA[<p>Posted on <a href="http://luosky.com/2011/10/%e6%8c%a5%e5%88%ab%e4%b9%94%e5%b8%83%e6%96%af.html" title="10:33 pm">2011-10-06</a> by  <a href="http://luosky.com/author/luosky" title="View all posts by luosky">luosky</a></p>
 
@@ -648,7 +648,7 @@ And that has made all the difference.</p>
 <p>Rest in peace, Steve Jobs</p>
 
 <p><a href="http://photo.luosky.com/wp-content/uploads/2011/10/t_hero.png"><img src="http://photo.luosky.com/wp-content/uploads/2011/10/t_hero-300x273.png" title="t_hero" alt="" /></a></p>
-<p><a rel="bookmark" href="http://luosky.github.com/2011/10/06/fareware-steve-jobs/">&#9875; Permalink</a></p>]]></content>
+<p><a rel="bookmark" href="http://luosky.com/2011/10/06/fareware-steve-jobs/">&#9875; Permalink</a></p>]]></content>
     </entry>
   
     <entry>
@@ -658,9 +658,9 @@ And that has made all the difference.</p>
 
 
 <title type="html"><![CDATA[First Week on Xcode ]]></title>
-<link href="http://luosky.github.com/2011/04/03/first-week-on-xcode-4/"/>
+<link href="http://luosky.com/2011/04/03/first-week-on-xcode-4/"/>
 <updated>2011-04-03T00:36:00+08:00</updated>
-<id>http://luosky.github.com/2011/04/03/first-week-on-xcode-4</id>
+<id>http://luosky.com/2011/04/03/first-week-on-xcode-4</id>
 
       <content type="html"><![CDATA[<p>经历了上周的one week on rails,这周又切换回iOS了.自从更新了Xcode 4之后,就跑去做支付宝连接和学习Ruby on Rails去了,一直没有碰Xcode.</p>
 
@@ -689,7 +689,7 @@ And that has made all the difference.</p>
 <h3>带有static library的项目用Organizer提交到app store时无法verify/share/submit的问题:</h3>
 
 <p>在static library的building settings里将skip install设为YES</p>
-<p><a rel="bookmark" href="http://luosky.github.com/2011/04/03/first-week-on-xcode-4/">&#9875; Permalink</a></p>]]></content>
+<p><a rel="bookmark" href="http://luosky.com/2011/04/03/first-week-on-xcode-4/">&#9875; Permalink</a></p>]]></content>
     </entry>
   
     <entry>
@@ -699,9 +699,9 @@ And that has made all the difference.</p>
 
 
 <title type="html"><![CDATA[窗外]]></title>
-<link href="http://luosky.github.com/2011/03/20/outside-the-window/"/>
+<link href="http://luosky.com/2011/03/20/outside-the-window/"/>
 <updated>2011-03-20T00:36:00+08:00</updated>
-<id>http://luosky.github.com/2011/03/20/outside-the-window</id>
+<id>http://luosky.com/2011/03/20/outside-the-window</id>
 
       <content type="html"><![CDATA[<p>Posted on <a href="http://luosky.com/2011/03/%e7%aa%97%e5%a4%96.html" title="6:07 pm">2011-03-20</a> by  <a href="http://luosky.com/author/luosky" title="View all posts by luosky">luosky</a></p>
 
@@ -719,7 +719,7 @@ And that has made all the difference.</p>
 <p><a href="http://posterous.com/getfile/files.posterous.com/luosky/DogBAGFEfdyqajvahJGbchksqmkdpeAoyhqvhBgEtgIysbfpkpvaCAcIIGAy/media_httpimagesinsta_ArBHj.jpg.scaled1000.jpg"><img src="http://photo.luosky.com/wp-content/plugins/wp-o-matic//ce9ed_media_httpimagesinsta_ArBHj.jpg.scaled500.jpg" alt="Media_httpimagesinsta_arbhj" /></a></p>
 
 <p>Taken at 汤臣豪园</p>
-<p><a rel="bookmark" href="http://luosky.github.com/2011/03/20/outside-the-window/">&#9875; Permalink</a></p>]]></content>
+<p><a rel="bookmark" href="http://luosky.com/2011/03/20/outside-the-window/">&#9875; Permalink</a></p>]]></content>
     </entry>
   
     <entry>
@@ -729,9 +729,9 @@ And that has made all the difference.</p>
 
 
 <title type="html"><![CDATA[Mary and Max]]></title>
-<link href="http://luosky.github.com/2011/01/15/mary-and-max/"/>
+<link href="http://luosky.com/2011/01/15/mary-and-max/"/>
 <updated>2011-01-15T00:36:00+08:00</updated>
-<id>http://luosky.github.com/2011/01/15/mary-and-max</id>
+<id>http://luosky.com/2011/01/15/mary-and-max</id>
 
       <content type="html"><![CDATA[<p><img src="http://photo.luosky.com/wp-content/uploads/2011/01/s4034827.jpg" title="s4034827" alt="" /></p>
 
@@ -761,7 +761,7 @@ And that has made all the difference.</p>
 
 <blockquote><p>Dear Mary</p><p>Please find enclosed my entire Noblet collection as a sign that I forgive you.</p><p>When I received your book, the emotions inside my brain felt like they were in a tumble dryer, smashing into each other. The hurt felt like when I accidentally stapled my lips together. </p><p>The reason I forgive you is because you are not perfect.   <br/>You are imperfect and so am I.   <br/>All humans are imperfect, even the men outside my apartment who litters. </p><p>When I was young, I wanted to be anybody but myself.   <br/>Dr. Bernard Hazelhof said if I was on a desert island then I would have to get used to my own company, just me and the coconuts. He said I would have to accept myself, my warts and all, and that we don&#8217;t get to choose our warts. They are a part of us and we have to live with them.   </p><p>We can, however, choose our friends and I am glad I have chosen you.</p><p>Dr. Bernard Hazelhof also said that everyone&#8217;s lives are like a very long sidewalk. Some are well paved. Others, like mine, have cracks, banana skins and cigarette butts. Your sidewalk is like mine but probably not as many cracks. Hopefully, one day, our sidewalk will meet and we can share a can of condensed milk. </p><p>You are my best friends.   <br/>You are my only friend.</p><p>Your American penpal, Max Jerry Horowitz.</p><footer><strong>Max</strong> <cite>Mary and Max</cite></footer></blockquote>
 
-<p><a rel="bookmark" href="http://luosky.github.com/2011/01/15/mary-and-max/">&#9875; Permalink</a></p>]]></content>
+<p><a rel="bookmark" href="http://luosky.com/2011/01/15/mary-and-max/">&#9875; Permalink</a></p>]]></content>
     </entry>
   
     <entry>
@@ -771,14 +771,14 @@ And that has made all the difference.</p>
 
 
 <title type="html"><![CDATA[虽说已经好几年没有去维护live space上的blog了,但要关的时候还是有些舍不得.]]></title>
-<link href="http://luosky.github.com/2011/01/06/shutdown-msn-live-space/"/>
+<link href="http://luosky.com/2011/01/06/shutdown-msn-live-space/"/>
 <updated>2011-01-06T00:36:00+08:00</updated>
-<id>http://luosky.github.com/2011/01/06/shutdown-msn-live-space</id>
+<id>http://luosky.com/2011/01/06/shutdown-msn-live-space</id>
 
       <content type="html"><![CDATA[<p>Posted on <a href="http://luosky.com/2011/01/%e8%99%bd%e8%af%b4%e5%b7%b2%e7%bb%8f%e5%a5%bd%e5%87%a0%e5%b9%b4%e6%b2%a1%e6%9c%89%e5%8e%bb%e7%bb%b4%e6%8a%a4live-space%e4%b8%8a%e7%9a%84blog%e4%ba%86%e4%bd%86%e8%a6%81%e5%85%b3%e7%9a%84%e6%97%b6.html" title="12:14 am">2011-01-06</a> by  <a href="http://luosky.com/author/luosky" title="View all posts by luosky">luosky</a></p>
 
 <p><a href="http://photo.luosky.com/wp-content/uploads/2011/01/Screen-shot-2011-01-06-at-12.04.34-AM.png"><img src="http://photo.luosky.com/wp-content/uploads/2011/01/Screen-shot-2011-01-06-at-12.04.34-AM.png" title="Screen shot 2011-01-06 at 12.04.34 AM" alt="" /></a></p>
-<p><a rel="bookmark" href="http://luosky.github.com/2011/01/06/shutdown-msn-live-space/">&#9875; Permalink</a></p>]]></content>
+<p><a rel="bookmark" href="http://luosky.com/2011/01/06/shutdown-msn-live-space/">&#9875; Permalink</a></p>]]></content>
     </entry>
   
     <entry>
@@ -788,9 +788,9 @@ And that has made all the difference.</p>
 
 
 <title type="html"><![CDATA[我的第二个iOS应用 爱折客 更新了]]></title>
-<link href="http://luosky.github.com/2011/01/06/my-second-ios-app/"/>
+<link href="http://luosky.com/2011/01/06/my-second-ios-app/"/>
 <updated>2011-01-06T00:36:00+08:00</updated>
-<id>http://luosky.github.com/2011/01/06/my-second-ios-app</id>
+<id>http://luosky.com/2011/01/06/my-second-ios-app</id>
 
       <content type="html"><![CDATA[<p>我做的第二个iOS应用[爱折客][]更新了,上海地区的iPhone用户欢迎试用:</p>
 
@@ -815,7 +815,7 @@ And that has made all the difference.</p>
 <h3>评论箱:</h3>
 
 <p><img src="http://a1.phobos.apple.com/us/r1000/056/Purple/6e/39/ee/mzl.yvnvogck.320x480-75.jpg" title="评论箱" alt="" /></p>
-<p><a rel="bookmark" href="http://luosky.github.com/2011/01/06/my-second-ios-app/">&#9875; Permalink</a></p>]]></content>
+<p><a rel="bookmark" href="http://luosky.com/2011/01/06/my-second-ios-app/">&#9875; Permalink</a></p>]]></content>
     </entry>
   
     <entry>
@@ -825,9 +825,9 @@ And that has made all the difference.</p>
 
 
 <title type="html"><![CDATA[iOS app内发送短信]]></title>
-<link href="http://luosky.github.com/2011/01/04/ios-in-app-sms/"/>
+<link href="http://luosky.com/2011/01/04/ios-in-app-sms/"/>
 <updated>2011-01-04T00:36:00+08:00</updated>
-<id>http://luosky.github.com/2011/01/04/ios-in-app-sms</id>
+<id>http://luosky.com/2011/01/04/ios-in-app-sms</id>
 
       <content type="html"><![CDATA[<p>iOS4.0新加入了<code>MFMessageComposeViewController</code>和<code>MFMessageComposeViewControllerDelegate</code>,提供了发送短信的接口,可以像发送邮件那样不用跳出程序来发送短信. 介绍可参阅Message UI Framework Reference</p>
 
@@ -980,7 +980,7 @@ And that has made all the difference.</p>
 
 
 
-<p><a rel="bookmark" href="http://luosky.github.com/2011/01/04/ios-in-app-sms/">&#9875; Permalink</a></p>]]></content>
+<p><a rel="bookmark" href="http://luosky.com/2011/01/04/ios-in-app-sms/">&#9875; Permalink</a></p>]]></content>
     </entry>
   
     <entry>
@@ -990,9 +990,9 @@ And that has made all the difference.</p>
 
 
 <title type="html"><![CDATA[2010的生活轨迹]]></title>
-<link href="http://luosky.github.com/2011/01/03/my-2010/"/>
+<link href="http://luosky.com/2011/01/03/my-2010/"/>
 <updated>2011-01-03T00:36:00+08:00</updated>
-<id>http://luosky.github.com/2011/01/03/my-2010</id>
+<id>http://luosky.com/2011/01/03/my-2010</id>
 
       <content type="html"><![CDATA[<p>Posted on <a href="http://luosky.com/2011/01/2010%e7%9a%84%e7%94%9f%e6%b4%bb%e8%bd%a8%e8%bf%b9.html" title="10:17 pm">2011-01-03</a> by  <a href="http://luosky.com/author/luosky" title="View all posts by luosky">luosky</a></p>
 
@@ -1000,7 +1000,7 @@ And that has made all the difference.</p>
 有记录到的路程为:<br/>
 已行驶 190 公里<br/>
 距月球还有 362,913 多公里</p>
-<p><a rel="bookmark" href="http://luosky.github.com/2011/01/03/my-2010/">&#9875; Permalink</a></p>]]></content>
+<p><a rel="bookmark" href="http://luosky.com/2011/01/03/my-2010/">&#9875; Permalink</a></p>]]></content>
     </entry>
   
     <entry>
@@ -1010,9 +1010,9 @@ And that has made all the difference.</p>
 
 
 <title type="html"><![CDATA[我是同步控]]></title>
-<link href="http://luosky.github.com/2011/01/01/my-sync-solution/"/>
+<link href="http://luosky.com/2011/01/01/my-sync-solution/"/>
 <updated>2011-01-01T00:36:00+08:00</updated>
-<id>http://luosky.github.com/2011/01/01/my-sync-solution</id>
+<id>http://luosky.com/2011/01/01/my-sync-solution</id>
 
       <content type="html"><![CDATA[<h2>我的同步方案：</h2>
 
@@ -1075,7 +1075,7 @@ And that has made all the difference.</p>
 
 
 <p><em>2011-04-09 updated: 图片同步方式中换用<a href="http://www.smyx.net/wp-connect.html">WordPress连接微博</a> 来同步到几个微博</em></p>
-<p><a rel="bookmark" href="http://luosky.github.com/2011/01/01/my-sync-solution/">&#9875; Permalink</a></p>]]></content>
+<p><a rel="bookmark" href="http://luosky.com/2011/01/01/my-sync-solution/">&#9875; Permalink</a></p>]]></content>
     </entry>
   
     <entry>
@@ -1085,9 +1085,9 @@ And that has made all the difference.</p>
 
 
 <title type="html"><![CDATA[SD2.0大会笔记]]></title>
-<link href="http://luosky.github.com/2010/12/10/sd2.0-conference/"/>
+<link href="http://luosky.com/2010/12/10/sd2.0-conference/"/>
 <updated>2010-12-10T00:36:00+08:00</updated>
-<id>http://luosky.github.com/2010/12/10/sd2.0-conference</id>
+<id>http://luosky.com/2010/12/10/sd2.0-conference</id>
 
       <content type="html"><![CDATA[<h3>理性的设计</h3>
 
@@ -1128,7 +1128,7 @@ And that has made all the difference.</p>
 <li>遵循规范,比如维度在前,精度在后</li>
 </ul>
 
-<p><a rel="bookmark" href="http://luosky.github.com/2010/12/10/sd2.0-conference/">&#9875; Permalink</a></p>]]></content>
+<p><a rel="bookmark" href="http://luosky.com/2010/12/10/sd2.0-conference/">&#9875; Permalink</a></p>]]></content>
     </entry>
   
 </feed>
