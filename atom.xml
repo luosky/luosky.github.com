@@ -3,7 +3,7 @@
   <title><![CDATA[Luosky's Playground]]></title>
   <link href="http://luosky.com/atom.xml" rel="self"/>
   <link href="http://luosky.com/"/>
-  <updated>2012-08-07T20:17:20+08:00</updated>
+  <updated>2012-11-13T22:37:07+08:00</updated>
   <id>http://luosky.com/</id>
   <author>
     <name><![CDATA[Luosky]]></name>
@@ -65,6 +65,7 @@
 <ul>
 <li><a href="https://github.com/robbyrussell/oh-my-zsh/"><code>Oh my zsh</code></a>: 各种<a href="http://luosky.com/2012/07/20/switch-to-oh-my-zsh/">强化</a></li>
 <li><a href="https://github.com/joelthelion/autojump"><code>autojump</code></a> :  快速进行目录跳转</li>
+<li><a href="http://totalterminal.binaryage.com/"><code>TotalTerminal</code></a> : 随时切出控制台</li>
 </ul>
 
 
@@ -453,7 +454,7 @@ export LC_ALL=en_US.UTF-8</code></li>
 <li>BARCODE不支持中文(应该跟用的编码有关)</li>
 <li>日期格式: 2012-06-20T17:30+08:00</li>
 <li>使用相对时间的格式  &#8220;isRelative&#8221; : true</li>
-<li>coupon的primaryFields很大,中文只能放3个字</li>
+<li>coupon的primaryFields很大,中文只能放4个字()</li>
 <li>PKPassLibrary不是singleton,注册PKPassLibraryDidChangeNotification通知时,通知是针对某个具体的library对象的,所以需将你创建的library传过去.</li>
 </ul>
 
