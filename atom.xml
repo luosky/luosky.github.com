@@ -3,7 +3,7 @@
   <title><![CDATA[Luosky's Playground]]></title>
   <link href="http://luosky.com/atom.xml" rel="self"/>
   <link href="http://luosky.com/"/>
-  <updated>2012-11-30T11:26:22+08:00</updated>
+  <updated>2012-11-30T11:45:20+08:00</updated>
   <id>http://luosky.com/</id>
   <author>
     <name><![CDATA[Luosky]]></name>
@@ -39,7 +39,7 @@
 
 <ol>
 <li>到开发人员提供的邀请网址里注册TestFlight帐号. 完成这步你的帐号就会加到组里.</li>
-<li>注册完之后会收到一封注册右键,<strong>在你的iOS设备上</strong> 点击邮件里的登录按钮
+<li>注册完之后会收到一封注册右键,<strong>在你的iOS设备上</strong> 点击邮件里的登录按钮 (iOS设备指iPhone,iPod touch或iPad)
 
 <ul>
 <li>若你的iOS设备没有设置邮箱的话,也可以用safari打开<a href="https://testflightapp.com/m/login">https://testflightapp.com/m/login</a> 这个链接,然后用你注册的帐号登录</li>
