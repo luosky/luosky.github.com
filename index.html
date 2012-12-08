@@ -95,6 +95,70 @@
   <header>
     <h1 class="entry-title">
 
+<a href="/2012/12/08/dont-use-nsstrings-hash-use-md5-instead/">Don&#8217;t Use NSString&#8217;s Hash</a>
+
+</h1>
+
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-12-08T11:24:00+08:00" pubdate data-updated="true">Dec 8<span>th</span>, 2012</time>
+         &bull; <a rel="bookmark" href="/2012/12/08/dont-use-nsstrings-hash-use-md5-instead/">Permalink</a>
+      </p>
+    
+  </header>
+
+<div class="entry-content"><p>My recent iOS project, Aimeiwei, is an image-oriented app focused on food. We use lots of images, and one picture user updated can have two different aspect ratios, one is the original square food picture, and one is a cropped rectangle picutre that can possiblly be used as the restaurant&#8217;s header image. I utilized <a href="https://github.com/enormego/EGOImageLoading">EGOImageLoading</a> to cache and display images from our remote server. But I came across a strange problem: <strong><em>Sometimes</em></strong> the rectangle image view displays the square one instead, dispite the fact that the urls of the two images are different and the url of the rectangle one points to the correct rectangle image.</p>
+
+<p>After a long time digging, I found that the problem rooted in the <code>hash</code> method of <code>NSString</code>. These two url: <code>http://aizheke-img-dev.b0.upaiyun.com/imagefs/amw/food_story/50b85c545c168b2e6000003f/image/banner_46664ae45ffaff8ad1ab1cd55d38b6ac.jpg</code> and <code>http://aizheke-img-dev.b0.upaiyun.com/imagefs/amw/food_story/50b85c545c168b2e6000003f/image/medium_46664ae45ffaff8ad1ab1cd55d38b6ac.jpg</code>, their hash is identical! (And <a href="https://github.com/enormego/EGOImageLoading">EGOImageLoading</a> uses the hash result as a key to cache the image. So if the square image had been cached, the rectangle view used the cached square image to display.)</p>
+
+<p>Then I found this <a href="http://www.mulle-kybernetik.com/artikel/Optimization/opti-7.html">article</a> back in 2004, it says:</p>
+
+<pre><code>NSString/CFString/NSURL
+
+The hash is a convolution of the first and last eight bytes plus the length of the string basically the byte values are shifted and added to the string length.
+</code></pre>
+
+<p>I do know that the hash result is not guaranteed to be unique, but I don&#8217;t expect a &#8220;weak unique&#8221; like these. The implementation of <code>hash</code> must have been improved after these years because the data provided in the article no longer give the same result. But as of now 2012, on iOS 6 SDK, those two urls in my project still yield the same hash.</p>
+
+<p>The fix is simple, just use MD5 as the key. Now I use this <a href="https://github.com/jonkean/EGOImageLoading">fork</a> instead. If someday I had time, I may give <a href="https://github.com/rs/SDWebImage">SDWebImage</a> a try.</p>
+</div>
+
+  <footer>
+    
+    
+  </footer>
+
+
+    </article>
+  
+    
+
+
+
+
+
+
+
+
+
+
+    <article >
+      
+  <header>
+    <h1 class="entry-title">
+
 <a href="/2012/11/30/use-testflight-to-beta-test-ios-app/">使用TestFlight 安装测试版iOS应用(面向测试人员)</a>
 
 </h1>
@@ -984,69 +1048,6 @@ export LC_ALL=en_US.UTF-8</code></li>
 
     </article>
   
-    
-
-
-
-
-
-
-
-
-
-
-    <article >
-      
-  <header>
-    <h1 class="entry-title">
-
-<a href="/2012/03/23/first-time-handle-pull-request-on-github/">第一次处理Github的Pull Request</a>
-
-</h1>
-
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-03-23T00:36:00+08:00" pubdate data-updated="true">Mar 23<span>rd</span>, 2012</time>
-         &bull; <a rel="bookmark" href="/2012/03/23/first-time-handle-pull-request-on-github/">Permalink</a>
-      </p>
-    
-  </header>
-
-<div class="entry-content"><p><img class="" src="http://photo.luosky.com/wp-content/uploads/2012/03/Screen-Shot-2012-03-23-at-下午5.15.34-494x338.png" title="(merge pull request)" ></p>
-
-<p>第一次处理Github的Pull Request,还是<a href="https://github.com/CocoaPods/CocoaPods">CocoaPods</a>这样的项目,要点Merge pull request时不禁有点手抖…</p>
-
-<p><img class="" src="http://photo.luosky.com/wp-content/uploads/2012/03/4D08QFI206-494x187.jpg" title="(merge)" ></p>
-
-<p>算是对<a href="https://github.com/CocoaPods/CocoaPods">CocoaPods</a>做了点小贡献.</p>
-
-<p>============== 我是分隔线 ==============</p>
-
-<p><a href="https://github.com/CocoaPods/CocoaPods">CocoaPods</a>很活跃, 我的pull request提交没多久, 管理员就提了<a href="https://github.com/CocoaPods/Specs/pull/78#issuecomment-4656168">修改建议</a>,并且把我加入到了成员组里,同时还有另外一个人也提了别的<a href="https://github.com/CocoaPods/Specs/pull/78#issuecomment-4656168">建议</a>.</p>
-
-<p>关注了这个框架挺久了, 因为改动太大,之前一直不敢用. 现在算是已经挺成熟的了,这几天正在把<a href="http://itunes.apple.com/cn/app/id408827748?mt=8#">爱折客</a>换成用它来管理用到的组件.强烈推荐iOS和 Mac开发者也试试,要升级你用到的组件的版本真的非常方便.</p>
-</div>
-
-  <footer>
-    
-    
-  </footer>
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/blog/page/2/">&larr; Older</a>
@@ -1065,12 +1066,13 @@ export LC_ALL=en_US.UTF-8</code></li>
 <li class='category'><a href='/blog/categories/design/'>design (1)</a></li>
 <li class='category'><a href='/blog/categories/game/'>game (4)</a></li>
 <li class='category'><a href='/blog/categories/ios/'>iOS (6)</a></li>
+<li class='category'><a href='/blog/categories/ios-/'>iOS, (1)</a></li>
 <li class='category'><a href='/blog/categories/life/'>life (34)</a></li>
 <li class='category'><a href='/blog/categories/movie/'>movie (4)</a></li>
 <li class='category'><a href='/blog/categories/music/'>music (9)</a></li>
 <li class='category'><a href='/blog/categories/others/'>others (11)</a></li>
 <li class='category'><a href='/blog/categories/photography/'>photography (8)</a></li>
-<li class='category'><a href='/blog/categories/programming/'>programming (13)</a></li>
+<li class='category'><a href='/blog/categories/programming/'>programming (14)</a></li>
 <li class='category'><a href='/blog/categories/translation/'>translation (2)</a></li>
 
   </ul>
@@ -1078,6 +1080,10 @@ export LC_ALL=en_US.UTF-8</code></li>
 <section>
   <h1>Recent Posts</h1>
   <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/2012/12/08/dont-use-nsstrings-hash-use-md5-instead/">Don&#8217;t Use NSString&#8217;s Hash</a>
+      </li>
     
       <li class="post">
         <a href="/2012/11/30/use-testflight-to-beta-test-ios-app/">使用TestFlight 安装测试版iOS应用(面向测试人员)</a>
@@ -1093,10 +1099,6 @@ export LC_ALL=en_US.UTF-8</code></li>
     
       <li class="post">
         <a href="/2012/07/24/create-custom-rss-feed-for-octopress/">Create Custom Rss Feed for Octopress</a>
-      </li>
-    
-      <li class="post">
-        <a href="/2012/07/22/migrated-to-octopress/">Migrated to Octopress</a>
       </li>
     
   </ul>

@@ -95,6 +95,207 @@
   <header>
     <h1 class="entry-title">
 
+<a href="/2011/01/04/ios-in-app-sms/">iOS App内发送短信</a>
+
+</h1>
+
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-01-04T00:36:00+08:00" pubdate data-updated="true">Jan 4<span>th</span>, 2011</time>
+         &bull; <a rel="bookmark" href="/2011/01/04/ios-in-app-sms/">Permalink</a>
+      </p>
+    
+  </header>
+
+<div class="entry-content"><p>iOS4.0新加入了<code>MFMessageComposeViewController</code>和<code>MFMessageComposeViewControllerDelegate</code>,提供了发送短信的接口,可以像发送邮件那样不用跳出程序来发送短信. 介绍可参阅Message UI Framework Reference</p>
+
+<p>一些笔记:</p>
+
+<h3>MFMessageComposeViewController</h3>
+
+<ul>
+<li>提供了操作界面</li>
+<li>使用前必须检查canSendText方法,若返回NO则不应将这个controller展现出来,而应该提示用户不支持发送短信功能.</li>
+<li>界面不能自行定制</li>
+<li>要发送的短信的内容(body)和收件人(recipients)在展现这个controller前需初始化好,展现了之后短信内容不能通过程序来进行修改.不过用户仍然可以手工修改短信内容和选择收件人</li>
+<li>用户点了发送或者取消,或者发送失败时,MFMessageComposeViewControllerDelegate 的- messageComposeViewController:didFinishWithResult:方法都能得到通知,在这里进行相应的处理</li>
+</ul>
+
+
+<p>若在iOS3.0上运行的话,会提示<code>dyld: Symbol not found: _OBJC_CLASS_$_MFMessageComposeViewController</code> 解决方案:</p>
+
+<ol>
+<li>MessageUI.framework的引入类型应选择weak(在target -> Get Info -> General -> Linked Libraries -> MessageUI.framework -> Type 里修改)</li>
+<li>不要在.h文件里直接import MessageUI/MFMessageComposeViewController.h,改为import &lt;MessageUI/MessageUI.h></li>
+</ol>
+
+
+<p>具体的发送代码:</p>
+
+<figure class='code'><div class='highlight'><table><td class='gutter'><pre class='line-numbers'><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+<span class='line-number'>26</span>
+<span class='line-number'>27</span>
+<span class='line-number'>28</span>
+<span class='line-number'>29</span>
+<span class='line-number'>30</span>
+<span class='line-number'>31</span>
+<span class='line-number'>32</span>
+<span class='line-number'>33</span>
+<span class='line-number'>34</span>
+<span class='line-number'>35</span>
+<span class='line-number'>36</span>
+<span class='line-number'>37</span>
+<span class='line-number'>38</span>
+<span class='line-number'>39</span>
+<span class='line-number'>40</span>
+<span class='line-number'>41</span>
+<span class='line-number'>42</span>
+<span class='line-number'>43</span>
+<span class='line-number'>44</span>
+<span class='line-number'>45</span>
+<span class='line-number'>46</span>
+<span class='line-number'>47</span>
+<span class='line-number'>48</span>
+<span class='line-number'>49</span>
+<span class='line-number'>50</span>
+<span class='line-number'>51</span>
+<span class='line-number'>52</span>
+<span class='line-number'>53</span>
+<span class='line-number'>54</span>
+<span class='line-number'>55</span>
+<span class='line-number'>56</span>
+<span class='line-number'>57</span>
+<span class='line-number'>58</span>
+<span class='line-number'>59</span>
+<span class='line-number'>60</span>
+<span class='line-number'>61</span>
+</pre></td><td class='code'><pre><code class='objective-c'><span class='line'><span class="cp">    </span>
+</span><span class='line'><span class="cp">    #pragma mark -</span>
+</span><span class='line'><span class="cp">    #pragma mark SMS</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="o">-</span><span class="p">(</span><span class="kt">IBAction</span><span class="p">)</span><span class="nl">showSMSPicker:</span><span class="p">(</span><span class="kt">id</span><span class="p">)</span><span class="n">sender</span> <span class="p">{</span>
+</span><span class='line'>      <span class="c1">// The MFMessageComposeViewController class is only available in iPhone OS 4.0 or later.</span>
+</span><span class='line'>      <span class="c1">// So, we must verify the existence of the above class and log an error message for devices</span>
+</span><span class='line'>      <span class="c1">//     running earlier versions of the iPhone OS. Set feedbackMsg if device doesn&#39;t support</span>
+</span><span class='line'>      <span class="c1">//     MFMessageComposeViewController API.</span>
+</span><span class='line'>      <span class="n">Class</span> <span class="n">messageClass</span> <span class="o">=</span> <span class="p">(</span><span class="n">NSClassFromString</span><span class="p">(</span><span class="s">@&quot;MFMessageComposeViewController&quot;</span><span class="p">));</span>
+</span><span class='line'>
+</span><span class='line'>      <span class="k">if</span> <span class="p">(</span><span class="n">messageClass</span> <span class="o">!=</span> <span class="nb">nil</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>          <span class="c1">// Check whether the current device is configured for sending SMS messages</span>
+</span><span class='line'>          <span class="k">if</span> <span class="p">([</span><span class="n">messageClass</span> <span class="n">canSendText</span><span class="p">])</span> <span class="p">{</span>
+</span><span class='line'>              <span class="p">[</span><span class="n">self</span> <span class="n">displaySMSComposerSheet</span><span class="p">];</span>
+</span><span class='line'>          <span class="p">}</span>
+</span><span class='line'>          <span class="k">else</span> <span class="p">{</span>
+</span><span class='line'>              <span class="p">[</span><span class="n">UIAlertView</span> <span class="nl">quickAlertWithTitle:</span><span class="s">@&quot;设备没有短信功能&quot;</span> <span class="nl">messageTitle:</span><span class="nb">nil</span> <span class="nl">dismissTitle:</span><span class="s">@&quot;关闭&quot;</span><span class="p">];</span>
+</span><span class='line'>          <span class="p">}</span>
+</span><span class='line'>      <span class="p">}</span>
+</span><span class='line'>      <span class="k">else</span> <span class="p">{</span>
+</span><span class='line'>          <span class="p">[</span><span class="n">UIAlertView</span> <span class="nl">quickAlertWithTitle:</span><span class="s">@&quot;iOS版本过低,iOS4.0以上才支持程序内发送短信&quot;</span> <span class="nl">messageTitle:</span><span class="nb">nil</span> <span class="nl">dismissTitle:</span><span class="s">@&quot;关闭&quot;</span><span class="p">];</span>
+</span><span class='line'>      <span class="p">}</span>
+</span><span class='line'>    <span class="p">}</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="o">-</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="n">displaySMSComposerSheet</span>
+</span><span class='line'>    <span class="p">{</span>
+</span><span class='line'>      <span class="n">MFMessageComposeViewController</span> <span class="o">*</span><span class="n">picker</span> <span class="o">=</span> <span class="p">[[</span><span class="n">MFMessageComposeViewController</span> <span class="n">alloc</span><span class="p">]</span> <span class="n">init</span><span class="p">];</span>
+</span><span class='line'>      <span class="n">picker</span><span class="p">.</span><span class="n">messageComposeDelegate</span> <span class="o">=</span> <span class="n">self</span><span class="p">;</span>
+</span><span class='line'>
+</span><span class='line'>      <span class="n">NSMutableString</span><span class="o">*</span> <span class="n">absUrl</span> <span class="o">=</span> <span class="p">[[</span><span class="n">NSMutableString</span> <span class="n">alloc</span><span class="p">]</span> <span class="nl">initWithString:</span><span class="n">web</span><span class="p">.</span><span class="n">request</span><span class="p">.</span><span class="n">URL</span><span class="p">.</span><span class="n">absoluteString</span><span class="p">];</span>
+</span><span class='line'>      <span class="p">[</span><span class="n">absUrl</span> <span class="nl">replaceOccurrencesOfString:</span><span class="s">@&quot;http://i.aizheke.com&quot;</span> <span class="nl">withString:</span><span class="s">@&quot;http://m.aizheke.com&quot;</span> <span class="nl">options:</span><span class="n">NSCaseInsensitiveSearch</span> <span class="nl">range:</span><span class="n">NSMakeRange</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="p">[</span><span class="n">absUrl</span> <span class="n">length</span><span class="p">])];</span>
+</span><span class='line'>
+</span><span class='line'>      <span class="n">picker</span><span class="p">.</span><span class="n">body</span><span class="o">=</span><span class="p">[</span><span class="n">NSString</span> <span class="nl">stringWithFormat:</span><span class="s">@&quot;我在爱折客上看到：%@ 可能对你有用，推荐给你！link：%@&quot;</span>
+</span><span class='line'>                                          <span class="p">,[</span><span class="n">web</span> <span class="nl">stringByEvaluatingJavaScriptFromString:</span><span class="s">@&quot;document.title&quot;</span><span class="p">]</span>
+</span><span class='line'>                                          <span class="p">,</span><span class="n">absUrl</span><span class="p">];</span>
+</span><span class='line'>      <span class="p">[</span><span class="n">absUrl</span> <span class="n">release</span><span class="p">];</span>
+</span><span class='line'>      <span class="p">[</span><span class="n">self</span> <span class="nl">presentModalViewController:</span><span class="n">picker</span> <span class="nl">animated:</span><span class="n">YES</span><span class="p">];</span>
+</span><span class='line'>      <span class="p">[</span><span class="n">picker</span> <span class="n">release</span><span class="p">];</span>
+</span><span class='line'>    <span class="p">}</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="o">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nl">messageComposeViewController:</span><span class="p">(</span><span class="n">MFMessageComposeViewController</span> <span class="o">*</span><span class="p">)</span><span class="n">controller</span>
+</span><span class='line'>                   <span class="nl">didFinishWithResult:</span><span class="p">(</span><span class="n">MessageComposeResult</span><span class="p">)</span><span class="n">result</span> <span class="p">{</span>
+</span><span class='line'>
+</span><span class='line'>      <span class="k">switch</span> <span class="p">(</span><span class="n">result</span><span class="p">)</span>
+</span><span class='line'>      <span class="p">{</span>
+</span><span class='line'>          <span class="k">case</span> <span class="nl">MessageComposeResultCancelled:</span>
+</span><span class='line'>              <span class="n">LOG_EXPR</span><span class="p">(</span><span class="s">@&quot;Result: SMS sending canceled&quot;</span><span class="p">);</span>
+</span><span class='line'>              <span class="k">break</span><span class="p">;</span>
+</span><span class='line'>          <span class="k">case</span> <span class="nl">MessageComposeResultSent:</span>
+</span><span class='line'>              <span class="n">LOG_EXPR</span><span class="p">(</span><span class="s">@&quot;Result: SMS sent&quot;</span><span class="p">);</span>
+</span><span class='line'>              <span class="k">break</span><span class="p">;</span>
+</span><span class='line'>          <span class="k">case</span> <span class="nl">MessageComposeResultFailed:</span>
+</span><span class='line'>              <span class="p">[</span><span class="n">UIAlertView</span> <span class="nl">quickAlertWithTitle:</span><span class="s">@&quot;短信发送失败&quot;</span> <span class="nl">messageTitle:</span><span class="nb">nil</span> <span class="nl">dismissTitle:</span><span class="s">@&quot;关闭&quot;</span><span class="p">];</span>
+</span><span class='line'>              <span class="k">break</span><span class="p">;</span>
+</span><span class='line'>          <span class="k">default</span><span class="o">:</span>
+</span><span class='line'>              <span class="n">LOG_EXPR</span><span class="p">(</span><span class="s">@&quot;Result: SMS not sent&quot;</span><span class="p">);</span>
+</span><span class='line'>              <span class="k">break</span><span class="p">;</span>
+</span><span class='line'>      <span class="p">}</span>
+</span><span class='line'>      <span class="p">[</span><span class="n">self</span> <span class="nl">dismissModalViewControllerAnimated:</span><span class="n">YES</span><span class="p">];</span>
+</span><span class='line'>    <span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+
+</div>
+
+  <footer>
+    
+    
+  </footer>
+
+
+    </article>
+  
+    
+
+
+
+
+
+
+
+
+
+
+    <article >
+      
+  <header>
+    <h1 class="entry-title">
+
 <a href="/2011/01/03/my-2010/">2010的生活轨迹</a>
 
 </h1>
@@ -855,96 +1056,6 @@ team member只能下载和安装证书及profile</p>
 
     </article>
   
-    
-
-
-
-
-
-
-
-
-
-
-    <article >
-      
-  <header>
-    <h1 class="entry-title">
-
-<a href="/2007/02/15/angel-on-the-wall/">&#22681;&#19978;&#30340;&#22825;&#20351;</a>
-
-</h1>
-
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2007-02-15T00:30:08+08:00" pubdate data-updated="true">Feb 15<span>th</span>, 2007</time>
-         &bull; <a rel="bookmark" href="/2007/02/15/angel-on-the-wall/">Permalink</a>
-      </p>
-    
-  </header>
-
-<div class="entry-content"><h1><a href="index.html">Singing Like Nobody&#8217;s Listening</a></h1>
-
-<h2>墙上的天使</h2>
-
-<h5>2007/3/1 16:30:08</h5>
-
-<p>Wednesday, 14. February 2007, 04:38:02</p>
-
-<p>看完了《梦旅人》，依旧是那么的”岩井俊二“。</p>
-
-<p>曾几何时，我们不也像这些墙上的天使般天真无邪，是什么让我们渐渐地变成了我们眼中的正常人，而这些过去的自己渐渐地成为了我们眼中的疯子？</p>
-
-<p>1997年7月10日，他们外出野餐一起去看世界末日。随着海边夕阳下漫天黑羽片片飘落，可可眼中的世界末日终于来临。这个世界末日何尝不也是小悟，卷毛的世界末日呢？他们的世界末日是如此的宁静坦然，他们都得到了自己的救赎。而我们这些旁观的surviver，该为他们感到高兴抑或悲伤？又该为我们自己感到高兴还是悲伤？</p>
-
-<hr />
-
-<p>摘抄点别人的评论做个记录：<br/>
-”朝太阳开枪，射落心底藐视的那些又蠢又笨的光芒，我们的青春恰似萤火虫的微茫，漆黑中点起勇气和希望。噩梦也许永远无法忘记，当我们知道了世界末日，不如义无反顾地走向生命的顶端。脱离既定的轨道，趟在齐腰深的河流里，尖锐的抵抗也该有一个柔软的出口和归宿。“</p>
-
-<p>”　　岩井给我们一个十字架，抱着它，踉跄的走在梦想边上，即使不小心摔断了脖子也要让它颠簸的咔嚓作响。我们单纯到不理解这个世界，也一样不被这个世界所理解。世界的尽头斑斓缤纷，看起来一点也不像冷酷仙境。有许多人终其一生，也不曾看见通向天堂途中蔓延到天边的花朵，和清澈的雪山湖泊。 “</p>
-
-<p>&#8212;-萤火虫·Exit 《映像·萤火青春 梦旅人》</p>
-
-<p>”小悟是温顺懦弱的，但喜欢着他的朋友，一起在围墙上走远，只渴望得到和别人相同的东西。 “</p>
-
-<p>”　　我们都曾是这样的，如这些疯子般天真、敏感而执着。我们会被优美的圣诗吸引，而最终却不会停留。我们会看不起别人的懦弱，或者我们自己就是懦弱。我们会想要一个如同别人手上的洋娃娃一样的玩具，结果却找到一只断手。我们会对着不喜欢的广告板豪不犹豫地开枪示威。我们会相信自己就是世界，或者对权威定义的世界深信不疑。神父举着可可身上掉下的一根羽毛，喃喃自问：难道他们是黑色的天使？ ”</p>
-
-<p>”那个白衣天使在荒芜的草地上徒劳挣扎，脸上满是细细的汗珠，脖子折断的声音，一下、一下，那么清晰。“</p>
-
-<p>&#8212;-霜林醉 《在边缘挣扎》</p>
-
-<p>“现实为什么会这样?而梦想为什么会那样? <br/>
-世界为什么会这样?而那些如同天使一般的人们，为什么却成了我们眼中疯狂的人? “</p>
-
-<p>”他们的心灵是坦诚真挚的。 <br/>
-所以他们会比许多被蒙蔽的眼睛更能发现生活中无处不在，点滴细碎的美丽。“</p>
-
-<p>&#8212;-jie 《梦旅人》</p>
-
-<h3>Comments</h3>
-</div>
-
-  <footer>
-    
-    
-  </footer>
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/blog/page/4/">&larr; Older</a>
@@ -965,12 +1076,13 @@ team member只能下载和安装证书及profile</p>
 <li class='category'><a href='/blog/categories/design/'>design (1)</a></li>
 <li class='category'><a href='/blog/categories/game/'>game (4)</a></li>
 <li class='category'><a href='/blog/categories/ios/'>iOS (6)</a></li>
+<li class='category'><a href='/blog/categories/ios-/'>iOS, (1)</a></li>
 <li class='category'><a href='/blog/categories/life/'>life (34)</a></li>
 <li class='category'><a href='/blog/categories/movie/'>movie (4)</a></li>
 <li class='category'><a href='/blog/categories/music/'>music (9)</a></li>
 <li class='category'><a href='/blog/categories/others/'>others (11)</a></li>
 <li class='category'><a href='/blog/categories/photography/'>photography (8)</a></li>
-<li class='category'><a href='/blog/categories/programming/'>programming (13)</a></li>
+<li class='category'><a href='/blog/categories/programming/'>programming (14)</a></li>
 <li class='category'><a href='/blog/categories/translation/'>translation (2)</a></li>
 
   </ul>
@@ -978,6 +1090,10 @@ team member只能下载和安装证书及profile</p>
 <section>
   <h1>Recent Posts</h1>
   <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/2012/12/08/dont-use-nsstrings-hash-use-md5-instead/">Don&#8217;t Use NSString&#8217;s Hash</a>
+      </li>
     
       <li class="post">
         <a href="/2012/11/30/use-testflight-to-beta-test-ios-app/">使用TestFlight 安装测试版iOS应用(面向测试人员)</a>
@@ -993,10 +1109,6 @@ team member只能下载和安装证书及profile</p>
     
       <li class="post">
         <a href="/2012/07/24/create-custom-rss-feed-for-octopress/">Create Custom Rss Feed for Octopress</a>
-      </li>
-    
-      <li class="post">
-        <a href="/2012/07/22/migrated-to-octopress/">Migrated to Octopress</a>
       </li>
     
   </ul>
