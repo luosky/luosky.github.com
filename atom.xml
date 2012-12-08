@@ -3,7 +3,7 @@
   <title><![CDATA[Luosky's Playground]]></title>
   <link href="http://luosky.com/atom.xml" rel="self"/>
   <link href="http://luosky.com/"/>
-  <updated>2012-12-08T13:07:31+08:00</updated>
+  <updated>2012-12-08T13:15:21+08:00</updated>
   <id>http://luosky.com/</id>
   <author>
     <name><![CDATA[Luosky]]></name>
@@ -25,7 +25,17 @@
 
       <content type="html"><![CDATA[<p>My recent iOS project, Aimeiwei, is an image-oriented app focused on food. We use lots of images, and one picture user updated can have two different aspect ratios, one is the original square food picture, and one is a cropped rectangle picutre that can possiblly be used as the restaurant&#8217;s header image. I utilized <a href="https://github.com/enormego/EGOImageLoading">EGOImageLoading</a> to cache and display images from our remote server. But I came across a strange problem: <strong><em>Sometimes</em></strong> the rectangle image view displays the square one instead, dispite the fact that the urls of the two images are different and the url of the rectangle one points to the correct rectangle image.</p>
 
-<p>After a long time digging, I found that the problem rooted in the <code>hash</code> method of <code>NSString</code>. These two url: <code>http://aizheke-img-dev.b0.upaiyun.com/imagefs/amw/food_story/50b85c545c168b2e6000003f/image/banner_46664ae45ffaff8ad1ab1cd55d38b6ac.jpg</code> and <code>http://aizheke-img-dev.b0.upaiyun.com/imagefs/amw/food_story/50b85c545c168b2e6000003f/image/medium_46664ae45ffaff8ad1ab1cd55d38b6ac.jpg</code>, their hash is identical! (And <a href="https://github.com/enormego/EGOImageLoading">EGOImageLoading</a> uses the hash result as a key to cache the image. So if the square image had been cached, the rectangle view used the cached square image to display.)</p>
+<p>After a long time digging, I found that the problem rooted in the <code>hash</code> method of <code>NSString</code>. These two url:</p>
+
+<pre><code>http://aizheke-img-dev.b0.upaiyun.com/imagefs/amw/food_story/50b85c545c168b2e6000003f/image/banner_46664ae45ffaff8ad1ab1cd55d38b6ac.jpg 
+</code></pre>
+
+<p>and</p>
+
+<pre><code>http://aizheke-img-dev.b0.upaiyun.com/imagefs/amw/food_story/50b85c545c168b2e6000003f/image/medium_46664ae45ffaff8ad1ab1cd55d38b6ac.jpg
+</code></pre>
+
+<p>Their hash is identical! (And <a href="https://github.com/enormego/EGOImageLoading">EGOImageLoading</a> uses the hash result as a key to cache the image. So if the square image had been cached, the rectangle view used the cached square image to display.)</p>
 
 <p>Then I found this <a href="http://www.mulle-kybernetik.com/artikel/Optimization/opti-7.html">article</a> back in 2004, it says:</p>
 
