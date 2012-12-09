@@ -3,7 +3,7 @@
   <title><![CDATA[Luosky's Playground]]></title>
   <link href="http://luosky.com/atom.xml" rel="self"/>
   <link href="http://luosky.com/"/>
-  <updated>2012-12-09T19:15:30+08:00</updated>
+  <updated>2012-12-10T00:51:42+08:00</updated>
   <id>http://luosky.com/</id>
   <author>
     <name><![CDATA[Luosky]]></name>
@@ -11,6 +11,21 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+    <entry>
+      
+
+
+
+
+<title type="html"><![CDATA[高效程序员的45个习惯：敏捷开发修炼之道 读书笔记]]></title>
+<link href="http://luosky.com/2012/12/10/gao-xiao-cheng-xu-yuan-de-45du-shu-bi-ji/"/>
+<updated>2012-12-10T00:47:00+08:00</updated>
+<id>http://luosky.com/2012/12/10/gao-xiao-cheng-xu-yuan-de-45du-shu-bi-ji</id>
+
+      <content type="html"><![CDATA[<p>暂时没有能比较方便处理多看导出的书摘的markdown工具, 先放个<a href="https://www.evernote.com/shard/s1/sh/e10486e3-8cba-4422-86a6-7d738904eda0/a47bbacaf8f240dff1af3393965845c8">Evernote的链接</a>, 回头再导进octopress.</p>
+<p><a rel="bookmark" href="http://luosky.com/2012/12/10/gao-xiao-cheng-xu-yuan-de-45du-shu-bi-ji/">&#9875; Permalink</a></p>]]></content>
+    </entry>
   
     <entry>
       
@@ -291,7 +306,7 @@ The hash is a convolution of the first and last eight bytes plus the length of t
 <li><a href="http://pqrs.org/macosx/keyremap4macbook/index.html">KeyRemap4MacBook</a>
 
 <ul>
-<li>可自定义按键的很多特性,比如<a href="http://brettterpstra.com/a-useful-caps-lock-key/?utm_source=feedburner&amp;utm_medium=feed&amp;utm_campaign=Feed%3A+BrettTerpstra+%28Brett+Terpstra%29">轻按为escape,按住为ctrl+shift+opt+command</a>. 另外它自带的vi mode也很不错.我用了其中的右command+hjkl和Fn+hjkl来作为上下左右的快捷键,还有右command+fb做翻页的快捷键.</li>
+<li>可自定义按键的很多特性,比如<a href="http://brettterpstra.com/a-useful-caps-lock-key/?utm_source=feedburner&amp;utm_medium=feed&amp;utm_campaign=Feed%3A+BrettTerpstra+%28Brett+Terpstra%29">轻按为escape,按住为ctrl+shift+opt+command</a>. 另外它自带的vi mode也很不错.我用了其中的右command+hjkl和Fn+hjkl来作为上下左右的快捷键,还有右command+fb做翻页的快捷键.还用了右command+左command进入complete vi mode, 右option进入browse mode.</li>
 </ul>
 </li>
 <li><a href="http://infinite-labs.net/afloat/#download">Afloat</a>
@@ -1173,43 +1188,6 @@ And that has made all the difference.</p>
 
 <p><a href="http://photo.luosky.com/wp-content/uploads/2011/01/Screen-shot-2011-01-06-at-12.04.34-AM.png"><img src="http://photo.luosky.com/wp-content/uploads/2011/01/Screen-shot-2011-01-06-at-12.04.34-AM.png" title="Screen shot 2011-01-06 at 12.04.34 AM" alt="" /></a></p>
 <p><a rel="bookmark" href="http://luosky.com/2011/01/06/shutdown-msn-live-space/">&#9875; Permalink</a></p>]]></content>
-    </entry>
-  
-    <entry>
-      
-
-
-
-
-<title type="html"><![CDATA[我的第二个iOS应用 爱折客 更新了]]></title>
-<link href="http://luosky.com/2011/01/06/my-second-ios-app/"/>
-<updated>2011-01-06T00:36:00+08:00</updated>
-<id>http://luosky.com/2011/01/06/my-second-ios-app</id>
-
-      <content type="html"><![CDATA[<p>我做的第二个iOS应用[爱折客][]更新了,上海地区的iPhone用户欢迎试用:</p>
-
-<p><a href="http://photo.luosky.com/wp-content/uploads/2011/01/Default.png"><img src="http://photo.luosky.com/wp-content/uploads/2011/01/Default.png" title="Default" alt="" /></a></p>
-
-<h3>显示你附近的优惠券:</h3>
-
-<p><img src="http://a1.phobos.apple.com/us/r1000/002/Purple/58/00/1e/mzl.yzjshxuf.320x480-75.jpg" title="附近" alt="" /></p>
-
-<h3>优惠券页面:</h3>
-
-<p><img src="http://a1.phobos.apple.com/us/r1000/040/Purple/61/c0/b0/mzl.yxnuejnc.320x480-75.jpg" title="优惠券" alt="" /></p>
-
-<h3>你关注的店的动态:</h3>
-
-<p><img src="http://a1.phobos.apple.com/us/r1000/036/Purple/73/64/ff/mzl.dqxvrrxb.320x480-75.jpg" title="我的店" alt="" /></p>
-
-<h3>放入口袋的优惠券:</h3>
-
-<p><img src="http://a1.phobos.apple.com/us/r1000/044/Purple/58/9f/6d/mzl.jlaqcrzy.320x480-75.jpg" title="口袋" alt="" /></p>
-
-<h3>评论箱:</h3>
-
-<p><img src="http://a1.phobos.apple.com/us/r1000/056/Purple/6e/39/ee/mzl.yvnvogck.320x480-75.jpg" title="评论箱" alt="" /></p>
-<p><a rel="bookmark" href="http://luosky.com/2011/01/06/my-second-ios-app/">&#9875; Permalink</a></p>]]></content>
     </entry>
   
 </feed>
