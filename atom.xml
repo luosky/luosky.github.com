@@ -3,7 +3,7 @@
   <title><![CDATA[Luosky's Playground]]></title>
   <link href="http://luosky.com/atom.xml" rel="self"/>
   <link href="http://luosky.com/"/>
-  <updated>2012-12-10T00:51:42+08:00</updated>
+  <updated>2013-01-26T20:36:38+08:00</updated>
   <id>http://luosky.com/</id>
   <author>
     <name><![CDATA[Luosky]]></name>
@@ -147,7 +147,7 @@ The hash is a convolution of the first and last eight bytes plus the length of t
 
       <content type="html"><![CDATA[<p>以下是我觉得好用的app,如果没有链接的,一般都可以在Mac的App Store里找到.</p>
 
-<h2>编程</h2>
+<h2>开发</h2>
 
 <ul>
 <li>CodeRunner</li>
@@ -161,6 +161,12 @@ The hash is a convolution of the first and last eight bytes plus the length of t
 
 <ul>
 <li>版本控制</li>
+</ul>
+</li>
+<li><a href="http://mschrag.github.com/">SpeedLimit</a>
+
+<ul>
+<li>在mac上模拟3G或Edge的速度</li>
 </ul>
 </li>
 </ul>
