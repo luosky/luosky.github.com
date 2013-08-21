@@ -1,0 +1,438 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>KeyRemap4MacBook - Luosky's Playground</title>
+  <meta name="author" content="Luosky">
+  <meta name="Generator" content="Jekyll & Octopress (http://octopress.org)">
+
+  
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <link rel="canonical" href="http://luosky.com/2013/08/13/keyremap4macbook/">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <script src="/javascripts/octopress.min.js" type="text/javascript"></script>
+  <link href="/feed" rel="alternate" title="Luosky's Playground" type="application/atom+xml">
+  
+
+<!--Fonts from Google's Web font directory at http://google.com/webfonts -->
+<link href='http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic' rel='stylesheet' type='text/css'>
+
+  
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-150010-7']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+
+
+   
+  <link href="/octopress-favicon.png" rel="icon">
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <h1><a href="/">Luosky's Playground</a></h1>
+  
+    <h2>It's better to burn out than to fade away.</h2>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/feed" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="http://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:luosky.com" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+	<li><a href="/">Blog</a></li>
+	<li><a href="/archives">Archives</a></li>
+	<li><a href="http://luosky.tumblr.com">Mobile Photoes</a></li>
+	<li><a href="/about">About</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+
+
+
+
+
+
+
+
+
+
+
+<article class="hentry " role="article">
+  
+  <header>
+    <h1 class="entry-title">
+
+KeyRemap4MacBook
+
+</h1>
+
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-08-13T19:21:00+08:00" pubdate data-updated="true">Aug 13<span>th</span>, 2013</time>
+         &bull; <a rel="bookmark" href="/2013/08/13/keyremap4macbook/">Permalink</a>
+      </p>
+    
+  </header>
+
+<div class="entry-content"><p><a href="https://pqrs.org/macosx/KeyRemap4MacBook/">KeyRemap4MacBook</a> 是个可以改变Mac按键映射的工具，用到最多的就是<a href="http://brettterpstra.com/2012/12/08/a-useful-caps-lock-key">将Caps Lock键改成Hyper键</a>。也强烈建议开发人员把 <code>Caps Lock</code> 改成 <code>Hyper</code>（Shift + Control + Command + Option），这样你就可以有一整套一般不会被程序占用的快捷键可供使用了。</p>
+
+<p>今天看了下他的具体语法，发现还可以有别的玩法：</p>
+
+<h2>一键切换到指定的输入法</h2>
+
+<p>切换中英文输入法我一直觉得是浪费时间的一件事情，每次都要先试错法判断下当前处于什么输入法。特别是如果你有时候还会用到中文输入法的英文输入的话，这时候你要切换到中文的话恐怕得将视线移到标题栏里确认当前是处于英文输入法还是处于中文输入法的英文输入，然后才好切换到中文输入（当然避免这种情况最好的办法还是把中文输入法的英文输入禁掉）。</p>
+
+<p>用KeyRemap4MacBook，你可以为你的每个输入法都设置一个快捷键。这里我用<code>Cmd + Space</code>来切换到英文输入法，用<code>Shift + Cmd + Space</code>来切换到中文输入法。我的中文输入法是百度拼音，用别的输入法的同学可以用KeyRemap4MacBook的Event Viewer来查看自己所用的输入法的input source id。</p>
+
+<figure class='code'><div class='highlight'><table><td class='gutter'><pre class='line-numbers'><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+</pre></td><td class='code'><pre><code class='plain'><span class='line'>    &lt;item>
+</span><span class='line'>      &lt;name>fast input source switch&lt;/name>
+</span><span class='line'>      &lt;appendix>Change input source to US by command + space&lt;/appendix>
+</span><span class='line'>      &lt;appendix>Change input source to Baidu by command + alt + space&lt;/appendix>
+</span><span class='line'>      &lt;identifier>luosky.change_input_source_to_us&lt;/identifier>
+</span><span class='line'>      &lt;vkchangeinputsourcedef>
+</span><span class='line'>          &lt;name>KeyCode::VK_CHANGE_INPUTSOURCE_BAIDU&lt;/name>
+</span><span class='line'>          &lt;inputsourceid_equal>com.baidu.inputmethod.BaiduIM.pinyin&lt;/inputsourceid_equal>
+</span><span class='line'>      &lt;/vkchangeinputsourcedef>
+</span><span class='line'>      &lt;autogen>
+</span><span class='line'>          __KeyToKey__
+</span><span class='line'>          KeyCode::SPACE, ModifierFlag::COMMAND_L | ModifierFlag::NONE,
+</span><span class='line'>          KeyCode::VK_CHANGE_INPUTSOURCE_US
+</span><span class='line'>      &lt;/autogen>
+</span><span class='line'>      &lt;autogen>
+</span><span class='line'>          __KeyToKey__
+</span><span class='line'>          KeyCode::SPACE, ModifierFlag::COMMAND_L | ModifierFlag::OPTION_L | ModifierFlag::NONE,
+</span><span class='line'>          KeyCode::VK_CHANGE_INPUTSOURCE_BAIDU
+</span><span class='line'>      &lt;/autogen>
+</span><span class='line'>  &lt;/item></span></code></pre></td></tr></table></div></figure>
+
+
+<h2>一键启动/切换程序，在该程序里按的话则隐藏该程序的窗口</h2>
+
+<p>经常有些应用，比如 QQ 或者邮件，你只需要很快的瞄一眼， 就可以切换回原来正在进行的工作中。用 <code>Alt + Tab</code>切换的话得一个个切换过去实在太慢。如果可以为这个应用指定一个快捷键，按一下就切换过去，再按一下，切换回之前的应用，那可以节约不少时间。</p>
+
+<p>这个用 KeyRemap4MacBook 也能做到，实现的思路是当当前应用不是 QQ 时，这个快捷键打开 QQ，当当前应用是 QQ 时，这个快捷键隐藏当前应用的所有窗口。</p>
+
+<p><strong>updated</strong>:后来想想，这个功能用 <a href="http://www.boastr.de/">betterTouchTool</a> 来实现更方便些，这里就当留个备份吧</p>
+
+<figure class='code'><div class='highlight'><table><td class='gutter'><pre class='line-numbers'><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+<span class='line-number'>26</span>
+<span class='line-number'>27</span>
+<span class='line-number'>28</span>
+<span class='line-number'>29</span>
+<span class='line-number'>30</span>
+</pre></td><td class='code'><pre><code class='plain'><span class='line'>
+</span><span class='line'>  &lt;vkopenurldef>
+</span><span class='line'>    &lt;name>KeyCode::VK_OPEN_URL_APP_QQ&lt;/name>
+</span><span class='line'>    &lt;url>file:///Applications/QQ.app&lt;/url>
+</span><span class='line'>  &lt;/vkopenurldef>
+</span><span class='line'>  &lt;appdef>
+</span><span class='line'>    &lt;appname>APP_QQ&lt;/appname>
+</span><span class='line'>    &lt;equal>com.tencent.qq&lt;/equal>
+</span><span class='line'>  &lt;/appdef>
+</span><span class='line'>
+</span><span class='line'>  &lt;item>
+</span><span class='line'>    &lt;name>Change hyper + q to open QQ&lt;/name>
+</span><span class='line'>    &lt;identifier>luosky.hyper_q_qq&lt;/identifier>
+</span><span class='line'>    &lt;not>APP_QQ&lt;/not>
+</span><span class='line'>    &lt;autogen>
+</span><span class='line'>      __KeyToKey__
+</span><span class='line'>      KeyCode::Q, ModifierFlag::OPTION_L | ModifierFlag::SHIFT_L | ModifierFlag::CONTROL_L | ModifierFlag::COMMAND_L,
+</span><span class='line'>      KeyCode::VK_OPEN_URL_APP_QQ
+</span><span class='line'>    &lt;/autogen>
+</span><span class='line'>  &lt;/item>
+</span><span class='line'>  &lt;item>
+</span><span class='line'>    &lt;name>Change hyper + q to hide QQ in QQ&lt;/name>
+</span><span class='line'>    &lt;identifier>luosky.hyper_q_hide_qq&lt;/identifier>
+</span><span class='line'>    &lt;only>APP_QQ&lt;/only>
+</span><span class='line'>    &lt;autogen>
+</span><span class='line'>      __KeyToKey__
+</span><span class='line'>      KeyCode::Q, ModifierFlag::OPTION_L | ModifierFlag::SHIFT_L | ModifierFlag::CONTROL_L | ModifierFlag::COMMAND_L,
+</span><span class='line'>      KeyCode::H, ModifierFlag::COMMAND_L
+</span><span class='line'>    &lt;/autogen>
+</span><span class='line'>  &lt;/item>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<h2>其他</h2>
+
+<p>除了上面两个以外我还用到了下面这些：</p>
+
+<ul>
+<li><a href="http://brettterpstra.com/2012/12/08/a-useful-caps-lock-key">将Caps Lock键改成Hyper键</a></li>
+<li><code>Hyper</code> + <code>Space</code> 输出 <code>Enter</code></li>
+<li><code>Shift_L/R</code> + <code>Space</code> 输出 <code>(</code> / <code>)</code></li>
+<li>自带的
+
+<ul>
+<li>单击 <code>Option_L</code> 进入浏览模式</li>
+<li>vi mode中的<code>Command</code> +<code>h/j/k/l</code>和<code>Fn</code>+<code>h/j/k/l</code> 输出 上下左右 ，和<code>Command</code> + <code>f/b</code>输出 <code>PageDown</code>/<code>PageUp</code>。</li>
+<li><code>Command_L</code> + <code>Command_R</code> 进入 complete vi mode</li>
+</ul>
+</li>
+</ul>
+
+
+<p>完整的 <a href="https://gist.github.com/luosky/6293221">private.xml </a></p>
+</div>
+
+
+  <footer>
+    <p class="meta">
+      
+  
+
+<span class="byline author vcard">Posted by <span class="fn">Luosky</span></span>
+
+
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-08-13T19:21:00+08:00" pubdate data-updated="true">Aug 13<span>th</span>, 2013</time>
+
+
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/productivity/'>productivity</a>
+  
+</span>
+
+
+
+      
+
+    </p>
+    
+      <div class="sharing">
+  
+    
+      <a href="http://twitter.com/share" title="Tweet this" class="twitter-share" target="_blank">Tweet</a>
+    
+  
+  
+  
+  
+
+   <iframe allowtransparency="true" frameborder="0" scrolling="no" src="http://hits.sinajs.cn/A1/weiboshare.html?url=http://luosky.com/2013/08/13/keyremap4macbook/&amp;appkey=1556233841&amp;type=6&amp;ralateUid=1644030950&amp;language=zh_cn" width="86" height="16"></iframe>
+
+
+
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/2012/12/10/gao-xiao-cheng-xu-yuan-de-45du-shu-bi-ji/" title="Previous Post: 高效程序员的45个习惯：敏捷开发修炼之道 读书笔记">&laquo; 高效程序员的45个习惯：敏捷开发修炼之道 读书笔记</a>
+      
+      
+    </p>
+  </footer>
+</article>
+
+<section>
+  <h1>Comments</h1>
+  
+
+  
+    <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+  
+  
+  	<script type="text/javascript">
+(function(){
+var url = "http://widget.weibo.com/distribution/comments.php?width=0&url=http://luosky.com/2013/08/13/keyremap4macbook/&brandline=y&fontsize=14&ralateuid=&appkey=&dpc=1";
+document.write('<iframe id="WBCommentFrame" src="' + url + '" scrolling="no" frameborder="0" style="width:100%"></iframe>');
+})();
+</script>
+<script src="http://tjs.sjs.sinajs.cn/open/widget/js/widget/comment.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript">
+window.WBComment.init({
+    "id": "WBCommentFrame"
+});
+</script>
+  
+</section>
+
+</div>
+
+<aside class="sidebar">
+  
+    <section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/2013/08/13/keyremap4macbook/">KeyRemap4MacBook</a>
+      </li>
+    
+      <li class="post">
+        <a href="/2012/12/10/gao-xiao-cheng-xu-yuan-de-45du-shu-bi-ji/">高效程序员的45个习惯：敏捷开发修炼之道 读书笔记</a>
+      </li>
+    
+      <li class="post">
+        <a href="/2012/12/08/be-careful-with-nsstring-hash/">Be Careful with NSString's Hash</a>
+      </li>
+    
+      <li class="post">
+        <a href="/2012/11/30/use-testflight-to-beta-test-ios-app/">使用TestFlight 安装测试版iOS应用(面向测试人员)</a>
+      </li>
+    
+      <li class="post">
+        <a href="/2012/08/06/my-bettertouchtool-config/">My BetterTouchTool Config</a>
+      </li>
+    
+  </ul>
+</section>
+
+
+<section>
+  <h1>Latest Tweets</h1>
+  <ul id="tweets" data-user="luosky" data-count="4" data-replies="false">
+    <li class="loading">Status updating...</li>
+  </ul>
+  
+    <a href="http://twitter.com/luosky" class="twitter-follow-button" data-show-count="false">Follow @luosky</a>
+  
+</section>
+
+
+
+
+
+
+
+
+
+
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2013 - Luosky -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+<script type="text/javascript">
+      var disqus_shortname = 'luosky';
+			var disqus_developer = '1';
+      
+        
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://luosky.com/2013/08/13/keyremap4macbook/';
+        var disqus_url = 'http://luosky.com/2013/08/13/keyremap4macbook/';
+        var disqus_script = 'embed.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = 'http://' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+
+
+
+</body>
+</html>
