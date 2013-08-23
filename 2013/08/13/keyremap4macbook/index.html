@@ -240,6 +240,72 @@ KeyRemap4MacBook
 </span></code></pre></td></tr></table></div></figure>
 
 
+<h2>HHKB 单独设置</h2>
+
+<p>最近入了神器键盘 <a href="http://en.wikipedia.org/wiki/Happy_Hacking_Keyboard">HHKB</a>，由于它天生就把<code>Caps Lock</code>去掉了，重度依赖的<code>Hyper</code>键一下子没了很不习惯，就把长按<code>Tab</code>映射成了<code>Hyper</code>。同时我还把右边的<code>Option</code>也映射成了<code>Hyper</code>，搭配之前设置的<code>Hyper</code> + <code>J/K/H/L</code> 输出 <code>下/上/左/右</code>，这样只要用手掌按住右<code>Option</code>就可以直接单手用 <code>J/K/H/L</code>这些 vi 键来做方向键了。</p>
+
+<figure class='code'><div class='highlight'><table><td class='gutter'><pre class='line-numbers'><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+<span class='line-number'>26</span>
+<span class='line-number'>27</span>
+<span class='line-number'>28</span>
+<span class='line-number'>29</span>
+<span class='line-number'>30</span>
+</pre></td><td class='code'><pre><code class='plain'><span class='line'>    &lt;item>
+</span><span class='line'>      &lt;name>HHKB adopt Hyper settings&lt;/name>
+</span><span class='line'>      &lt;identifier>luosky.hhkb_hyper&lt;/identifier>
+</span><span class='line'>      &lt;appendix>(Option_R / TAB to Hyper (ctrl+shift+cmd+opt), press only once, send escape)&lt;/appendix>
+</span><span class='line'>
+</span><span class='line'>      &lt;devicevendordef>
+</span><span class='line'>          &lt;vendorname>TOPRE&lt;/vendorname>
+</span><span class='line'>          &lt;vendorid>0x0853&lt;/vendorid>
+</span><span class='line'>      &lt;/devicevendordef>
+</span><span class='line'>
+</span><span class='line'>      &lt;deviceproductdef>
+</span><span class='line'>          &lt;productname>HHKB_PRO2_TYPES&lt;/productname>
+</span><span class='line'>          &lt;productid>0x0100&lt;/productid>
+</span><span class='line'>      &lt;/deviceproductdef>
+</span><span class='line'>      &lt;device_only>DeviceVendor::TOPRE, DeviceProduct::HHKB_PRO2_TYPES&lt;/device_only>
+</span><span class='line'>      &lt;autogen>
+</span><span class='line'>          --KeyOverlaidModifier--
+</span><span class='line'>          KeyCode::TAB,
+</span><span class='line'>          KeyCode::COMMAND_L,
+</span><span class='line'>          ModifierFlag::OPTION_L | ModifierFlag::SHIFT_L | ModifierFlag::CONTROL_L,
+</span><span class='line'>          KeyCode::TAB
+</span><span class='line'>      &lt;/autogen>
+</span><span class='line'>      &lt;autogen>
+</span><span class='line'>          --KeyOverlaidModifier--
+</span><span class='line'>          KeyCode::OPTION_R,
+</span><span class='line'>          KeyCode::COMMAND_L,
+</span><span class='line'>          ModifierFlag::OPTION_L | ModifierFlag::SHIFT_L | ModifierFlag::CONTROL_L,
+</span><span class='line'>          KeyCode::ESCAPE
+</span><span class='line'>      &lt;/autogen>
+</span><span class='line'>  &lt;/item></span></code></pre></td></tr></table></div></figure>
+
+
 <h2>其他</h2>
 
 <p>除了上面两个以外我还用到了下面这些：</p>
