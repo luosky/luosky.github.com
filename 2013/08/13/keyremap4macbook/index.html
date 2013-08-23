@@ -169,78 +169,7 @@ KeyRemap4MacBook
 </span><span class='line'>  &lt;/item></span></code></pre></td></tr></table></div></figure>
 
 
-<h2>一键启动/切换程序，在该程序里按的话则隐藏该程序的窗口</h2>
-
-<p>经常有些应用，比如 QQ 或者邮件，你只需要很快的瞄一眼， 就可以切换回原来正在进行的工作中。用 <code>Alt + Tab</code>切换的话得一个个切换过去实在太慢。如果可以为这个应用指定一个快捷键，按一下就切换过去，再按一下，切换回之前的应用，那可以节约不少时间。</p>
-
-<p>这个用 KeyRemap4MacBook 也能做到，实现的思路是当当前应用不是 QQ 时，这个快捷键打开 QQ，当当前应用是 QQ 时，这个快捷键隐藏当前应用的所有窗口。</p>
-
-<p><strong>updated</strong>:后来想想，这个功能用 <a href="http://www.boastr.de/">betterTouchTool</a> 来实现更方便些，这里就当留个备份吧</p>
-
-<figure class='code'><div class='highlight'><table><td class='gutter'><pre class='line-numbers'><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-<span class='line-number'>14</span>
-<span class='line-number'>15</span>
-<span class='line-number'>16</span>
-<span class='line-number'>17</span>
-<span class='line-number'>18</span>
-<span class='line-number'>19</span>
-<span class='line-number'>20</span>
-<span class='line-number'>21</span>
-<span class='line-number'>22</span>
-<span class='line-number'>23</span>
-<span class='line-number'>24</span>
-<span class='line-number'>25</span>
-<span class='line-number'>26</span>
-<span class='line-number'>27</span>
-<span class='line-number'>28</span>
-<span class='line-number'>29</span>
-<span class='line-number'>30</span>
-</pre></td><td class='code'><pre><code class='plain'><span class='line'>
-</span><span class='line'>  &lt;vkopenurldef>
-</span><span class='line'>    &lt;name>KeyCode::VK_OPEN_URL_APP_QQ&lt;/name>
-</span><span class='line'>    &lt;url>file:///Applications/QQ.app&lt;/url>
-</span><span class='line'>  &lt;/vkopenurldef>
-</span><span class='line'>  &lt;appdef>
-</span><span class='line'>    &lt;appname>APP_QQ&lt;/appname>
-</span><span class='line'>    &lt;equal>com.tencent.qq&lt;/equal>
-</span><span class='line'>  &lt;/appdef>
-</span><span class='line'>
-</span><span class='line'>  &lt;item>
-</span><span class='line'>    &lt;name>Change hyper + q to open QQ&lt;/name>
-</span><span class='line'>    &lt;identifier>luosky.hyper_q_qq&lt;/identifier>
-</span><span class='line'>    &lt;not>APP_QQ&lt;/not>
-</span><span class='line'>    &lt;autogen>
-</span><span class='line'>      __KeyToKey__
-</span><span class='line'>      KeyCode::Q, ModifierFlag::OPTION_L | ModifierFlag::SHIFT_L | ModifierFlag::CONTROL_L | ModifierFlag::COMMAND_L,
-</span><span class='line'>      KeyCode::VK_OPEN_URL_APP_QQ
-</span><span class='line'>    &lt;/autogen>
-</span><span class='line'>  &lt;/item>
-</span><span class='line'>  &lt;item>
-</span><span class='line'>    &lt;name>Change hyper + q to hide QQ in QQ&lt;/name>
-</span><span class='line'>    &lt;identifier>luosky.hyper_q_hide_qq&lt;/identifier>
-</span><span class='line'>    &lt;only>APP_QQ&lt;/only>
-</span><span class='line'>    &lt;autogen>
-</span><span class='line'>      __KeyToKey__
-</span><span class='line'>      KeyCode::Q, ModifierFlag::OPTION_L | ModifierFlag::SHIFT_L | ModifierFlag::CONTROL_L | ModifierFlag::COMMAND_L,
-</span><span class='line'>      KeyCode::H, ModifierFlag::COMMAND_L
-</span><span class='line'>    &lt;/autogen>
-</span><span class='line'>  &lt;/item>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<h2>HHKB 单独设置</h2>
+<h2>单独设置 HHKB 以贴合普通键盘的习惯</h2>
 
 <p>最近入了神器键盘 <a href="http://en.wikipedia.org/wiki/Happy_Hacking_Keyboard">HHKB</a>，由于它天生就把<code>Caps Lock</code>去掉了，重度依赖的<code>Hyper</code>键一下子没了很不习惯，于是我做了以下修改，以便在保留  HHKB 键位优点的基础上，尽可能的贴合普通键盘的习惯(这些设置都只在 HHKB 上才生效)：</p>
 
@@ -323,12 +252,82 @@ KeyRemap4MacBook
 </span><span class='line'>  &lt;/item></span></code></pre></td></tr></table></div></figure>
 
 
+<h2>一键启动/切换程序，在该程序里按的话则隐藏该程序的窗口</h2>
+
+<p>经常有些应用，比如 QQ 或者邮件，你只需要很快的瞄一眼， 就可以切换回原来正在进行的工作中。用 <code>Alt + Tab</code>切换的话得一个个切换过去实在太慢。如果可以为这个应用指定一个快捷键，按一下就切换过去，再按一下，切换回之前的应用，那可以节约不少时间。</p>
+
+<p>这个用 KeyRemap4MacBook 也能做到，实现的思路是当当前应用不是 QQ 时，这个快捷键打开 QQ，当当前应用是 QQ 时，这个快捷键隐藏当前应用的所有窗口。</p>
+
+<figure class='code'><div class='highlight'><table><td class='gutter'><pre class='line-numbers'><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+<span class='line-number'>26</span>
+<span class='line-number'>27</span>
+<span class='line-number'>28</span>
+<span class='line-number'>29</span>
+<span class='line-number'>30</span>
+</pre></td><td class='code'><pre><code class='plain'><span class='line'>
+</span><span class='line'>  &lt;vkopenurldef>
+</span><span class='line'>    &lt;name>KeyCode::VK_OPEN_URL_APP_QQ&lt;/name>
+</span><span class='line'>    &lt;url>file:///Applications/QQ.app&lt;/url>
+</span><span class='line'>  &lt;/vkopenurldef>
+</span><span class='line'>  &lt;appdef>
+</span><span class='line'>    &lt;appname>APP_QQ&lt;/appname>
+</span><span class='line'>    &lt;equal>com.tencent.qq&lt;/equal>
+</span><span class='line'>  &lt;/appdef>
+</span><span class='line'>
+</span><span class='line'>  &lt;item>
+</span><span class='line'>    &lt;name>Change hyper + q to open QQ&lt;/name>
+</span><span class='line'>    &lt;identifier>luosky.hyper_q_qq&lt;/identifier>
+</span><span class='line'>    &lt;not>APP_QQ&lt;/not>
+</span><span class='line'>    &lt;autogen>
+</span><span class='line'>      __KeyToKey__
+</span><span class='line'>      KeyCode::Q, ModifierFlag::OPTION_L | ModifierFlag::SHIFT_L | ModifierFlag::CONTROL_L | ModifierFlag::COMMAND_L,
+</span><span class='line'>      KeyCode::VK_OPEN_URL_APP_QQ
+</span><span class='line'>    &lt;/autogen>
+</span><span class='line'>  &lt;/item>
+</span><span class='line'>  &lt;item>
+</span><span class='line'>    &lt;name>Change hyper + q to hide QQ in QQ&lt;/name>
+</span><span class='line'>    &lt;identifier>luosky.hyper_q_hide_qq&lt;/identifier>
+</span><span class='line'>    &lt;only>APP_QQ&lt;/only>
+</span><span class='line'>    &lt;autogen>
+</span><span class='line'>      __KeyToKey__
+</span><span class='line'>      KeyCode::Q, ModifierFlag::OPTION_L | ModifierFlag::SHIFT_L | ModifierFlag::CONTROL_L | ModifierFlag::COMMAND_L,
+</span><span class='line'>      KeyCode::H, ModifierFlag::COMMAND_L
+</span><span class='line'>    &lt;/autogen>
+</span><span class='line'>  &lt;/item>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><strong>updated</strong>:后来想想，这个功能用 <a href="http://www.boastr.de/">betterTouchTool</a> 来实现更方便些，这里就当留个备份吧</p>
+
 <h2>其他</h2>
 
-<p>除了上面两个以外我还用到了下面这些：</p>
+<p>除了上面几个以外我还用到了下面这些：</p>
 
 <ul>
-<li><a href="http://brettterpstra.com/2012/12/08/a-useful-caps-lock-key">将Caps Lock键改成Hyper键</a></li>
 <li><code>Hyper</code> + <code>Space</code> 输出 <code>Enter</code></li>
 <li><code>Shift_L/R</code> + <code>Space</code> 输出 <code>(</code> / <code>)</code></li>
 <li>自带的
