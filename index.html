@@ -243,7 +243,14 @@
 
 <h2>HHKB 单独设置</h2>
 
-<p>最近入了神器键盘 <a href="http://en.wikipedia.org/wiki/Happy_Hacking_Keyboard">HHKB</a>，由于它天生就把<code>Caps Lock</code>去掉了，重度依赖的<code>Hyper</code>键一下子没了很不习惯，就把长按<code>Tab</code>映射成了<code>Hyper</code>。同时我还把右边的<code>Option</code>也映射成了<code>Hyper</code>，搭配之前设置的<code>Hyper</code> + <code>J/K/H/L</code> 输出 <code>下/上/左/右</code>，这样只要用手掌按住右<code>Option</code>就可以直接单手用 <code>J/K/H/L</code>这些 vi 键来做方向键了。</p>
+<p>最近入了神器键盘 <a href="http://en.wikipedia.org/wiki/Happy_Hacking_Keyboard">HHKB</a>，由于它天生就把<code>Caps Lock</code>去掉了，重度依赖的<code>Hyper</code>键一下子没了很不习惯，于是我做了以下修改，以便在保留  HHKB 键位优点的基础上，尽可能的贴合普通键盘的习惯(这些设置都只在 HHKB 上才生效)：</p>
+
+<ul>
+<li>长按<code>Tab</code> => <code>Hyper</code></li>
+<li>右边的<code>Option</code> => <code>Hyper</code>，搭配之前设置的<code>Hyper</code> + <code>J/K/H/L</code> 输出 <code>下/上/左/右</code>，这样只要用手掌按住右<code>Option</code>就可以直接单手用 <code>J/K/H/L</code>这些 vi 键来做方向键了。</li>
+<li>左边的<code>Shift</code> + <code>Delete</code> => <code>Forward Delete</code></li>
+</ul>
+
 
 <figure class='code'><div class='highlight'><table><td class='gutter'><pre class='line-numbers'><span class='line-number'>1</span>
 <span class='line-number'>2</span>
@@ -275,6 +282,11 @@
 <span class='line-number'>28</span>
 <span class='line-number'>29</span>
 <span class='line-number'>30</span>
+<span class='line-number'>31</span>
+<span class='line-number'>32</span>
+<span class='line-number'>33</span>
+<span class='line-number'>34</span>
+<span class='line-number'>35</span>
 </pre></td><td class='code'><pre><code class='plain'><span class='line'>    &lt;item>
 </span><span class='line'>      &lt;name>HHKB adopt Hyper settings&lt;/name>
 </span><span class='line'>      &lt;identifier>luosky.hhkb_hyper&lt;/identifier>
@@ -303,6 +315,11 @@
 </span><span class='line'>          KeyCode::COMMAND_L,
 </span><span class='line'>          ModifierFlag::OPTION_L | ModifierFlag::SHIFT_L | ModifierFlag::CONTROL_L,
 </span><span class='line'>          KeyCode::ESCAPE
+</span><span class='line'>      &lt;/autogen>
+</span><span class='line'>      &lt;autogen>
+</span><span class='line'>          --KeyToKey--
+</span><span class='line'>          KeyCode::DELETE, ModifierFlag::SHIFT_L | ModifierFlag::NONE,
+</span><span class='line'>          KeyCode::FORWARD_DELETE
 </span><span class='line'>      &lt;/autogen>
 </span><span class='line'>  &lt;/item></span></code></pre></td></tr></table></div></figure>
 
