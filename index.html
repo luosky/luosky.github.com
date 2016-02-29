@@ -253,9 +253,11 @@
 </span><span class='line'>  &lt;/item></span></code></pre></td></tr></table></div></figure>
 
 
+<p>update: HHKB 的 Fn 键 不能被 KeyRemap4MacBook 捕获，所以不支持 Fn 相关的修改。只有 Fn 键在 EventView 里能看到的键盘，才可以修改。</p>
+
 <h2>一键启动/切换程序，在该程序里按的话则隐藏该程序的窗口</h2>
 
-<p>经常有些应用，比如 QQ 或者邮件，你只需要很快的瞄一眼， 就可以切换回原来正在进行的工作中。用 <code>Alt + Tab</code>切换的话得一个个切换过去实在太慢。如果可以为这个应用指定一个快捷键，按一下就切换过去，再按一下，切换回之前的应用，那可以节约不少时间。</p>
+<p>经常有些应用，比如 QQ 或者邮件，你只需要很快的瞄一眼， 就可以切换回原来正在进行的工作中。用 <code>Command + Tab</code>切换的话得一个个切换过去实在太慢。如果可以为这个应用指定一个快捷键，按一下就切换过去，再按一下，切换回之前的应用，那可以节约不少时间。</p>
 
 <p>这个用 KeyRemap4MacBook 也能做到，实现的思路是当当前应用不是 QQ 时，这个快捷键打开 QQ，当当前应用是 QQ 时，这个快捷键隐藏当前应用的所有窗口。</p>
 
@@ -329,12 +331,12 @@
 <p>除了上面几个以外我还用到了下面这些：</p>
 
 <ul>
-<li><code>Hyper</code> + <code>Space</code> 输出 <code>Enter</code></li>
+<li><code>Hyper</code> + <code>Space</code> 输出 <code>Enter</code>。 适合需要按 <code>Enter</code>而右手在鼠标上时用，最常见的场景就是跳出对话框让你选确定还是取消，而你想直接按<code>Enter</code>键选择确定的时候。</li>
 <li><code>Shift_L/R</code> + <code>Space</code> 输出 <code>(</code> / <code>)</code></li>
 <li>自带的
 
 <ul>
-<li>单击 <code>Option_L</code> 进入浏览模式</li>
+<li><del>单击 <code>Option_L</code> 进入浏览模式</del></li>
 <li>vi mode中的<code>Command</code> +<code>h/j/k/l</code>和<code>Fn</code>+<code>h/j/k/l</code> 输出 上下左右 ，和<code>Command</code> + <code>f/b</code>输出 <code>PageDown</code>/<code>PageUp</code>。</li>
 <li><code>Command_L</code> + <code>Command_R</code> 进入 complete vi mode</li>
 </ul>
@@ -701,10 +703,16 @@ The hash is a convolution of the first and last eight bytes plus the length of t
 <li>快速进行目录跳转</li>
 </ul>
 </li>
-<li><a href="http://totalterminal.binaryage.com/">TotalTerminal</a>
+<li>Go2Shell
 
 <ul>
-<li>随时切出控制台</li>
+<li>从 Finder 里直接跳到当前目录的控制台</li>
+</ul>
+</li>
+<li><a href="https://github.com/micha/resty">resty</a>
+
+<ul>
+<li>curl 的替代品</li>
 </ul>
 </li>
 </ul>
@@ -772,6 +780,12 @@ The hash is a convolution of the first and last eight bytes plus the length of t
 
 <ul>
 <li>SSD硬盘增强</li>
+</ul>
+</li>
+<li><a href="http://www.noodlesoft.com/hazel">Hazel</a>
+
+<ul>
+<li>根据自定义的规则自动对文件进行分类</li>
 </ul>
 </li>
 <li><a href="http://blog.boastr.net/?page_id=79">Second Bar</a>
@@ -895,6 +909,12 @@ The hash is a convolution of the first and last eight bytes plus the length of t
 <h2>Music:</h2>
 
 <ul>
+<li>Simplify
+
+<ul>
+<li>统一控制音乐播放器，兼容 iTunes, Spotify, Rdio, Pandora等等</li>
+</ul>
+</li>
 <li>MusicSeekerX
 
 <ul>
@@ -1133,13 +1153,15 @@ The hash is a convolution of the first and last eight bytes plus the length of t
     
   </header>
 
-<div class="entry-content"><p>将blog从wordpress迁移到Octopress上了,主要是因为其支持markdown.用markdown写文章真是太适合理工科的宅男了.</p>
+<div class="entry-content"><p>将 blog 从 wordpress 迁移到 Octopress 上了，主要是因为其支持 markdown 。用 markdown 写文章真是太适合理工科的宅男了。</p>
 
-<p>原来的blog改到<a href="http://photo.luosky.com">photo.luosky.com</a>上,将主要用来放日常用手机拍的照片.</p>
+<p>安装完后用 <code>rake new_post['Title of The Post']</code> 来新建一篇文章。编辑完后用 <code>rake generate</code> 生成 html， 然后 <code>rake deploy</code> 即可将文章发布了。</p>
 
-<p>一些迁移时碰到的问题记录如下:</p>
+<p>原来的blog改到<a href="http://photo.luosky.com">photo.luosky.com</a>上，将主要用来放日常用手机拍的照片。</p>
 
-<p>Some Tips:</p>
+<p>一些迁移时碰到的问题记录如下：</p>
+
+<p>Some Tips：</p>
 
 <ul>
 <li>用<a href="http://pow.cx/">pow</a>来本地运行很方便</li>
@@ -1154,7 +1176,7 @@ The hash is a convolution of the first and last eight bytes plus the length of t
 
 <ol>
 <li>在本地建一个/images 的soft link指向到{octopress}/source/images目录</li>
-<li>将图片放在/images目录下,在markdown文件中以/image/xxx.jpg引用</li>
+<li>将图片放在/images目录下，在markdown文件中以/image/xxx.jpg引用</li>
 </ol>
 </li>
 <li>When you are filling the values in _config.yml. A space need to be added between the value and the colon after the key.</li>
@@ -1535,7 +1557,7 @@ export LC_ALL=en_US.UTF-8</code></li>
     </div>
   </div>
   <footer role="contentinfo"><p>
-  Copyright &copy; 2013 - Luosky -
+  Copyright &copy; 2016 - Luosky -
   <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
 </p>
 

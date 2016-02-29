@@ -252,9 +252,11 @@ KeyRemap4MacBook
 </span><span class='line'>  &lt;/item></span></code></pre></td></tr></table></div></figure>
 
 
+<p>update: HHKB 的 Fn 键 不能被 KeyRemap4MacBook 捕获，所以不支持 Fn 相关的修改。只有 Fn 键在 EventView 里能看到的键盘，才可以修改。</p>
+
 <h2>一键启动/切换程序，在该程序里按的话则隐藏该程序的窗口</h2>
 
-<p>经常有些应用，比如 QQ 或者邮件，你只需要很快的瞄一眼， 就可以切换回原来正在进行的工作中。用 <code>Alt + Tab</code>切换的话得一个个切换过去实在太慢。如果可以为这个应用指定一个快捷键，按一下就切换过去，再按一下，切换回之前的应用，那可以节约不少时间。</p>
+<p>经常有些应用，比如 QQ 或者邮件，你只需要很快的瞄一眼， 就可以切换回原来正在进行的工作中。用 <code>Command + Tab</code>切换的话得一个个切换过去实在太慢。如果可以为这个应用指定一个快捷键，按一下就切换过去，再按一下，切换回之前的应用，那可以节约不少时间。</p>
 
 <p>这个用 KeyRemap4MacBook 也能做到，实现的思路是当当前应用不是 QQ 时，这个快捷键打开 QQ，当当前应用是 QQ 时，这个快捷键隐藏当前应用的所有窗口。</p>
 
@@ -328,12 +330,12 @@ KeyRemap4MacBook
 <p>除了上面几个以外我还用到了下面这些：</p>
 
 <ul>
-<li><code>Hyper</code> + <code>Space</code> 输出 <code>Enter</code></li>
+<li><code>Hyper</code> + <code>Space</code> 输出 <code>Enter</code>。 适合需要按 <code>Enter</code>而右手在鼠标上时用，最常见的场景就是跳出对话框让你选确定还是取消，而你想直接按<code>Enter</code>键选择确定的时候。</li>
 <li><code>Shift_L/R</code> + <code>Space</code> 输出 <code>(</code> / <code>)</code></li>
 <li>自带的
 
 <ul>
-<li>单击 <code>Option_L</code> 进入浏览模式</li>
+<li><del>单击 <code>Option_L</code> 进入浏览模式</del></li>
 <li>vi mode中的<code>Command</code> +<code>h/j/k/l</code>和<code>Fn</code>+<code>h/j/k/l</code> 输出 上下左右 ，和<code>Command</code> + <code>f/b</code>输出 <code>PageDown</code>/<code>PageUp</code>。</li>
 <li><code>Command_L</code> + <code>Command_R</code> 进入 complete vi mode</li>
 </ul>
@@ -487,7 +489,7 @@ window.WBComment.init({
     </div>
   </div>
   <footer role="contentinfo"><p>
-  Copyright &copy; 2013 - Luosky -
+  Copyright &copy; 2016 - Luosky -
   <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
 </p>
 

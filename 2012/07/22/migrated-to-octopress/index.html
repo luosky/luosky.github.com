@@ -117,13 +117,15 @@ Migrated to Octopress
     
   </header>
 
-<div class="entry-content"><p>将blog从wordpress迁移到Octopress上了,主要是因为其支持markdown.用markdown写文章真是太适合理工科的宅男了.</p>
+<div class="entry-content"><p>将 blog 从 wordpress 迁移到 Octopress 上了，主要是因为其支持 markdown 。用 markdown 写文章真是太适合理工科的宅男了。</p>
 
-<p>原来的blog改到<a href="http://photo.luosky.com">photo.luosky.com</a>上,将主要用来放日常用手机拍的照片.</p>
+<p>安装完后用 <code>rake new_post['Title of The Post']</code> 来新建一篇文章。编辑完后用 <code>rake generate</code> 生成 html， 然后 <code>rake deploy</code> 即可将文章发布了。</p>
 
-<p>一些迁移时碰到的问题记录如下:</p>
+<p>原来的blog改到<a href="http://photo.luosky.com">photo.luosky.com</a>上，将主要用来放日常用手机拍的照片。</p>
 
-<p>Some Tips:</p>
+<p>一些迁移时碰到的问题记录如下：</p>
+
+<p>Some Tips：</p>
 
 <ul>
 <li>用<a href="http://pow.cx/">pow</a>来本地运行很方便</li>
@@ -138,7 +140,7 @@ Migrated to Octopress
 
 <ol>
 <li>在本地建一个/images 的soft link指向到{octopress}/source/images目录</li>
-<li>将图片放在/images目录下,在markdown文件中以/image/xxx.jpg引用</li>
+<li>将图片放在/images目录下，在markdown文件中以/image/xxx.jpg引用</li>
 </ol>
 </li>
 <li>When you are filling the values in _config.yml. A space need to be added between the value and the colon after the key.</li>
@@ -297,7 +299,7 @@ window.WBComment.init({
     </div>
   </div>
   <footer role="contentinfo"><p>
-  Copyright &copy; 2013 - Luosky -
+  Copyright &copy; 2016 - Luosky -
   <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
 </p>
 
