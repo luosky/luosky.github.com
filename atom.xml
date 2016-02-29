@@ -3,7 +3,7 @@
   <title><![CDATA[Luosky's Playground]]></title>
   <link href="http://luosky.com/atom.xml" rel="self"/>
   <link href="http://luosky.com/"/>
-  <updated>2016-02-29T20:58:26+08:00</updated>
+  <updated>2016-02-29T22:47:33+08:00</updated>
   <id>http://luosky.com/</id>
   <author>
     <name><![CDATA[Luosky]]></name>
@@ -11,6 +11,99 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+    <entry>
+      
+
+
+
+
+<title type="html"><![CDATA[My Reading Flow]]></title>
+<link href="http://luosky.com/2016/02/29/my-reading-flow/"/>
+<updated>2016-02-29T22:22:00+08:00</updated>
+<id>http://luosky.com/2016/02/29/my-reading-flow</id>
+
+      <content type="html"><![CDATA[<p>[TOC]</p>
+
+<p>主要用于记录和分享我当前的阅读流程、用到的工具、自动化的方案以及弃用的方案。会随时根据变化而更新，也欢迎大家推荐好用的工具和服务。主要适用于 Mac 和 iPhone 用户。</p>
+
+<h2>阅读工具</h2>
+
+<p>主要用的是 Reeder 和 Instapaper</p>
+
+<h2>阅读源</h2>
+
+<p><img src="http://7xr7zg.com1.z0.glb.clouddn.com/2016-02-28-readingSources.jpg" alt="readingSources" /></p>
+
+<p><em>(这里偷懒用 markdown 的顺序图画了下)</em></p>
+
+<pre><code>```sequence
+Blog-&gt;Reeder: via Inoreader
+Reeder-&gt;Instapaper:
+PinboardNetwork-&gt;Instapaper: 根据 Pinboard Network 的 RSS 利用 IFTTT 存到 Instapaper 上
+Twitter-&gt;Instapaper: use Tweetbot's Share to Instapaper
+微信文章-&gt;Instapaper: 在 Safari 里打开后 Share to Instapaper
+```
+</code></pre>
+
+<h2>知识库管理</h2>
+
+<ul>
+<li>Evernote
+
+<ul>
+<li>将有价值的文章全文保存至 Bookmark 笔记本中。</li>
+</ul>
+</li>
+<li>fetching.io
+
+<ul>
+<li>使用其 native 客户端，可对浏览器的浏览历史进行全文搜索，并管理 bookmark</li>
+</ul>
+</li>
+</ul>
+
+
+<h2>Highlight</h2>
+
+<ul>
+<li>Genius + ifttt 自动将 highlight 的内容同步更新到 Evernote 上
+
+<ul>
+<li>目前选用的方案，配合 Mac 上 Chrome 的插件十分方便，不用改变原有的阅读流程。</li>
+<li>缺点是手机端支持体验还不是很好，可考虑利用 Instapaper 同步过去</li>
+</ul>
+</li>
+<li><del>instapaper  需要付月费</del></li>
+<li><del>利用 kindle 支持有限</del></li>
+<li><del>Clippings.io 月费2$</del></li>
+</ul>
+
+
+<h2>好文分享流程</h2>
+
+<p>目的：将觉得有价值的文章自动化分享到 Pinboard 并同时全文保存到 Evernote
+流程：存到 Instapaper，利用它的Like 自动分享到Pinboard 和 Evernote（需要 evernote plus）</p>
+
+<p>可选方案：</p>
+
+<ul>
+<li>IFTTT 连接 evernote 的 create linked post
+
+<ul>
+<li>缺点是没有全文</li>
+</ul>
+</li>
+<li>Evernote 的 email post
+
+<ul>
+<li>缺点是需要 evernote plus 月费，每月 18 rmb</li>
+</ul>
+</li>
+</ul>
+
+<p><a rel="bookmark" href="http://luosky.com/2016/02/29/my-reading-flow/">&#9875; Permalink</a></p>]]></content>
+    </entry>
   
     <entry>
       
@@ -121,7 +214,7 @@
 <span class='line-number'>33</span>
 <span class='line-number'>34</span>
 <span class='line-number'>35</span>
-</pre></td><td class='code'><pre><code class='plain'><span class='line'>    &lt;item>
+</pre></td><td class='code'><pre><code class='plain'><span class='line'>    &lt;item> 
 </span><span class='line'>      &lt;name>HHKB adopt Hyper settings&lt;/name>
 </span><span class='line'>      &lt;identifier>luosky.hhkb_hyper&lt;/identifier>
 </span><span class='line'>      &lt;appendix>(Option_R / TAB to Hyper (ctrl+shift+cmd+opt), press only once, send escape)&lt;/appendix>
@@ -1412,48 +1505,6 @@ And that has made all the difference.</p>
 
 <p>Taken at 汤臣豪园</p>
 <p><a rel="bookmark" href="http://luosky.com/2011/03/20/outside-the-window/">&#9875; Permalink</a></p>]]></content>
-    </entry>
-  
-    <entry>
-      
-
-
-
-
-<title type="html"><![CDATA[Mary and Max]]></title>
-<link href="http://luosky.com/2011/01/15/mary-and-max/"/>
-<updated>2011-01-15T00:36:00+08:00</updated>
-<id>http://luosky.com/2011/01/15/mary-and-max</id>
-
-      <content type="html"><![CDATA[<p><img src="http://photo.luosky.com/wp-content/uploads/2011/01/s4034827.jpg" title="s4034827" alt="" /></p>
-
-<p>@caoxg 推荐的治愈系电影,周六的午后边吃着披萨,边把它看完了.虽然疗的不是我的伤,看了还是感觉很温暖.五星级.</p>
-
-<h3>Quotes:</h3>
-
-<p><img class="right" src="http://photo.luosky.com/wp-content/uploads/2011/01/p496809861-300x168.jpg"></p>
-
-<blockquote><p>When I was young, I wanted to be anybody but myself.</p><footer><strong>Max</strong> <cite>Mary and Max</cite></footer></blockquote>
-
-
-<p></p>
-
-<p><img class="right" src="http://photo.luosky.com/wp-content/uploads/2011/01/p589868900-300x166.jpg">
-<img class="right" src="http://photo.luosky.com/wp-content/uploads/2011/01/p589869194-300x166.jpg"></p>
-
-<blockquote><p>Love yourself first.</p><footer><strong>Max</strong> <cite>Mary and Max</cite></footer></blockquote>
-
-
-<p></p>
-
-<blockquote><p>Whatever will be , will be.</p><footer><strong>Max</strong> <cite>Mary and Max</cite></footer></blockquote>
-
-
-<h3>最后Max给Mary的信的全文:</h3>
-
-<blockquote><p>Dear Mary</p><p>Please find enclosed my entire Noblet collection as a sign that I forgive you.</p><p>When I received your book, the emotions inside my brain felt like they were in a tumble dryer, smashing into each other. The hurt felt like when I accidentally stapled my lips together. </p><p>The reason I forgive you is because you are not perfect.   <br/>You are imperfect and so am I.   <br/>All humans are imperfect, even the men outside my apartment who litters. </p><p>When I was young, I wanted to be anybody but myself.   <br/>Dr. Bernard Hazelhof said if I was on a desert island then I would have to get used to my own company, just me and the coconuts. He said I would have to accept myself, my warts and all, and that we don&#8217;t get to choose our warts. They are a part of us and we have to live with them.   </p><p>We can, however, choose our friends and I am glad I have chosen you.</p><p>Dr. Bernard Hazelhof also said that everyone&#8217;s lives are like a very long sidewalk. Some are well paved. Others, like mine, have cracks, banana skins and cigarette butts. Your sidewalk is like mine but probably not as many cracks. Hopefully, one day, our sidewalk will meet and we can share a can of condensed milk. </p><p>You are my best friends.   <br/>You are my only friend.</p><p>Your American penpal, Max Jerry Horowitz.</p><footer><strong>Max</strong> <cite>Mary and Max</cite></footer></blockquote>
-
-<p><a rel="bookmark" href="http://luosky.com/2011/01/15/mary-and-max/">&#9875; Permalink</a></p>]]></content>
     </entry>
   
 </feed>

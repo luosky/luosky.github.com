@@ -94,6 +94,135 @@
   <header>
     <h1 class="entry-title">
 
+<a href="/2016/02/29/my-reading-flow/">My Reading Flow</a>
+
+</h1>
+
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2016-02-29T22:22:00+08:00" pubdate data-updated="true">Feb 29<span>th</span>, 2016</time>
+         &bull; <a rel="bookmark" href="/2016/02/29/my-reading-flow/">Permalink</a>
+      </p>
+    
+  </header>
+
+<div class="entry-content"><p>[TOC]</p>
+
+<p>主要用于记录和分享我当前的阅读流程、用到的工具、自动化的方案以及弃用的方案。会随时根据变化而更新，也欢迎大家推荐好用的工具和服务。主要适用于 Mac 和 iPhone 用户。</p>
+
+<h2>阅读工具</h2>
+
+<p>主要用的是 Reeder 和 Instapaper</p>
+
+<h2>阅读源</h2>
+
+<p><img src="http://7xr7zg.com1.z0.glb.clouddn.com/2016-02-28-readingSources.jpg" alt="readingSources" /></p>
+
+<p><em>(这里偷懒用 markdown 的顺序图画了下)</em></p>
+
+<pre><code>```sequence
+Blog-&gt;Reeder: via Inoreader
+Reeder-&gt;Instapaper:
+PinboardNetwork-&gt;Instapaper: 根据 Pinboard Network 的 RSS 利用 IFTTT 存到 Instapaper 上
+Twitter-&gt;Instapaper: use Tweetbot's Share to Instapaper
+微信文章-&gt;Instapaper: 在 Safari 里打开后 Share to Instapaper
+```
+</code></pre>
+
+<h2>知识库管理</h2>
+
+<ul>
+<li>Evernote
+
+<ul>
+<li>将有价值的文章全文保存至 Bookmark 笔记本中。</li>
+</ul>
+</li>
+<li>fetching.io
+
+<ul>
+<li>使用其 native 客户端，可对浏览器的浏览历史进行全文搜索，并管理 bookmark</li>
+</ul>
+</li>
+</ul>
+
+
+<h2>Highlight</h2>
+
+<ul>
+<li>Genius + ifttt 自动将 highlight 的内容同步更新到 Evernote 上
+
+<ul>
+<li>目前选用的方案，配合 Mac 上 Chrome 的插件十分方便，不用改变原有的阅读流程。</li>
+<li>缺点是手机端支持体验还不是很好，可考虑利用 Instapaper 同步过去</li>
+</ul>
+</li>
+<li><del>instapaper  需要付月费</del></li>
+<li><del>利用 kindle 支持有限</del></li>
+<li><del>Clippings.io 月费2$</del></li>
+</ul>
+
+
+<h2>好文分享流程</h2>
+
+<p>目的：将觉得有价值的文章自动化分享到 Pinboard 并同时全文保存到 Evernote
+流程：存到 Instapaper，利用它的Like 自动分享到Pinboard 和 Evernote（需要 evernote plus）</p>
+
+<p>可选方案：</p>
+
+<ul>
+<li>IFTTT 连接 evernote 的 create linked post
+
+<ul>
+<li>缺点是没有全文</li>
+</ul>
+</li>
+<li>Evernote 的 email post
+
+<ul>
+<li>缺点是需要 evernote plus 月费，每月 18 rmb</li>
+</ul>
+</li>
+</ul>
+
+</div>
+
+  <footer>
+    
+    
+  </footer>
+
+
+    </article>
+  
+    
+
+
+
+
+
+
+
+
+
+
+    <article >
+      
+  <header>
+    <h1 class="entry-title">
+
 <a href="/2013/08/13/keyremap4macbook/">KeyRemap4MacBook</a>
 
 </h1>
@@ -216,7 +345,7 @@
 <span class='line-number'>33</span>
 <span class='line-number'>34</span>
 <span class='line-number'>35</span>
-</pre></td><td class='code'><pre><code class='plain'><span class='line'>    &lt;item>
+</pre></td><td class='code'><pre><code class='plain'><span class='line'>    &lt;item> 
 </span><span class='line'>      &lt;name>HHKB adopt Hyper settings&lt;/name>
 </span><span class='line'>      &lt;identifier>luosky.hhkb_hyper&lt;/identifier>
 </span><span class='line'>      &lt;appendix>(Option_R / TAB to Hyper (ctrl+shift+cmd+opt), press only once, send escape)&lt;/appendix>
@@ -1307,158 +1436,6 @@ export LC_ALL=en_US.UTF-8</code></li>
 
     </article>
   
-    
-
-
-
-
-
-
-
-
-
-
-    <article >
-      
-  <header>
-    <h1 class="entry-title">
-
-<a href="/2012/06/21/passkit-passbook-api-study-notes/">PassKit (PassBook Api) 学习笔记</a>
-
-</h1>
-
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-06-21T21:40:00+08:00" pubdate data-updated="true">Jun 21<span>st</span>, 2012</time>
-         &bull; <a rel="bookmark" href="/2012/06/21/passkit-passbook-api-study-notes/">Permalink</a>
-      </p>
-    
-  </header>
-
-<div class="entry-content"><h2>PassKit 学习笔记</h2>
-
-<p>PassBook里存放的是一个个电子凭证(pass),这些pass可以是兑换券,机票,门票等,这些pass可以通过各种第三方app,网站,或者email进行安装. PassBook本身不提供这些pass,只是提供了一个查看这些pass,以及接受pass更新的平台. PassKit则是这个平台开放的API.</p>
-
-<h3>pass的安装方式</h3>
-
-<ol>
-<li>通过网站下载 (MIME type: application/vnd-com.apple.pkpass)</li>
-<li>通过email下载</li>
-<li>通过提供pass的app安装</li>
-</ol>
-
-
-<h3>pass type identifier</h3>
-
-<p>必须在developer.apple.com里注册自己pass type identifier</p>
-
-<h3>pass的类型</h3>
-
-<ul>
-<li>boardingPass</li>
-<li>coupon</li>
-<li>eventTicket</li>
-<li>storeCard  余额卡,必须指定余额值</li>
-<li>generic</li>
-</ul>
-
-
-<h3>pass的提醒方式</h3>
-
-<p><strong>预先指定的提醒:</strong></p>
-
-<ul>
-<li>时间 &#8211;当时间接近时可在锁屏界面提醒用户相关信息</li>
-<li>地点 &#8211;当用户接近指定地点时提醒用户相关信息(指定地点最多只能指定10个)</li>
-</ul>
-
-
-<p>预先指定的提醒在发布到用户的PassBook后仍可以随时被修改.</p>
-
-<p><strong>实时提醒:</strong></p>
-
-<ul>
-<li>当pass信息需要更改时,可通过推送通知用户,界面上可展示相应的修改信息. (除了pass的类型和序列号,其他字段都可以随时修改)</li>
-</ul>
-
-
-<h3>pass的样式</h3>
-
-<h4>颜色:</h4>
-
-<p><img src="/images/blog/2012-06-21-passkit-passbook-api-xue-xi-bi-ji/color.jpg" alt="image" /></p>
-
-<h5>样式:</h5>
-
-<p>store card &amp; coupon:</p>
-
-<p><img src="/images/blog/2012-06-21-passkit-passbook-api-xue-xi-bi-ji/logo_bg_storecard.png" alt="image" /></p>
-
-<p>event :</p>
-
-<p><img src="/images/blog/2012-06-21-passkit-passbook-api-xue-xi-bi-ji/logo_bg_event.png" alt="image" /></p>
-
-<h3>pass的字段</h3>
-
-<p><img src="/images/blog/2012-06-21-passkit-passbook-api-xue-xi-bi-ji/fields.jpeg" alt="image" /></p>
-
-<ul>
-<li>serialNumber用来标识pass,同样的pass type identifier 下不能有两个pass的serialNumber相同</li>
-<li>只有发布时指定了验证地址和验证token的pass才能在发布后进行修改(这个token只是用来验证pass本身可以接收更新,和设备是没有关系的)</li>
-<li>webServiceURL token的验证地址,指向用户自己实现的rest服务器,必须实现更新pass所需的各种接口,必须是https…</li>
-<li>relevantDate 提醒用户的时间. 具体显示提醒的时间范围由pass类型决定</li>
-<li>locations 提醒用户的地址.范围大小由pass类型决定</li>
-<li><p>显示App Store item :
-<code>
-"associatedStoreIdentifiers" : [ 375380948 ]
-</code></p>
-
-<h3>注意点</h3></li>
-<li><p>iPad上没有Passbook</p></li>
-<li>导出P12时不用选中私钥</li>
-<li>签名和打包pass可用wwdc示例代码提供的签名工具</li>
-<li>BARCODE不支持中文(应该跟用的编码有关)</li>
-<li>日期格式: 2012-06-20T17:30+08:00</li>
-<li>使用相对时间的格式  &#8220;isRelative&#8221; : true</li>
-<li>coupon的primaryFields很大,中文只能放4个字()</li>
-<li>PKPassLibrary不是singleton,注册PKPassLibraryDidChangeNotification通知时,通知是针对某个具体的library对象的,所以需将你创建的library传过去.</li>
-</ul>
-
-
-<figure class='code'><div class='highlight'><table><td class='gutter'><pre class='line-numbers'><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-</pre></td><td class='code'><pre><code class='objective-c'><span class='line'>    <span class="p">[</span><span class="n">noteCenter</span> <span class="nl">addObserver:</span><span class="n">self</span>
-</span><span class='line'>                   <span class="nl">selector:</span><span class="k">@selector</span><span class="p">(</span><span class="n">passLibraryDidChange</span><span class="p">)</span>
-</span><span class='line'>                       <span class="nl">name:</span><span class="n">PKPassLibraryDidChangeNotification</span>
-</span><span class='line'>                     <span class="nl">object:</span><span class="n">self</span><span class="p">.</span><span class="n">library</span><span class="p">];</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>附上自己写的 <a href="/images/blog/2012-06-21-passkit-passbook-api-xue-xi-bi-ji/passkit_project.zip">pass工程</a>  (你可能需要换成自己开发者账号签名的pass才能在pass列表中查看已安装的pass,添加pass的话则不需要)</p>
-</div>
-
-  <footer>
-    
-    
-  </footer>
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/blog/page/2/">&larr; Older</a>
@@ -1483,7 +1460,7 @@ export LC_ALL=en_US.UTF-8</code></li>
 <li class='category'><a href='/blog/categories/others/'>others (10)</a></li>
 <li class='category'><a href='/blog/categories/photography/'>photography (8)</a></li>
 <li class='category'><a href='/blog/categories/productive/'>productive (1)</a></li>
-<li class='category'><a href='/blog/categories/productivity/'>productivity (1)</a></li>
+<li class='category'><a href='/blog/categories/productivity/'>productivity (2)</a></li>
 <li class='category'><a href='/blog/categories/programming/'>programming (14)</a></li>
 <li class='category'><a href='/blog/categories/reading/'>reading (1)</a></li>
 <li class='category'><a href='/blog/categories/study/'>study (1)</a></li>
@@ -1494,6 +1471,10 @@ export LC_ALL=en_US.UTF-8</code></li>
 <section>
   <h1>Recent Posts</h1>
   <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/2016/02/29/my-reading-flow/">My Reading Flow</a>
+      </li>
     
       <li class="post">
         <a href="/2013/08/13/keyremap4macbook/">KeyRemap4MacBook</a>
@@ -1509,10 +1490,6 @@ export LC_ALL=en_US.UTF-8</code></li>
     
       <li class="post">
         <a href="/2012/11/30/use-testflight-to-beta-test-ios-app/">使用TestFlight 安装测试版iOS应用(面向测试人员)</a>
-      </li>
-    
-      <li class="post">
-        <a href="/2012/08/06/my-bettertouchtool-config/">My BetterTouchTool Config</a>
       </li>
     
   </ul>

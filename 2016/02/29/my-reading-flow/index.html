@@ -5,7 +5,7 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>iOS模拟器居然还可以监测出来Mac上正在facetime,做得也太细致了 - Luosky's Playground</title>
+  <title>My Reading Flow - Luosky's Playground</title>
   <meta name="author" content="Luosky">
   <meta name="Generator" content="Jekyll & Octopress (http://octopress.org)">
 
@@ -17,7 +17,7 @@
   <meta name="MobileOptimized" content="320">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   
-  <link rel="canonical" href="http://luosky.com/2012/02/27/amazing-ios-simulator/">
+  <link rel="canonical" href="http://luosky.com/2016/02/29/my-reading-flow/">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <script src="/javascripts/octopress.min.js" type="text/javascript"></script>
   <link href="/feed" rel="alternate" title="Luosky's Playground" type="application/atom+xml">
@@ -93,7 +93,7 @@
   <header>
     <h1 class="entry-title">
 
-iOS模拟器居然还可以监测出来Mac上正在facetime,做得也太细致了
+My Reading Flow
 
 </h1>
 
@@ -111,13 +111,91 @@ iOS模拟器居然还可以监测出来Mac上正在facetime,做得也太细致�
   
 
 
-<time datetime="2012-02-27T00:36:00+08:00" pubdate data-updated="true">Feb 27<span>th</span>, 2012</time>
-         &bull; <a rel="bookmark" href="/2012/02/27/amazing-ios-simulator/">Permalink</a>
+<time datetime="2016-02-29T22:22:00+08:00" pubdate data-updated="true">Feb 29<span>th</span>, 2016</time>
+         &bull; <a rel="bookmark" href="/2016/02/29/my-reading-flow/">Permalink</a>
       </p>
     
   </header>
 
-<div class="entry-content"><p><img class="" src="http://photo.luosky.com/wp-content/uploads/2012/02/Screen-Shot-2012-02-27-at-下午8.36.15-262x494.png" title="iOS" ></p>
+<div class="entry-content"><p>[TOC]</p>
+
+<p>主要用于记录和分享我当前的阅读流程、用到的工具、自动化的方案以及弃用的方案。会随时根据变化而更新，也欢迎大家推荐好用的工具和服务。主要适用于 Mac 和 iPhone 用户。</p>
+
+<h2>阅读工具</h2>
+
+<p>主要用的是 Reeder 和 Instapaper</p>
+
+<h2>阅读源</h2>
+
+<p><img src="http://7xr7zg.com1.z0.glb.clouddn.com/2016-02-28-readingSources.jpg" alt="readingSources" /></p>
+
+<p><em>(这里偷懒用 markdown 的顺序图画了下)</em></p>
+
+<pre><code>```sequence
+Blog-&gt;Reeder: via Inoreader
+Reeder-&gt;Instapaper:
+PinboardNetwork-&gt;Instapaper: 根据 Pinboard Network 的 RSS 利用 IFTTT 存到 Instapaper 上
+Twitter-&gt;Instapaper: use Tweetbot's Share to Instapaper
+微信文章-&gt;Instapaper: 在 Safari 里打开后 Share to Instapaper
+```
+</code></pre>
+
+<h2>知识库管理</h2>
+
+<ul>
+<li>Evernote
+
+<ul>
+<li>将有价值的文章全文保存至 Bookmark 笔记本中。</li>
+</ul>
+</li>
+<li>fetching.io
+
+<ul>
+<li>使用其 native 客户端，可对浏览器的浏览历史进行全文搜索，并管理 bookmark</li>
+</ul>
+</li>
+</ul>
+
+
+<h2>Highlight</h2>
+
+<ul>
+<li>Genius + ifttt 自动将 highlight 的内容同步更新到 Evernote 上
+
+<ul>
+<li>目前选用的方案，配合 Mac 上 Chrome 的插件十分方便，不用改变原有的阅读流程。</li>
+<li>缺点是手机端支持体验还不是很好，可考虑利用 Instapaper 同步过去</li>
+</ul>
+</li>
+<li><del>instapaper  需要付月费</del></li>
+<li><del>利用 kindle 支持有限</del></li>
+<li><del>Clippings.io 月费2$</del></li>
+</ul>
+
+
+<h2>好文分享流程</h2>
+
+<p>目的：将觉得有价值的文章自动化分享到 Pinboard 并同时全文保存到 Evernote
+流程：存到 Instapaper，利用它的Like 自动分享到Pinboard 和 Evernote（需要 evernote plus）</p>
+
+<p>可选方案：</p>
+
+<ul>
+<li>IFTTT 连接 evernote 的 create linked post
+
+<ul>
+<li>缺点是没有全文</li>
+</ul>
+</li>
+<li>Evernote 的 email post
+
+<ul>
+<li>缺点是需要 evernote plus 月费，每月 18 rmb</li>
+</ul>
+</li>
+</ul>
+
 </div>
 
 
@@ -140,12 +218,12 @@ iOS模拟器居然还可以监测出来Mac上正在facetime,做得也太细致�
   
 
 
-<time datetime="2012-02-27T00:36:00+08:00" pubdate data-updated="true">Feb 27<span>th</span>, 2012</time>
+<time datetime="2016-02-29T22:22:00+08:00" pubdate data-updated="true">Feb 29<span>th</span>, 2016</time>
 
 
 <span class="categories">
   
-    <a class='category' href='/blog/categories/life/'>life</a>, <a class='category' href='/blog/categories/programming/'>programming</a>
+    <a class='category' href='/blog/categories/productivity/'>productivity</a>
   
 </span>
 
@@ -165,7 +243,7 @@ iOS模拟器居然还可以监测出来Mac上正在facetime,做得也太细致�
   
   
 
-   <iframe allowtransparency="true" frameborder="0" scrolling="no" src="http://hits.sinajs.cn/A1/weiboshare.html?url=http://luosky.com/2012/02/27/amazing-ios-simulator/&amp;appkey=1556233841&amp;type=6&amp;ralateUid=1644030950&amp;language=zh_cn" width="86" height="16"></iframe>
+   <iframe allowtransparency="true" frameborder="0" scrolling="no" src="http://hits.sinajs.cn/A1/weiboshare.html?url=http://luosky.com/2016/02/29/my-reading-flow/&amp;appkey=1556233841&amp;type=6&amp;ralateUid=1644030950&amp;language=zh_cn" width="86" height="16"></iframe>
 
 
 
@@ -174,10 +252,8 @@ iOS模拟器居然还可以监测出来Mac上正在facetime,做得也太细致�
     
     <p class="meta">
       
-        <a class="basic-alignment left" href="/2012/01/02/my-2011/" title="Previous Post: 2011年小结">&laquo; 2011年小结</a>
+        <a class="basic-alignment left" href="/2013/08/13/keyremap4macbook/" title="Previous Post: KeyRemap4MacBook">&laquo; KeyRemap4MacBook</a>
       
-      
-        <a class="basic-alignment right" href="/2012/03/23/first-time-handle-pull-request-on-github/" title="Next Post: 第一次处理Github的Pull Request">第一次处理Github的Pull Request &raquo;</a>
       
     </p>
   </footer>
@@ -194,7 +270,7 @@ iOS模拟器居然还可以监测出来Mac上正在facetime,做得也太细致�
   
   	<script type="text/javascript">
 (function(){
-var url = "http://widget.weibo.com/distribution/comments.php?width=0&url=http://luosky.com/2012/02/27/amazing-ios-simulator/&brandline=y&fontsize=14&ralateuid=&appkey=&dpc=1";
+var url = "http://widget.weibo.com/distribution/comments.php?width=0&url=http://luosky.com/2016/02/29/my-reading-flow/&brandline=y&fontsize=14&ralateuid=&appkey=&dpc=1";
 document.write('<iframe id="WBCommentFrame" src="' + url + '" scrolling="no" frameborder="0" style="width:100%"></iframe>');
 })();
 </script>
@@ -278,8 +354,8 @@ window.WBComment.init({
       
         
         // var disqus_developer = 1;
-        var disqus_identifier = 'http://luosky.com/2012/02/27/amazing-ios-simulator/';
-        var disqus_url = 'http://luosky.com/2012/02/27/amazing-ios-simulator/';
+        var disqus_identifier = 'http://luosky.com/2016/02/29/my-reading-flow/';
+        var disqus_url = 'http://luosky.com/2016/02/29/my-reading-flow/';
         var disqus_script = 'embed.js';
       
     (function () {
