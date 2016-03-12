@@ -3,7 +3,7 @@
   <title><![CDATA[Luosky's Playground]]></title>
   <link href="http://luosky.com/atom.xml" rel="self"/>
   <link href="http://luosky.com/"/>
-  <updated>2016-02-29T23:31:40+08:00</updated>
+  <updated>2016-03-12T17:50:02+08:00</updated>
   <id>http://luosky.com/</id>
   <author>
     <name><![CDATA[Luosky]]></name>
@@ -581,130 +581,29 @@ The hash is a convolution of the first and last eight bytes plus the length of t
 </ul>
 
 
-<h2>辅助</h2>
+<h2>效率</h2>
 
 <ul>
-<li><a href="http://www.alfredapp.com/">Alfred</a>
-
-<ul>
-<li>spotlight替代品.神器!</li>
-</ul>
-</li>
-<li><a href="http://manytricks.com/witch/">Witch</a>
-
-<ul>
-<li>窗口切换应用,我主要用来切换当前应用的多个窗口.和系统自带的区别是可以显示一个窗口的列表供你选择,而不是直接一个一个切换.</li>
-</ul>
-</li>
-<li><a href="https://github.com/jigish/slate">slate</a>
-
-<ul>
-<li> 窗口布局管理, 可以一键将各个应用的窗口调整到预设的大小.支持多显示器.<a href="https://www.dropbox.com/s/ktl6nwez9s00zff/.slate">我的配置</a></li>
-</ul>
-</li>
-<li><a href="http://www.boastr.de/">BetterTouchTool</a>
-
-<ul>
-<li> 触摸板/键盘/鼠标增强, 支持很多手势和自定义功能. <a href="http://luosky.com/2012/08/06/my-bettertouchtool-config/">我的配置</a></li>
-</ul>
-</li>
-<li><a href="http://www.groths.org/?page_id=322">TRIM Enabler</a>
-
-<ul>
-<li>SSD硬盘增强</li>
-</ul>
-</li>
-<li><a href="http://www.noodlesoft.com/hazel">Hazel</a>
-
-<ul>
-<li>根据自定义的规则自动对文件进行分类</li>
-</ul>
-</li>
-<li><a href="http://blog.boastr.net/?page_id=79">Second Bar</a>
-
-<ul>
-<li> (在多个显示器里都显示menu bar)</li>
-</ul>
-</li>
-<li><a href="http://www.macbartender.com/">Bartender</a>
-
-<ul>
-<li>隐藏/合并menubar上的图标</li>
-</ul>
-</li>
-<li><a href="http://homepage.mac.com/khsu/DejaMenu/DejaMenu.html">DejaMenu</a>
-
-<ul>
-<li> 随时随地呼出菜单栏   </li>
-</ul>
-</li>
-<li><a href="https://www.rescuetime.com/">RescueTime</a>
-
-<ul>
-<li> 记录时间</li>
-</ul>
-</li>
-<li>The Unarchiver
-
-<ul>
-<li> 解压软件,可避免windows里打包的文件解压乱码.</li>
-</ul>
-</li>
+<li><a href="http://www.alfredapp.com/">Alfred</a>   spotlight替代品.神器!</li>
+<li><a href="http://pasteapp.me/">Paste</a>  剪贴板管理工具</li>
+<li><a href="http://manytricks.com/witch/">Witch</a> 窗口切换应用,我主要用来切换当前应用的多个窗口.和系统自带的区别是可以显示一个窗口的列表供你选择,而不是直接一个一个切换.</li>
+<li><a href="https://github.com/jigish/slate">slate</a>  窗口布局管理, 可以一键将各个应用的窗口调整到预设的大小.支持多显示器.<a href="https://www.dropbox.com/s/ktl6nwez9s00zff/.slate">我的配置</a></li>
+<li><a href="http://www.boastr.de/">BetterTouchTool</a>  触摸板/键盘/鼠标增强, 支持很多手势和自定义功能. <a href="http://luosky.com/2012/08/06/my-bettertouchtool-config/">我的配置</a></li>
+<li><a href="http://www.noodlesoft.com/hazel">Hazel</a>  根据自定义的规则自动对文件进行分类</li>
+<li><a href="http://www.macbartender.com/">Bartender</a> 隐藏/合并menubar上的图标</li>
+<li><a href="http://homepage.mac.com/khsu/DejaMenu/DejaMenu.html"><del>DejaMenu</del></a>   <del>随时随地呼出菜单栏</del>    改为给菜单栏增加 <code>cmd+shift+?</code> 的全局快捷键来代替</li>
+<li><a href="https://www.rescuetime.com/">RescueTime</a> 记录时间</li>
 <li>Dropbox</li>
-<li><a href="http://www.trankynam.com/xtrafinder/"><del>XtraFinder</del></a> 
-
-<ul>
-<li> Finder强化，支持 tab，显示路径等</li>
-</ul>
-</li>
-<li><a href="https://github.com/lra/mackup">Mackup</a>
-
-<ul>
-<li>备份各个程序的配置文件到Dropbox</li>
-</ul>
-</li>
-<li>DTerm
-
-<ul>
-<li> 在Finder里command + shift + enter 快速执行命令行</li>
-</ul>
-</li>
-<li><a href="http://pqrs.org/macosx/keyremap4macbook/pckeyboardhack.html.en">PCKeyboardHack</a>
-
-<ul>
-<li>可将caps lock按钮改成别的按键. 这个没用的按键占据了这么好的键盘位不好好利用实在可惜.建议配合下面的KeyRemap4MacBook使用.</li>
-</ul>
-</li>
-<li><a href="http://pqrs.org/macosx/keyremap4macbook/index.html">KeyRemap4MacBook</a>
-
-<ul>
-<li>可自定义按键的映射，将你的键盘 hack 成完全适合你自己习惯的样子。我的配置在<a href="http://luosky.com/2013/08/13/keyremap4macbook/">这里</a></li>
-</ul>
-</li>
-<li><a href="http://infinite-labs.net/afloat/#download">Afloat</a>
-
-<ul>
-<li> 让某个窗口&#8221;总是在前&#8221;</li>
-</ul>
-</li>
-<li><a href="https://daisydiskapp.com/">DaisyDisk</a> [<del>Disk Inventory X</del>]
-
-<ul>
-<li>大文件清理</li>
-</ul>
-</li>
-<li><a href="http://macpaw.com/cleanmymac">CleanMyMac 3</a> [<del>GrandPerspective</del>]
-
-<ul>
-<li>磁盘清理</li>
-</ul>
-</li>
-</ul>
-
-
-<h2>设计:</h2>
-
-<ul>
+<li><p><a href="https://github.com/lra/mackup">Mackup</a>   备份各个程序的配置文件到Dropbox</p></li>
+<li><p><a href="http://pqrs.org/macosx/keyremap4macbook/pckeyboardhack.html.en">PCKeyboardHack</a>  可将caps lock按钮改成别的按键. 这个没用的按键占据了这么好的键盘位不好好利用实在可惜.建议配合下面的KeyRemap4MacBook使用.</p></li>
+<li><p><a href="http://pqrs.org/macosx/keyremap4macbook/index.html">KeyRemap4MacBook</a>    可自定义按键的映射，将你的键盘 hack 成完全适合你自己习惯的样子。我的配置在<a href="http://luosky.com/2013/08/13/keyremap4macbook/">这里</a></p></li>
+<li><p><a href="https://daisydiskapp.com/">DaisyDisk</a> [<del>Disk Inventory X</del>] 大文件清理</p></li>
+<li><a href="http://macpaw.com/cleanmymac">CleanMyMac 3</a> [<del>GrandPerspective</del>]   磁盘清理</li>
+<li><a href="http://blog.boastr.net/?page_id=79"><del>Second Bar</del></a>   在多个显示器里都显示menu bar</li>
+<li><a href="http://www.trankynam.com/xtrafinder/"><del>XtraFinder</del></a>   Finder强化，支持 tab，显示路径等</li>
+<li><a href="http://infinite-labs.net/afloat/#download"><del>Afloat</del></a> 让某个窗口&#8221;总是在前&#8221;</li>
+<li><del>DTerm</del>    在Finder里command + shift + enter 快速执行命令行</li>
+<li><h2>设计:</h2></li>
 <li>SparkBox
 
 <ul>
