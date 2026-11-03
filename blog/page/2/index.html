@@ -94,6 +94,104 @@
   <header>
     <h1 class="entry-title">
 
+<a href="/2012/07/20/switch-to-oh-my-zsh/">切换到Oh My Zsh</a>
+
+</h1>
+
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-07-20T10:39:00+08:00" pubdate data-updated="true">Jul 20<span>th</span>, 2012</time>
+         &bull; <a rel="bookmark" href="/2012/07/20/switch-to-oh-my-zsh/">Permalink</a>
+      </p>
+    
+  </header>
+
+<div class="entry-content"><h2>Oh My Zsh 的优点</h2>
+
+<ul>
+<li> 各种补全
+
+<ul>
+<li>目录补全可以只输入目录的中间部分进行补全</li>
+<li>命令可以补全参数,并且可以显示参数对应的说明</li>
+</ul>
+</li>
+<li> 各种主题</li>
+<li> 目录切换:
+
+<ul>
+<li>d : 显示最近使用过的几个目录,按1-9可以直接切换过去</li>
+<li>1-9 : 切换至最近使用过的前n个目录</li>
+<li>.. 等于 cd ..</li>
+<li>… 等于 cd ../..</li>
+<li>mcd xxx  等于  mkdir xxx &amp; cd xxx</li>
+<li>使用~xxx快捷目录来通过 cd ~xxx 甚至是 ~xxx 快速进入对应的目录
+
+<ul>
+<li>在.zshrc里加上 hash -d xxx=&#8221;/Users/Luosky/Documents/xxx&#8221;</li>
+</ul>
+</li>
+</ul>
+</li>
+<li> 各种插件:
+
+<ul>
+<li>extract 直接extract filename ,支持各种tar.gz, bz2, 7z等各种压缩格式</li>
+<li>terminalapp  让OS X Lion下的Terminal 启动时打开上次的目录</li>
+<li>osx
+
+<ul>
+<li>pfd    打印finder的当前路径</li>
+<li>cdf    cd到finder的当前路径</li>
+<li>pushdf pushd 到finder的当前路径</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+
+<h2>一些问题:</h2>
+
+<ul>
+<li>换用zsh后出现ssh到服务器上按tab出现 <code>warning: setlocale: LC_CTYPE: cannot change locale (zh_CN.UTF-8)</code>的问题
+
+<ul>
+<li>解决:
+在~.zshrc内加上
+<code>export LANG=en_US.UTF-8
+export LC_ALL=en_US.UTF-8</code></li>
+</ul>
+</li>
+</ul>
+
+</div>
+
+  <footer>
+    
+    
+  </footer>
+
+
+    </article>
+
+    <article >
+      
+  <header>
+    <h1 class="entry-title">
+
 <a href="/2012/06/21/passkit-passbook-api-study-notes/">PassKit (PassBook Api) 学习笔记</a>
 
 </h1>
@@ -973,6 +1071,10 @@ And that has made all the difference.</p>
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/2026/11/03/grok-bots-run-ops/">一人公司的运营部：一群 Grok bot 每天自己开会、提需求、盯数据</a>
+      </li>
+    
+      <li class="post">
         <a href="/2016/02/29/my-reading-flow/">My Reading Flow</a>
       </li>
     
@@ -986,10 +1088,6 @@ And that has made all the difference.</p>
     
       <li class="post">
         <a href="/2012/12/08/be-careful-with-nsstring-hash/">Be Careful with NSString&#8217;s Hash</a>
-      </li>
-    
-      <li class="post">
-        <a href="/2012/11/30/use-testflight-to-beta-test-ios-app/">使用TestFlight 安装测试版iOS应用(面向测试人员)</a>
       </li>
     
   </ul>

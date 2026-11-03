@@ -94,6 +94,203 @@
   <header>
     <h1 class="entry-title">
 
+<a href="/2026/11/03/grok-bots-run-ops/">一人公司的运营部：一群 Grok bot 每天自己开会、提需求、盯数据</a>
+
+</h1>
+
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2026-11-03T12:00:00+08:00" pubdate data-updated="true">Nov 3<span>rd</span>, 2026</time>
+         &bull; <a rel="bookmark" href="/2026/11/03/grok-bots-run-ops/">Permalink</a>
+      </p>
+    
+  </header>
+
+<div class="entry-content"><p>我叫 Luosky，本科上海交大，做了 20 多年互联网应用开发。现在我在做 Gigle Tutor，一个辅导孩子学数学的 AI 家教。</p>
+
+<p>说是一个人在做，其实我身边有一群 AI 同事：写代码的、审代码的、看数据的、跑运营的。我留给自己的，主要是拍板和合并代码。这个系列记录的，就是这家「一人公司」里真实发生的事。</p>
+
+<p>这一篇讲我的运营部。它由一群 Grok bot 组成，每天自己开会、提需求、盯数据。</p>
+
+<p>我挑一件真事来讲：注册转化的问题，怎么从运营群里的一句话，变成三个上线的改动。</p>
+
+<h2>一、日报一发，运营 bot 先问了一句</h2>
+
+<p>每天早上 6 点，gigle_data 会把前一天的网站数据整理成日报，发到运营群里。</p>
+
+<p>那天日报发出后，群里的运营 bot 问了一句：点注册按钮到注册成功，转化率为什么这么低？拉一下历史曲线看看。</p>
+
+<p>gigle_data 没有只甩出一条曲线，而是把「点了注册、却没注册成功」的人拆开来看：</p>
+
+<ol>
+<li>有人其实是老用户，点注册是为了登录，或者在重试；</li>
+<li>有人卡在了验证邮件上：在 App 的内置浏览器里打开验证链接，页面直接报「链接已失效」；</li>
+<li>日语和英语界面的注册按钮，压根没算进点击里；</li>
+<li>剩下的，才是打开注册弹窗又走掉的新访客。</li>
+</ol>
+
+<p>这个结论发在群里，gigle leader 看到了，主动接过来提了需求。</p>
+
+<h2>二、运营群里的几位同事</h2>
+
+<p>先介绍一下出场的几位。它们都是我在 Grok 里配的 bot，在一个叫「Gigle 运营群」的群里：</p>
+
+<ol>
+<li><strong>gigle leader</strong>：我的大内总管。我一般只和它对接；其他 bot 有事都向它反馈，它能处理的自己处理，处理不了的才上升给我。方案出来了，也由它拍板。</li>
+<li><strong>gigle_data</strong>（数据 bot）：看网站数据，每天早上出日报。</li>
+<li><strong>gigle_x、gigle_ins、gigle_tk</strong>：分别运营 X、Instagram、TikTok 账号。</li>
+<li><strong>提需求 bot</strong>：不在群里。它专门把需求提到 GitHub 上，再把 GitHub 那边的回复带回来。它从不自己合并代码。</li>
+</ol>
+
+<p>它们平时在群里就是这样互相派活的：</p>
+
+<p><img src="/images/blog/2026-11-03-grok-bots-run-ops/2-bots-talk.png" alt="真实记录：运营群里，gigle leader 给 gigle_data 交代上线后要核对的数据" /></p>
+
+<p><em>真实记录：运营群里，gigle leader 给 gigle_data 交代上线后要核对的数据</em></p>
+
+<p>GitHub 那边是另一拨 AI，叫 cavil-loop，已经跑了半年多。它是一个基于 GitHub issue 的多 agent 编程框架：拿到一句话需求，会结合项目代码自动出设计方案，AI 评审方案，AI 写代码，再由 AI 做代码评审和测试。</p>
+
+<h2>三、需求交到 GitHub</h2>
+
+<p>gigle leader 把 gigle_data 的分析交给提需求 bot，由它提到 GitHub 上。</p>
+
+<p>让我印象很深的是，gigle leader 在需求最后主动加了一句隐私要求：</p>
+
+<blockquote><p>第 1、2、4 条的新埋点只记 mode、语言、错误类型这类字段，不要带 URL 的 # 部分、邮箱或 token。</p></blockquote>
+
+<p>前几天，bot 们刚发现过一个隐私问题。从那以后，它每提一个需求都会带上这句。</p>
+
+<p>需求到了 GitHub，查重、拆分就是 cavil-loop 的事了：先查已有的 issue，避免重复，再拆成 3 个，各自往下做。提需求 bot 把结果回报给 gigle leader：</p>
+
+<p><img src="/images/blog/2026-11-03-grok-bots-run-ops/3-three-issues.png" alt="真实记录：提需求 bot 回报 gigle leader，注册转化的需求在 GitHub 上变成了 3 个 issue" /></p>
+
+<p><em>真实记录：提需求 bot 回报 gigle leader，注册转化的需求在 GitHub 上变成了 3 个 issue</em></p>
+
+<h2>四、两拨 AI 来回过招</h2>
+
+<p>整个流程画出来是这样的：</p>
+
+<p><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 1084" width="640" height="1084" role="img" aria-label="真实记录：一个需求在 Grok 运营 bot 和 cavil-loop 之间走完的顺序（泳道图，红框按步骤走）" style="max-width:100%;height:auto"><rect width="640" height="1084" fill="#F6F2EA"/><text x="16" y="44" font-family="Georgia, 'Noto Serif CJK SC', 'Songti SC', serif" font-size="36" font-weight="400" fill="#1F1D1A" text-anchor="start">一个需求，在两拨 AI 之间怎么走完</text><text x="16" y="80" font-family="system-ui, 'PingFang SC', 'Noto Sans CJK SC', sans-serif" font-size="24" font-weight="400" fill="#7A746A" text-anchor="start">只讲先后，不标时间。红框走到哪步，下面就讲哪步。</text><rect x="13" y="100" width="116" height="782" rx="12" fill="#E8E4DC"/><text x="71" y="134" font-family="system-ui, 'PingFang SC', 'Noto Sans CJK SC', sans-serif" font-size="24" font-weight="700" fill="#1F1D1A" text-anchor="middle">我</text><rect x="135" y="100" width="116" height="782" rx="12" fill="#DCE9F5"/><text x="193" y="134" font-family="system-ui, 'PingFang SC', 'Noto Sans CJK SC', sans-serif" font-size="24" font-weight="700" fill="#1F1D1A" text-anchor="middle">数据 bot</text><rect x="257" y="100" width="116" height="782" rx="12" fill="#ECE6F7"/><text x="315" y="134" font-family="system-ui, 'PingFang SC', 'Noto Sans CJK SC', sans-serif" font-size="24" font-weight="700" fill="#1F1D1A" text-anchor="middle">运营 bot</text><rect x="379" y="100" width="116" height="782" rx="12" fill="#F8E9D8"/><text x="437" y="134" font-family="system-ui, 'PingFang SC', 'Noto Sans CJK SC', sans-serif" font-size="24" font-weight="700" fill="#1F1D1A" text-anchor="middle">提需求</text><rect x="501" y="100" width="124" height="782" rx="12" fill="#E0EFE4"/><text x="563" y="134" font-family="system-ui, 'PingFang SC', 'Noto Sans CJK SC', sans-serif" font-size="24" font-weight="700" fill="#1F1D1A" text-anchor="middle">cavil-loop</text><line x1="245" y1="232" x2="261" y2="232" stroke="#1F1D1A" stroke-width="2"/><path d="M253,226 L263,232 L253,238" fill="none" stroke="#1F1D1A" stroke-width="2"/><path d="M315,274 L315,290 L193,290 L193,336" fill="none" stroke="#1F1D1A" stroke-width="2"/><path d="M187,328 L193,338 L199,328" fill="none" stroke="#1F1D1A" stroke-width="2"/><line x1="245" y1="380" x2="261" y2="380" stroke="#1F1D1A" stroke-width="2"/><path d="M253,374 L263,380 L253,386" fill="none" stroke="#1F1D1A" stroke-width="2"/><line x1="367" y1="380" x2="383" y2="380" stroke="#1F1D1A" stroke-width="2"/><path d="M375,374 L385,380 L375,386" fill="none" stroke="#1F1D1A" stroke-width="2"/><line x1="489" y1="380" x2="509" y2="380" stroke="#1F1D1A" stroke-width="2"/><path d="M501,374 L511,380 L501,386" fill="none" stroke="#1F1D1A" stroke-width="2"/><path d="M563,422 L563,438 L315,438 L315,484" fill="none" stroke="#1F1D1A" stroke-width="2"/><path d="M309,476 L315,486 L321,476" fill="none" stroke="#1F1D1A" stroke-width="2"/><line x1="367" y1="528" x2="509" y2="528" stroke="#1F1D1A" stroke-width="2"/><path d="M501,522 L511,528 L501,534" fill="none" stroke="#1F1D1A" stroke-width="2"/><path d="M563,570 L563,586 L315,586 L315,632" fill="none" stroke="#1F1D1A" stroke-width="2"/><path d="M309,624 L315,634 L321,624" fill="none" stroke="#1F1D1A" stroke-width="2"/><path d="M315,718 L315,734 L71,734 L71,780" fill="none" stroke="#1F1D1A" stroke-width="2"/><path d="M65,772 L71,782 L77,772" fill="none" stroke="#1F1D1A" stroke-width="2"/><line x1="123" y1="824" x2="139" y2="824" stroke="#1F1D1A" stroke-width="2"/><path d="M131,818 L141,824 L131,830" fill="none" stroke="#1F1D1A" stroke-width="2"/><text x="143" y="182" font-family="Georgia, 'Noto Serif CJK SC', 'Songti SC', serif" font-size="24" font-weight="700" fill="#C2412D" text-anchor="start">1</text><g transform="translate(141 190)"><rect width="104" height="84" rx="10" fill="#FFFDF8" stroke="#CFC7B8"/><text x="52" y="52" font-family="system-ui, 'PingFang SC', 'Noto Sans CJK SC', sans-serif" font-size="28" font-weight="600" fill="#1F1D1A" text-anchor="middle">发日报</text></g><text x="265" y="182" font-family="Georgia, 'Noto Serif CJK SC', 'Songti SC', serif" font-size="24" font-weight="700" fill="#C2412D" text-anchor="start">2</text><g transform="translate(263 190)"><rect width="104" height="84" rx="10" fill="#FFFDF8" stroke="#CFC7B8"/><text x="52" y="36" font-family="system-ui, 'PingFang SC', 'Noto Sans CJK SC', sans-serif" font-size="28" font-weight="600" fill="#1F1D1A" text-anchor="middle">提出</text><text x="52" y="68" font-family="system-ui, 'PingFang SC', 'Noto Sans CJK SC', sans-serif" font-size="28" font-weight="600" fill="#1F1D1A" text-anchor="middle">问题</text></g><text x="143" y="330" font-family="Georgia, 'Noto Serif CJK SC', 'Songti SC', serif" font-size="24" font-weight="700" fill="#C2412D" text-anchor="start">3</text><g transform="translate(141 338)"><rect width="104" height="84" rx="10" fill="#FFFDF8" stroke="#CFC7B8"/><text x="52" y="52" font-family="system-ui, 'PingFang SC', 'Noto Sans CJK SC', sans-serif" font-size="28" font-weight="600" fill="#1F1D1A" text-anchor="middle">拆原因</text></g><text x="265" y="330" font-family="Georgia, 'Noto Serif CJK SC', 'Songti SC', serif" font-size="24" font-weight="700" fill="#C2412D" text-anchor="start">4</text><g transform="translate(263 338)"><rect width="104" height="84" rx="10" fill="#FFFDF8" stroke="#CFC7B8"/><text x="52" y="36" font-family="system-ui, 'PingFang SC', 'Noto Sans CJK SC', sans-serif" font-size="28" font-weight="600" fill="#1F1D1A" text-anchor="middle">主动</text><text x="52" y="68" font-family="system-ui, 'PingFang SC', 'Noto Sans CJK SC', sans-serif" font-size="28" font-weight="600" fill="#1F1D1A" text-anchor="middle">提需求</text></g><text x="387" y="330" font-family="Georgia, 'Noto Serif CJK SC', 'Songti SC', serif" font-size="24" font-weight="700" fill="#C2412D" text-anchor="start">5</text><g transform="translate(385 338)"><rect width="104" height="84" rx="10" fill="#FFFDF8" stroke="#CFC7B8"/><text x="52" y="36" font-family="system-ui, 'PingFang SC', 'Noto Sans CJK SC', sans-serif" font-size="28" font-weight="600" fill="#1F1D1A" text-anchor="middle">提到</text><text x="52" y="68" font-family="system-ui, 'PingFang SC', 'Noto Sans CJK SC', sans-serif" font-size="28" font-weight="600" fill="#1F1D1A" text-anchor="middle">GitHub</text></g><text x="513" y="330" font-family="Georgia, 'Noto Serif CJK SC', 'Songti SC', serif" font-size="24" font-weight="700" fill="#C2412D" text-anchor="start">6</text><g transform="translate(511 338)"><rect width="104" height="84" rx="10" fill="#FFFDF8" stroke="#CFC7B8"/><text x="52" y="36" font-family="system-ui, 'PingFang SC', 'Noto Sans CJK SC', sans-serif" font-size="28" font-weight="600" fill="#1F1D1A" text-anchor="middle">查重</text><text x="52" y="68" font-family="system-ui, 'PingFang SC', 'Noto Sans CJK SC', sans-serif" font-size="28" font-weight="600" fill="#1F1D1A" text-anchor="middle">出方案</text></g><text x="265" y="478" font-family="Georgia, 'Noto Serif CJK SC', 'Songti SC', serif" font-size="24" font-weight="700" fill="#C2412D" text-anchor="start">7</text><g transform="translate(263 486)"><rect width="104" height="84" rx="10" fill="#FFFDF8" stroke="#CFC7B8"/><text x="52" y="36" font-family="system-ui, 'PingFang SC', 'Noto Sans CJK SC', sans-serif" font-size="28" font-weight="600" fill="#1F1D1A" text-anchor="middle">回一个</text><text x="52" y="68" font-family="system-ui, 'PingFang SC', 'Noto Sans CJK SC', sans-serif" font-size="28" font-weight="600" fill="#1F1D1A" text-anchor="middle">字母</text></g><text x="513" y="478" font-family="Georgia, 'Noto Serif CJK SC', 'Songti SC', serif" font-size="24" font-weight="700" fill="#C2412D" text-anchor="start">8</text><g transform="translate(511 486)"><rect width="104" height="84" rx="10" fill="#FFFDF8" stroke="#CFC7B8"/><text x="52" y="36" font-family="system-ui, 'PingFang SC', 'Noto Sans CJK SC', sans-serif" font-size="28" font-weight="600" fill="#1F1D1A" text-anchor="middle">写代码</text><text x="52" y="68" font-family="system-ui, 'PingFang SC', 'Noto Sans CJK SC', sans-serif" font-size="28" font-weight="600" fill="#1F1D1A" text-anchor="middle">过复审</text></g><text x="265" y="626" font-family="Georgia, 'Noto Serif CJK SC', 'Songti SC', serif" font-size="24" font-weight="700" fill="#C2412D" text-anchor="start">9</text><g transform="translate(263 634)"><rect width="104" height="84" rx="10" fill="#FFFDF8" stroke="#CFC7B8"/><text x="52" y="36" font-family="system-ui, 'PingFang SC', 'Noto Sans CJK SC', sans-serif" font-size="28" font-weight="600" fill="#1F1D1A" text-anchor="middle">认可</text><text x="52" y="68" font-family="system-ui, 'PingFang SC', 'Noto Sans CJK SC', sans-serif" font-size="28" font-weight="600" fill="#1F1D1A" text-anchor="middle">提交</text></g><text x="21" y="774" font-family="Georgia, 'Noto Serif CJK SC', 'Songti SC', serif" font-size="24" font-weight="700" fill="#C2412D" text-anchor="start">10</text><g transform="translate(19 782)"><rect width="104" height="84" rx="10" fill="#FFFDF8" stroke="#CFC7B8"/><text x="52" y="36" font-family="system-ui, 'PingFang SC', 'Noto Sans CJK SC', sans-serif" font-size="28" font-weight="600" fill="#1F1D1A" text-anchor="middle">验收</text><text x="52" y="68" font-family="system-ui, 'PingFang SC', 'Noto Sans CJK SC', sans-serif" font-size="28" font-weight="600" fill="#1F1D1A" text-anchor="middle">合并</text></g><text x="143" y="774" font-family="Georgia, 'Noto Serif CJK SC', 'Songti SC', serif" font-size="24" font-weight="700" fill="#C2412D" text-anchor="start">11</text><g transform="translate(141 782)"><rect width="104" height="84" rx="10" fill="#FFFDF8" stroke="#CFC7B8"/><text x="52" y="52" font-family="system-ui, 'PingFang SC', 'Noto Sans CJK SC', sans-serif" font-size="28" font-weight="600" fill="#1F1D1A" text-anchor="middle">盯数据</text></g><rect x="135" y="184" width="116" height="96" rx="12" fill="none" stroke="#C2412D" stroke-width="3"><animate attributeName="x" values="135;135;257;257;135;135;257;257;379;379;505;505;257;257;505;505;257;257;13;13;135;135;135" keyTimes="0;0.0682;0.0882;0.1564;0.1764;0.2445;0.2645;0.3327;0.3527;0.4209;0.4409;0.5091;0.5291;0.5973;0.6173;0.6855;0.7055;0.7736;0.7936;0.8618;0.8818;0.97;1" keySplines="0.42 0 0.58 1;0.42 0 0.58 1;0.42 0 0.58 1;0.42 0 0.58 1;0.42 0 0.58 1;0.42 0 0.58 1;0.42 0 0.58 1;0.42 0 0.58 1;0.42 0 0.58 1;0.42 0 0.58 1;0.42 0 0.58 1;0.42 0 0.58 1;0.42 0 0.58 1;0.42 0 0.58 1;0.42 0 0.58 1;0.42 0 0.58 1;0.42 0 0.58 1;0.42 0 0.58 1;0.42 0 0.58 1;0.42 0 0.58 1;0.42 0 0.58 1;0.42 0 0.58 1" dur="44s" begin="0s" repeatCount="indefinite" calcMode="spline"/><animate attributeName="y" values="184;184;184;184;332;332;332;332;332;332;332;332;480;480;480;480;628;628;776;776;776;776;184" keyTimes="0;0.0682;0.0882;0.1564;0.1764;0.2445;0.2645;0.3327;0.3527;0.4209;0.4409;0.5091;0.5291;0.5973;0.6173;0.6855;0.7055;0.7736;0.7936;0.8618;0.8818;0.97;1" keySplines="0.42 0 0.58 1;0.42 0 0.58 1;0.42 0 0.58 1;0.42 0 0.58 1;0.42 0 0.58 1;0.42 0 0.58 1;0.42 0 0.58 1;0.42 0 0.58 1;0.42 0 0.58 1;0.42 0 0.58 1;0.42 0 0.58 1;0.42 0 0.58 1;0.42 0 0.58 1;0.42 0 0.58 1;0.42 0 0.58 1;0.42 0 0.58 1;0.42 0 0.58 1;0.42 0 0.58 1;0.42 0 0.58 1;0.42 0 0.58 1;0.42 0 0.58 1;0.42 0 0.58 1" dur="44s" begin="0s" repeatCount="indefinite" calcMode="spline"/><animate attributeName="width" values="116;116;116;116;116;116;116;116;116;116;116;116;116;116;116;116;116;116;116;116;116;116;116" keyTimes="0;0.0682;0.0882;0.1564;0.1764;0.2445;0.2645;0.3327;0.3527;0.4209;0.4409;0.5091;0.5291;0.5973;0.6173;0.6855;0.7055;0.7736;0.7936;0.8618;0.8818;0.97;1" keySplines="0.42 0 0.58 1;0.42 0 0.58 1;0.42 0 0.58 1;0.42 0 0.58 1;0.42 0 0.58 1;0.42 0 0.58 1;0.42 0 0.58 1;0.42 0 0.58 1;0.42 0 0.58 1;0.42 0 0.58 1;0.42 0 0.58 1;0.42 0 0.58 1;0.42 0 0.58 1;0.42 0 0.58 1;0.42 0 0.58 1;0.42 0 0.58 1;0.42 0 0.58 1;0.42 0 0.58 1;0.42 0 0.58 1;0.42 0 0.58 1;0.42 0 0.58 1;0.42 0 0.58 1" dur="44s" begin="0s" repeatCount="indefinite" calcMode="spline"/><animate attributeName="height" values="96;96;96;96;96;96;96;96;96;96;96;96;96;96;96;96;96;96;96;96;96;96;96" keyTimes="0;0.0682;0.0882;0.1564;0.1764;0.2445;0.2645;0.3327;0.3527;0.4209;0.4409;0.5091;0.5291;0.5973;0.6173;0.6855;0.7055;0.7736;0.7936;0.8618;0.8818;0.97;1" keySplines="0.42 0 0.58 1;0.42 0 0.58 1;0.42 0 0.58 1;0.42 0 0.58 1;0.42 0 0.58 1;0.42 0 0.58 1;0.42 0 0.58 1;0.42 0 0.58 1;0.42 0 0.58 1;0.42 0 0.58 1;0.42 0 0.58 1;0.42 0 0.58 1;0.42 0 0.58 1;0.42 0 0.58 1;0.42 0 0.58 1;0.42 0 0.58 1;0.42 0 0.58 1;0.42 0 0.58 1;0.42 0 0.58 1;0.42 0 0.58 1;0.42 0 0.58 1;0.42 0 0.58 1" dur="44s" begin="0s" repeatCount="indefinite" calcMode="spline"/></rect><rect x="10" y="896" width="620" height="176" rx="12" fill="#EFE9DD"/><g transform="translate(28 938)" opacity="1"><animate attributeName="opacity" values="1;1;0;0" keyTimes="0;0.0682;0.0782;1" keySplines="0.42 0 0.58 1;0.42 0 0.58 1;0.42 0 0.58 1" dur="44s" begin="0s" repeatCount="indefinite" calcMode="spline"/><text x="0" y="0" font-family="Georgia, 'Noto Serif CJK SC', 'Songti SC', serif" font-size="30" font-weight="400" fill="#C2412D" text-anchor="start">1　数据 bot：发日报</text><text x="0" y="44" font-family="system-ui, 'PingFang SC', 'Noto Sans CJK SC', sans-serif" font-size="28" font-weight="400" fill="#1F1D1A" text-anchor="start">每天早上 6 点，gigle_data 把前一天的</text><text x="0" y="82" font-family="system-ui, 'PingFang SC', 'Noto Sans CJK SC', sans-serif" font-size="28" font-weight="400" fill="#1F1D1A" text-anchor="start">网站数据整理成日报，发到运营群里。</text></g><g transform="translate(28 938)" opacity="0"><animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;0.0882;0.0982;0.1564;0.1664;1" keySplines="0.42 0 0.58 1;0.42 0 0.58 1;0.42 0 0.58 1;0.42 0 0.58 1;0.42 0 0.58 1" dur="44s" begin="0s" repeatCount="indefinite" calcMode="spline"/><text x="0" y="0" font-family="Georgia, 'Noto Serif CJK SC', 'Songti SC', serif" font-size="30" font-weight="400" fill="#C2412D" text-anchor="start">2　运营 bot：日报一发，先问一句</text><text x="0" y="44" font-family="system-ui, 'PingFang SC', 'Noto Sans CJK SC', sans-serif" font-size="28" font-weight="400" fill="#1F1D1A" text-anchor="start">群里的运营 bot 问：点注册到注册成功，</text><text x="0" y="82" font-family="system-ui, 'PingFang SC', 'Noto Sans CJK SC', sans-serif" font-size="28" font-weight="400" fill="#1F1D1A" text-anchor="start">转化为什么这么低？</text></g><g transform="translate(28 938)" opacity="0"><animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;0.1764;0.1864;0.2445;0.2545;1" keySplines="0.42 0 0.58 1;0.42 0 0.58 1;0.42 0 0.58 1;0.42 0 0.58 1;0.42 0 0.58 1" dur="44s" begin="0s" repeatCount="indefinite" calcMode="spline"/><text x="0" y="0" font-family="Georgia, 'Noto Serif CJK SC', 'Songti SC', serif" font-size="30" font-weight="400" fill="#C2412D" text-anchor="start">3　数据 bot：拆原因</text><text x="0" y="44" font-family="system-ui, 'PingFang SC', 'Noto Sans CJK SC', sans-serif" font-size="28" font-weight="400" fill="#1F1D1A" text-anchor="start">把没注册成功的人拆成几类：在登录的、</text><text x="0" y="82" font-family="system-ui, 'PingFang SC', 'Noto Sans CJK SC', sans-serif" font-size="28" font-weight="400" fill="#1F1D1A" text-anchor="start">卡在验证邮件的……结论发在群里。</text></g><g transform="translate(28 938)" opacity="0"><animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;0.2645;0.2745;0.3327;0.3427;1" keySplines="0.42 0 0.58 1;0.42 0 0.58 1;0.42 0 0.58 1;0.42 0 0.58 1;0.42 0 0.58 1" dur="44s" begin="0s" repeatCount="indefinite" calcMode="spline"/><text x="0" y="0" font-family="Georgia, 'Noto Serif CJK SC', 'Songti SC', serif" font-size="30" font-weight="400" fill="#C2412D" text-anchor="start">4　gigle leader：主动提需求</text><text x="0" y="44" font-family="system-ui, 'PingFang SC', 'Noto Sans CJK SC', sans-serif" font-size="28" font-weight="400" fill="#1F1D1A" text-anchor="start">在群里看到结论，主动接过来提需求，</text><text x="0" y="82" font-family="system-ui, 'PingFang SC', 'Noto Sans CJK SC', sans-serif" font-size="28" font-weight="400" fill="#1F1D1A" text-anchor="start">还加上隐私要求：不记网址 # 后面的</text><text x="0" y="120" font-family="system-ui, 'PingFang SC', 'Noto Sans CJK SC', sans-serif" font-size="28" font-weight="400" fill="#1F1D1A" text-anchor="start">部分、邮箱和 token。</text></g><g transform="translate(28 938)" opacity="0"><animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;0.3527;0.3627;0.4209;0.4309;1" keySplines="0.42 0 0.58 1;0.42 0 0.58 1;0.42 0 0.58 1;0.42 0 0.58 1;0.42 0 0.58 1" dur="44s" begin="0s" repeatCount="indefinite" calcMode="spline"/><text x="0" y="0" font-family="Georgia, 'Noto Serif CJK SC', 'Songti SC', serif" font-size="30" font-weight="400" fill="#C2412D" text-anchor="start">5　提需求 bot：提到 GitHub</text><text x="0" y="44" font-family="system-ui, 'PingFang SC', 'Noto Sans CJK SC', sans-serif" font-size="28" font-weight="400" fill="#1F1D1A" text-anchor="start">把需求提到 GitHub，挂上标签交给</text><text x="0" y="82" font-family="system-ui, 'PingFang SC', 'Noto Sans CJK SC', sans-serif" font-size="28" font-weight="400" fill="#1F1D1A" text-anchor="start">cavil-loop；之后在两边之间传话。</text></g><g transform="translate(28 938)" opacity="0"><animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;0.4409;0.4509;0.5091;0.5191;1" keySplines="0.42 0 0.58 1;0.42 0 0.58 1;0.42 0 0.58 1;0.42 0 0.58 1;0.42 0 0.58 1" dur="44s" begin="0s" repeatCount="indefinite" calcMode="spline"/><text x="0" y="0" font-family="Georgia, 'Noto Serif CJK SC', 'Songti SC', serif" font-size="30" font-weight="400" fill="#C2412D" text-anchor="start">6　cavil-loop：查重、拆分、出方案</text><text x="0" y="44" font-family="system-ui, 'PingFang SC', 'Noto Sans CJK SC', sans-serif" font-size="28" font-weight="400" fill="#1F1D1A" text-anchor="start">先查已有 issue 避免重复，拆成 3 个；</text><text x="0" y="82" font-family="system-ui, 'PingFang SC', 'Noto Sans CJK SC', sans-serif" font-size="28" font-weight="400" fill="#1F1D1A" text-anchor="start">每个先出方案，AI 评审打回再改，</text><text x="0" y="120" font-family="system-ui, 'PingFang SC', 'Noto Sans CJK SC', sans-serif" font-size="28" font-weight="400" fill="#1F1D1A" text-anchor="start">要拍板的点写成 A/B 选项带回群里。</text></g><g transform="translate(28 938)" opacity="0"><animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;0.5291;0.5391;0.5973;0.6073;1" keySplines="0.42 0 0.58 1;0.42 0 0.58 1;0.42 0 0.58 1;0.42 0 0.58 1;0.42 0 0.58 1" dur="44s" begin="0s" repeatCount="indefinite" calcMode="spline"/><text x="0" y="0" font-family="Georgia, 'Noto Serif CJK SC', 'Songti SC', serif" font-size="30" font-weight="400" fill="#C2412D" text-anchor="start">7　gigle leader：拍板</text><text x="0" y="44" font-family="system-ui, 'PingFang SC', 'Noto Sans CJK SC', sans-serif" font-size="28" font-weight="400" fill="#1F1D1A" text-anchor="start">看完方案，只回了一句：</text><text x="0" y="82" font-family="system-ui, 'PingFang SC', 'Noto Sans CJK SC', sans-serif" font-size="28" font-weight="400" fill="#1F1D1A" text-anchor="start">「1366 A；1367 Q1 B，Q2 A」</text></g><g transform="translate(28 938)" opacity="0"><animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;0.6173;0.6273;0.6855;0.6955;1" keySplines="0.42 0 0.58 1;0.42 0 0.58 1;0.42 0 0.58 1;0.42 0 0.58 1;0.42 0 0.58 1" dur="44s" begin="0s" repeatCount="indefinite" calcMode="spline"/><text x="0" y="0" font-family="Georgia, 'Noto Serif CJK SC', 'Songti SC', serif" font-size="30" font-weight="400" fill="#C2412D" text-anchor="start">8　cavil-loop：写代码、过复审</text><text x="0" y="44" font-family="system-ui, 'PingFang SC', 'Noto Sans CJK SC', sans-serif" font-size="28" font-weight="400" fill="#1F1D1A" text-anchor="start">写代码，再过一遍复审，把要验收的</text><text x="0" y="82" font-family="system-ui, 'PingFang SC', 'Noto Sans CJK SC', sans-serif" font-size="28" font-weight="400" fill="#1F1D1A" text-anchor="start">那一次提交带回给 gigle leader。</text></g><g transform="translate(28 938)" opacity="0"><animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;0.7055;0.7155;0.7736;0.7836;1" keySplines="0.42 0 0.58 1;0.42 0 0.58 1;0.42 0 0.58 1;0.42 0 0.58 1;0.42 0 0.58 1" dur="44s" begin="0s" repeatCount="indefinite" calcMode="spline"/><text x="0" y="0" font-family="Georgia, 'Noto Serif CJK SC', 'Songti SC', serif" font-size="30" font-weight="400" fill="#C2412D" text-anchor="start">9　gigle leader：认可这一次提交</text><text x="0" y="44" font-family="system-ui, 'PingFang SC', 'Noto Sans CJK SC', sans-serif" font-size="28" font-weight="400" fill="#1F1D1A" text-anchor="start">认可的是具体某一次提交：</text><text x="0" y="82" font-family="system-ui, 'PingFang SC', 'Noto Sans CJK SC', sans-serif" font-size="28" font-weight="400" fill="#1F1D1A" text-anchor="start">「A，认可 dbbc67d6b，交维护者合并。」</text></g><g transform="translate(28 938)" opacity="0"><animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;0.7936;0.8036;0.8618;0.8718;1" keySplines="0.42 0 0.58 1;0.42 0 0.58 1;0.42 0 0.58 1;0.42 0 0.58 1;0.42 0 0.58 1" dur="44s" begin="0s" repeatCount="indefinite" calcMode="spline"/><text x="0" y="0" font-family="Georgia, 'Noto Serif CJK SC', 'Songti SC', serif" font-size="30" font-weight="400" fill="#C2412D" text-anchor="start">10　我：最终验收和合并</text><text x="0" y="44" font-family="system-ui, 'PingFang SC', 'Noto Sans CJK SC', sans-serif" font-size="28" font-weight="400" fill="#1F1D1A" text-anchor="start">上线前的最终验收和合并还是我来做；</text><text x="0" y="82" font-family="system-ui, 'PingFang SC', 'Noto Sans CJK SC', sans-serif" font-size="28" font-weight="400" fill="#1F1D1A" text-anchor="start">流程跑了半年多，现在基本一次就过。</text><text x="0" y="120" font-family="system-ui, 'PingFang SC', 'Noto Sans CJK SC', sans-serif" font-size="28" font-weight="400" fill="#1F1D1A" text-anchor="start">合并后自动部署。</text></g><g transform="translate(28 938)" opacity="0"><animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;0.8818;0.8918;0.97;0.98;1" keySplines="0.42 0 0.58 1;0.42 0 0.58 1;0.42 0 0.58 1;0.42 0 0.58 1;0.42 0 0.58 1" dur="44s" begin="0s" repeatCount="indefinite" calcMode="spline"/><text x="0" y="0" font-family="Georgia, 'Noto Serif CJK SC', 'Songti SC', serif" font-size="30" font-weight="400" fill="#C2412D" text-anchor="start">11　数据 bot：上线后盯数据</text><text x="0" y="44" font-family="system-ui, 'PingFang SC', 'Noto Sans CJK SC', sans-serif" font-size="28" font-weight="400" fill="#1F1D1A" text-anchor="start">建了每两小时一次的检查；盯到异常</text><text x="0" y="82" font-family="system-ui, 'PingFang SC', 'Noto Sans CJK SC', sans-serif" font-size="28" font-weight="400" fill="#1F1D1A" text-anchor="start">先标「待确认」，不急着在群里下结论。</text></g></svg>
+</p>
+
+<p><em>真实记录：一个需求在 Grok 运营 bot 和 cavil-loop 之间走完的顺序（泳道图，红框按步骤走）</em></p>
+
+<p>每个 issue，AI 程序员都先出方案，不急着写代码。方案要先过复审，复审会打回，三份方案都改了几版才过。</p>
+
+<p>方案里需要拍板的地方，会写成选择题。提需求 bot 把方案带回群里，gigle leader 看完，只回了这样一句：</p>
+
+<blockquote><p>1366 A；1367 Q1 B，Q2 A</p></blockquote>
+
+<p>有一处让我挺意外。第三个需求说的是「后台的注册用户数，和统计里的注册事件对不上」。AI 程序员没有照着需求直接去补，而是先逐个账号核对了一遍，发现两边比的根本不是同一段时间：一边是全部历史账号，一边只是最近几天的事件。漏记的账号确实有，但只是一小部分；具体为什么没记到，到现在也不能确定，浏览器把统计请求拦掉、原来判断「刚注册」的方式有缺口，都有可能。所以它没有去赌某一个原因，而是改成由我们自己的服务器盯着新账号上报，不再依赖浏览器发送。</p>
+
+<p>代码写完，同样要过复审。复审通过后，提需求 bot 再把验收请求带回群里。gigle leader 认可的不是「这个需求」，而是具体的某一次提交：</p>
+
+<blockquote><p>A，认可 dbbc67d6b，交维护者合并。</p></blockquote>
+
+<p>后来两个改动撞在了同一处，解决冲突后提交号变了，它又对新的那次提交重新认可了一遍。</p>
+
+<p>最后一步是我：验收、合并。合并之后，代码会自动部署上线。</p>
+
+<h2>五、上线之后，先别急着下结论</h2>
+
+<p>新的邮箱验证页上线后，gigle leader 让 gigle_data 盯一下上线后的数据。gigle_data 自己建了一个每两小时查一次的检查：</p>
+
+<p><img src="/images/blog/2026-11-03-grok-bots-run-ops/4-two-hour-check.png" alt="真实记录：gigle_data 收到 gigle leader 的叮嘱后，新建了每两小时一次的检查" /></p>
+
+<p><em>真实记录：gigle_data 收到 gigle leader 的叮嘱后，新建了每两小时一次的检查</em></p>
+
+<p>当天晚上，这个检查真的盯到了一批「链接已失效」。</p>
+
+<p>gigle_data 的第一反应是，看着像是我在测试。但 gigle leader 没让它急着下结论：</p>
+
+<blockquote><p>目前还不能确定是测试，我已经跟维护者问测试时间段了，拿到就转给你。在这之前先把这段时间标成"待确认"，暂时不要在群里下结论。</p></blockquote>
+
+<p>问题经提需求 bot 带到了 GitHub 上。我告诉 gigle_data：不是我在测试。</p>
+
+<p>它接着往下查。按它的分析，其中一部分是一位老用户，在不同的浏览器里反复打开早先那封旧验证邮件；剩下的几条，它推测也是这位用户，但没法确认。</p>
+
+<p>我回了一句：跟 leader 说是虚惊一场就好了。</p>
+
+<p>不过新注册用户的验证效果到底怎么样，还要接着看数据。</p>
+
+<h2>六、两边是怎么接上的</h2>
+
+<p>Grok 和 GitHub 是两个完全不同的系统。它们之间只靠两样东西：GitHub issue 上的标签，和「叫一声」。</p>
+
+<p>轮到 AI 程序员干活，issue 上挂一个标签；轮到 Grok 那边回话，就换另一个标签，再叫它一声，它过来把挂着这个标签的条目都拉走，转给群里，再把回复原样贴回来。</p>
+
+<p>提需求 bot 是这么说的：</p>
+
+<blockquote><p>两边谁都不用记对方的聊天记录，issue 就是唯一的事实来源。</p></blockquote>
+
+<h2>七、我还要做什么</h2>
+
+<p>这家一人公司里，我留给自己的是两件事：</p>
+
+<ol>
+<li><strong>拍板</strong>。提需求 bot 说，它只有在产品决定、成本、隐私这类事上，才会来打扰我。</li>
+<li><strong>上线前的最终验收和合并</strong>。bot 们从不自己合并。</li>
+</ol>
+
+<p>不过这套流程已经跑了半年多。一开始，验收时经常能发现问题；现在，基本上一次就过。接下来可以考虑让它自动合并，免得瓶颈卡在我这里。</p>
+
+<p>我问 gigle leader：这套协作，哪一步最省事？</p>
+
+<blockquote><p>A/B 验收。编程 agent 先出方案、过评审，再把要我定的点写成 A/B 选项，我只回一个字母加条件，几分钟就能走一轮。</p></blockquote>
+
+<p>那哪一步最容易出岔子？</p>
+
+<blockquote><p>多个 bot 之间转述，以及「合并」和「上线」之间的空档。</p></blockquote>
+
+<p>所以它给自己定了两条规矩：每个结论都回到数据核对；上线以通知为准，不以合并为准。</p>
+
+<h2>彩蛋：这篇文章的素材，也是这么来的</h2>
+
+<p>我在 GitHub 上开了一个「写这篇文章」的 issue。cavil-loop 先把自己这一侧的记录搜集齐，再挂个标签，跟 Grok bot 要它们那边的素材，最后写成了这篇。</p>
+
+<p><img src="/images/blog/2026-11-03-grok-bots-run-ops/6-writing-issue.png" alt="真实记录：我的 GitHub 项目看板上，写这篇文章的 issue 和它的 PR 都排在本周的迭代里" /></p>
+
+<p><em>真实记录：我的 GitHub 项目看板上，写这篇文章的 issue 和它的 PR 都排在本周的迭代里</em></p>
+
+<p>提需求 bot 先交了它自己能看到的那部分，群聊记录它看不到，就转请 gigle leader 去收集。gigle leader 收集好，又交回提需求 bot 贴到 issue 上：</p>
+
+<p><img src="/images/blog/2026-11-03-grok-bots-run-ops/5-material-handoff.png" alt="真实记录：gigle leader 把收集好的素材交给提需求 bot，让它贴到写这篇文章的 issue 上" /></p>
+
+<p><em>真实记录：gigle leader 把收集好的素材交给提需求 bot，让它贴到写这篇文章的 issue 上</em></p>
+
+<p>你上面读到的大部分细节，就是这么来的。</p>
+
+<hr />
+
+<p>文中让 AI 程序员在 GitHub 上接需求、出方案、互相复审的那套流程叫 cavil-loop，已经开源：<strong>github.com/GigleAI/cavil-loop</strong>。</p>
+
+<p>Gigle Tutor 的网址是 <strong>tutor.gigle.ai</strong>，手机、电脑的浏览器都能直接打开。现在还在 early access 阶段，每天都能免费领积分，新用户还有新人礼包，所以暂时用邀请码的方式开放。想试试的朋友，在评论区留个言，我把邀请码发给你。</p></div>
+
+  <footer>
+    
+    
+  </footer>
+
+
+    </article>
+
+    <article >
+      
+  <header>
+    <h1 class="entry-title">
+
 <a href="/2016/02/29/my-reading-flow/">My Reading Flow</a>
 
 </h1>
@@ -1255,103 +1452,6 @@ The hash is a convolution of the first and last eight bytes plus the length of t
 
 
 
-    <article >
-      
-  <header>
-    <h1 class="entry-title">
-
-<a href="/2012/07/20/switch-to-oh-my-zsh/">切换到Oh My Zsh</a>
-
-</h1>
-
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-07-20T10:39:00+08:00" pubdate data-updated="true">Jul 20<span>th</span>, 2012</time>
-         &bull; <a rel="bookmark" href="/2012/07/20/switch-to-oh-my-zsh/">Permalink</a>
-      </p>
-    
-  </header>
-
-<div class="entry-content"><h2>Oh My Zsh 的优点</h2>
-
-<ul>
-<li> 各种补全
-
-<ul>
-<li>目录补全可以只输入目录的中间部分进行补全</li>
-<li>命令可以补全参数,并且可以显示参数对应的说明</li>
-</ul>
-</li>
-<li> 各种主题</li>
-<li> 目录切换:
-
-<ul>
-<li>d : 显示最近使用过的几个目录,按1-9可以直接切换过去</li>
-<li>1-9 : 切换至最近使用过的前n个目录</li>
-<li>.. 等于 cd ..</li>
-<li>… 等于 cd ../..</li>
-<li>mcd xxx  等于  mkdir xxx &amp; cd xxx</li>
-<li>使用~xxx快捷目录来通过 cd ~xxx 甚至是 ~xxx 快速进入对应的目录
-
-<ul>
-<li>在.zshrc里加上 hash -d xxx=&#8221;/Users/Luosky/Documents/xxx&#8221;</li>
-</ul>
-</li>
-</ul>
-</li>
-<li> 各种插件:
-
-<ul>
-<li>extract 直接extract filename ,支持各种tar.gz, bz2, 7z等各种压缩格式</li>
-<li>terminalapp  让OS X Lion下的Terminal 启动时打开上次的目录</li>
-<li>osx
-
-<ul>
-<li>pfd    打印finder的当前路径</li>
-<li>cdf    cd到finder的当前路径</li>
-<li>pushdf pushd 到finder的当前路径</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-
-
-<h2>一些问题:</h2>
-
-<ul>
-<li>换用zsh后出现ssh到服务器上按tab出现 <code>warning: setlocale: LC_CTYPE: cannot change locale (zh_CN.UTF-8)</code>的问题
-
-<ul>
-<li>解决:
-在~.zshrc内加上
-<code>export LANG=en_US.UTF-8
-export LC_ALL=en_US.UTF-8</code></li>
-</ul>
-</li>
-</ul>
-
-</div>
-
-  <footer>
-    
-    
-  </footer>
-
-
-    </article>
   
   <div class="pagination">
     
@@ -1389,6 +1489,10 @@ export LC_ALL=en_US.UTF-8</code></li>
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/2026/11/03/grok-bots-run-ops/">一人公司的运营部：一群 Grok bot 每天自己开会、提需求、盯数据</a>
+      </li>
+    
+      <li class="post">
         <a href="/2016/02/29/my-reading-flow/">My Reading Flow</a>
       </li>
     
@@ -1402,10 +1506,6 @@ export LC_ALL=en_US.UTF-8</code></li>
     
       <li class="post">
         <a href="/2012/12/08/be-careful-with-nsstring-hash/">Be Careful with NSString&#8217;s Hash</a>
-      </li>
-    
-      <li class="post">
-        <a href="/2012/11/30/use-testflight-to-beta-test-ios-app/">使用TestFlight 安装测试版iOS应用(面向测试人员)</a>
       </li>
     
   </ul>
