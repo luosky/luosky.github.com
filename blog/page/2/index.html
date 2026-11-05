@@ -94,6 +94,80 @@
   <header>
     <h1 class="entry-title">
 
+<a href="/2012/07/22/migrated-to-octopress/">Migrated to Octopress</a>
+
+</h1>
+
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-07-22T14:46:00+08:00" pubdate data-updated="true">Jul 22<span>nd</span>, 2012</time>
+         &bull; <a rel="bookmark" href="/2012/07/22/migrated-to-octopress/">Permalink</a>
+      </p>
+    
+  </header>
+
+<div class="entry-content"><p>将 blog 从 wordpress 迁移到 Octopress 上了，主要是因为其支持 markdown 。用 markdown 写文章真是太适合理工科的宅男了。</p>
+
+<p>安装完后用 <code>rake new_post['Title of The Post']</code> 来新建一篇文章。编辑完后用 <code>rake generate</code> 生成 html， 然后 <code>rake deploy</code> 即可将文章发布了。</p>
+
+<p>原来的blog改到<a href="http://photo.luosky.com">photo.luosky.com</a>上，将主要用来放日常用手机拍的照片。</p>
+
+<p>一些迁移时碰到的问题记录如下：</p>
+
+<p>Some Tips：</p>
+
+<ul>
+<li>用<a href="http://pow.cx/">pow</a>来本地运行很方便</li>
+<li>rake setup_github_pages时出现undefined method `[]&#8217; for nil:NilClass
+
+<ul>
+<li>一般是因为repository地址你填的是http的地址</li>
+<li>填ssh的那个形式如 git@github.com:your_username/your_username.github.com.git 的地址即可</li>
+</ul>
+</li>
+<li>带本地图片的markdown上传
+
+<ol>
+<li>在本地建一个/images 的soft link指向到{octopress}/source/images目录</li>
+<li>将图片放在/images目录下，在markdown文件中以/image/xxx.jpg引用</li>
+</ol>
+</li>
+<li>When you are filling the values in _config.yml. A space need to be added between the value and the colon after the key.</li>
+<li>add category list
+
+<ul>
+<li>see this <a href="http://paz.am/blog/blog/2012/06/25/octopress-category-list-plugin/">post</a></li>
+</ul>
+</li>
+</ul>
+
+</div>
+
+  <footer>
+    
+    
+  </footer>
+
+
+    </article>
+
+    <article >
+      
+  <header>
+    <h1 class="entry-title">
+
 <a href="/2012/07/20/switch-to-oh-my-zsh/">切换到Oh My Zsh</a>
 
 </h1>
@@ -1071,6 +1145,10 @@ And that has made all the difference.</p>
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/2026/11/05/grok-bot-handbook/">一群 Grok bot 的员工手册：怎么带好 AI 团队</a>
+      </li>
+    
+      <li class="post">
         <a href="/2026/11/03/grok-bots-run-ops/">一人公司的运营部：一群 Grok bot 每天自己开会、提需求、盯数据</a>
       </li>
     
@@ -1084,10 +1162,6 @@ And that has made all the difference.</p>
     
       <li class="post">
         <a href="/2012/12/10/gao-xiao-cheng-xu-yuan-de-45du-shu-bi-ji/">高效程序员的45个习惯：敏捷开发修炼之道 读书笔记</a>
-      </li>
-    
-      <li class="post">
-        <a href="/2012/12/08/be-careful-with-nsstring-hash/">Be Careful with NSString&#8217;s Hash</a>
       </li>
     
   </ul>

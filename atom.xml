@@ -3,7 +3,7 @@
   <title><![CDATA[Luosky's Playground]]></title>
   <link href="http://luosky.com/atom.xml" rel="self"/>
   <link href="http://luosky.com/"/>
-  <updated>2026-11-03T12:00:00+08:00</updated>
+  <updated>2026-11-05T12:00:00+08:00</updated>
   <id>http://luosky.com/</id>
   <author>
     <name><![CDATA[Luosky]]></name>
@@ -12,6 +12,167 @@
   <generator uri="http://octopress.org/">Octopress</generator>
 
   
+    <entry>
+      
+
+
+
+
+<title type="html"><![CDATA[一群 Grok bot 的员工手册：怎么带好 AI 团队]]></title>
+<link href="http://luosky.com/2026/11/05/grok-bot-handbook/"/>
+<updated>2026-11-05T12:00:00+08:00</updated>
+<id>http://luosky.com/2026/11/05/grok-bot-handbook</id>
+
+      <content type="html"><![CDATA[<p>用 Grok bot 没几天，我手下这群 bot 已经自己给开发那边提了 13 个需求单，其中 8 个已经做完上线。我要做的，多半只是看一眼需求，再点一下合并。有些需求，已经开始带来正向的收益。</p>
+
+<p>做到这些，靠的是我账号下 9 个 Grok bot 组成的运营团队：它们覆盖 8 个社交和内容平台，而人类负责人只有一个。它们每天写各平台的草稿、盯数据，还会开会讨论，给开发那边提需求。开发那边也是 AI（只不过不是 Grok bot），需要文案或案例时，也会反过来给它们提需求。</p>
+
+<p>下面是我用 Grok bot 团队的几条做法。每一条都写了做什么、为什么这么做。</p>
+
+<h2>一、给默认的 bot 起个名，让它当大内总管</h2>
+
+<p>bot 少的时候，我挨个跟它们说话就行。多了以后，问题就来了：每个 bot 都直接找我，什么事都得我来决策；新来一个 bot，又得从头交代一遍。相当于公司每来一个新人，我都得亲自带一遍，这反而拖慢了效率。</p>
+
+<p>所以我做的第一件事，是给默认的那个 bot 起了个名字，让它当 leader，也就是我的大内总管。</p>
+
+<p>我对它的要求是：</p>
+
+<ol>
+<li>我一般只和 leader 对接；</li>
+<li>其他 bot 有事都先向 leader 反馈，它能处理的自己处理，处理不了的才上升给我；</li>
+<li>方案出来了，也先由 leader 过一遍。</li>
+</ol>
+
+<p>落到团队手册里，分工写得更具体：运营上的决策，大部分授权给 leader 拍板；只有一些核心决策要我本人点头——产品和隐私的方向，以及那几类做错了收不回来的事：对外发布或发消息、花钱、删除、改账号设置（下面行为准则第 8 条）。leader 是运营队长，负责统筹、分派、汇总，自己不去做具体平台的运营。</p>
+
+<p><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 666" width="640" height="666" role="img" aria-label="示意图：bot 有事先报给 leader，运营上的事 leader 拍板，只有核心决策才到我这里" style="max-width:100%;height:auto"><rect width="640" height="666" fill="#F6F2EA"/><text x="22" y="60" font-family="Georgia, 'Noto Serif CJK SC', 'Songti SC', serif" font-size="36" font-weight="400" fill="#1F1D1A" text-anchor="start">有事先找 leader</text><rect x="10" y="108" width="620" height="108" rx="12" fill="#E8E4DC"/><rect x="10" y="248" width="620" height="108" rx="12" fill="#ECE6F7"/><text x="610" y="312" font-family="system-ui, 'PingFang SC', 'Noto Sans CJK SC', sans-serif" font-size="24" font-weight="400" fill="#7A746A" text-anchor="end">大内总管</text><rect x="10" y="388" width="620" height="108" rx="12" fill="#DCE9F5"/><line x1="106" y1="404" x2="320" y2="340" stroke="#1F1D1A" stroke-width="2"/><line x1="320" y1="404" x2="320" y2="340" stroke="#1F1D1A" stroke-width="2"/><line x1="534" y1="404" x2="320" y2="340" stroke="#1F1D1A" stroke-width="2"/><line x1="320" y1="264" x2="320" y2="200" stroke="#1F1D1A" stroke-width="2"/><g transform="translate(236 124)"><rect width="168" height="76" rx="10" fill="#FFFDF8" stroke="#CFC7B8"/><text x="84" y="48" font-family="system-ui, 'PingFang SC', 'Noto Sans CJK SC', sans-serif" font-size="28" font-weight="600" fill="#1F1D1A" text-anchor="middle">我</text></g><g transform="translate(236 264)"><rect width="168" height="76" rx="10" fill="#FFFDF8" stroke="#CFC7B8"/><text x="84" y="48" font-family="system-ui, 'PingFang SC', 'Noto Sans CJK SC', sans-serif" font-size="28" font-weight="600" fill="#1F1D1A" text-anchor="middle">leader</text></g><g transform="translate(22 404)"><rect width="168" height="76" rx="10" fill="#FFFDF8" stroke="#CFC7B8"/><text x="84" y="48" font-family="system-ui, 'PingFang SC', 'Noto Sans CJK SC', sans-serif" font-size="28" font-weight="600" fill="#1F1D1A" text-anchor="middle">数据 bot</text></g><g transform="translate(236 404)"><rect width="168" height="76" rx="10" fill="#FFFDF8" stroke="#CFC7B8"/><text x="84" y="48" font-family="system-ui, 'PingFang SC', 'Noto Sans CJK SC', sans-serif" font-size="28" font-weight="600" fill="#1F1D1A" text-anchor="middle">渠道 bot</text></g><g transform="translate(450 404)"><rect width="168" height="76" rx="10" fill="#FFFDF8" stroke="#CFC7B8"/><text x="84" y="48" font-family="system-ui, 'PingFang SC', 'Noto Sans CJK SC', sans-serif" font-size="28" font-weight="600" fill="#1F1D1A" text-anchor="middle">新 bot</text></g><rect x="230" y="398" width="180" height="88" rx="12" fill="none" stroke="#C2412D" stroke-width="3"><animate attributeName="x" values="230;230;230;230;230;230;230;230;444;444;230" keyTimes="0;0.174;0.194;0.368;0.388;0.562;0.582;0.756;0.776;0.97;1" keySplines="0.42 0 0.58 1;0.42 0 0.58 1;0.42 0 0.58 1;0.42 0 0.58 1;0.42 0 0.58 1;0.42 0 0.58 1;0.42 0 0.58 1;0.42 0 0.58 1;0.42 0 0.58 1;0.42 0 0.58 1" dur="30s" begin="0s" repeatCount="indefinite" calcMode="spline"/><animate attributeName="y" values="398;398;258;258;118;118;258;258;398;398;398" keyTimes="0;0.174;0.194;0.368;0.388;0.562;0.582;0.756;0.776;0.97;1" keySplines="0.42 0 0.58 1;0.42 0 0.58 1;0.42 0 0.58 1;0.42 0 0.58 1;0.42 0 0.58 1;0.42 0 0.58 1;0.42 0 0.58 1;0.42 0 0.58 1;0.42 0 0.58 1;0.42 0 0.58 1" dur="30s" begin="0s" repeatCount="indefinite" calcMode="spline"/><animate attributeName="width" values="180;180;180;180;180;180;180;180;180;180;180" keyTimes="0;0.174;0.194;0.368;0.388;0.562;0.582;0.756;0.776;0.97;1" keySplines="0.42 0 0.58 1;0.42 0 0.58 1;0.42 0 0.58 1;0.42 0 0.58 1;0.42 0 0.58 1;0.42 0 0.58 1;0.42 0 0.58 1;0.42 0 0.58 1;0.42 0 0.58 1;0.42 0 0.58 1" dur="30s" begin="0s" repeatCount="indefinite" calcMode="spline"/><animate attributeName="height" values="88;88;88;88;88;88;88;88;88;88;88" keyTimes="0;0.174;0.194;0.368;0.388;0.562;0.582;0.756;0.776;0.97;1" keySplines="0.42 0 0.58 1;0.42 0 0.58 1;0.42 0 0.58 1;0.42 0 0.58 1;0.42 0 0.58 1;0.42 0 0.58 1;0.42 0 0.58 1;0.42 0 0.58 1;0.42 0 0.58 1;0.42 0 0.58 1" dur="30s" begin="0s" repeatCount="indefinite" calcMode="spline"/></rect><rect x="10" y="512" width="620" height="142" rx="12" fill="#EFE9DD"/><g transform="translate(28 554)" opacity="1"><animate attributeName="opacity" values="1;1;0;0" keyTimes="0;0.174;0.184;1" keySplines="0.42 0 0.58 1;0.42 0 0.58 1;0.42 0 0.58 1" dur="30s" begin="0s" repeatCount="indefinite" calcMode="spline"/><text x="0" y="0" font-family="Georgia, 'Noto Serif CJK SC', 'Songti SC', serif" font-size="30" font-weight="400" fill="#C2412D" text-anchor="start">1　渠道 bot：有事先报给 leader</text><text x="0" y="44" font-family="system-ui, 'PingFang SC', 'Noto Sans CJK SC', sans-serif" font-size="28" font-weight="400" fill="#1F1D1A" text-anchor="start">不直接来找我，</text><text x="0" y="82" font-family="system-ui, 'PingFang SC', 'Noto Sans CJK SC', sans-serif" font-size="28" font-weight="400" fill="#1F1D1A" text-anchor="start">先向 leader 反馈。</text></g><g transform="translate(28 554)" opacity="0"><animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;0.194;0.204;0.368;0.378;1" keySplines="0.42 0 0.58 1;0.42 0 0.58 1;0.42 0 0.58 1;0.42 0 0.58 1;0.42 0 0.58 1" dur="30s" begin="0s" repeatCount="indefinite" calcMode="spline"/><text x="0" y="0" font-family="Georgia, 'Noto Serif CJK SC', 'Songti SC', serif" font-size="30" font-weight="400" fill="#C2412D" text-anchor="start">2　leader：运营上的事它拍板</text><text x="0" y="44" font-family="system-ui, 'PingFang SC', 'Noto Sans CJK SC', sans-serif" font-size="28" font-weight="400" fill="#1F1D1A" text-anchor="start">运营决定大部分授权给 leader，</text><text x="0" y="82" font-family="system-ui, 'PingFang SC', 'Noto Sans CJK SC', sans-serif" font-size="28" font-weight="400" fill="#1F1D1A" text-anchor="start">小事在这一层就消化了。</text></g><g transform="translate(28 554)" opacity="0"><animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;0.388;0.398;0.562;0.572;1" keySplines="0.42 0 0.58 1;0.42 0 0.58 1;0.42 0 0.58 1;0.42 0 0.58 1;0.42 0 0.58 1" dur="30s" begin="0s" repeatCount="indefinite" calcMode="spline"/><text x="0" y="0" font-family="Georgia, 'Noto Serif CJK SC', 'Songti SC', serif" font-size="30" font-weight="400" fill="#C2412D" text-anchor="start">3　我：只拍核心决策</text><text x="0" y="44" font-family="system-ui, 'PingFang SC', 'Noto Sans CJK SC', sans-serif" font-size="28" font-weight="400" fill="#1F1D1A" text-anchor="start">产品和隐私方向，对外发布、</text><text x="0" y="82" font-family="system-ui, 'PingFang SC', 'Noto Sans CJK SC', sans-serif" font-size="28" font-weight="400" fill="#1F1D1A" text-anchor="start">花钱、删除这类不可逆的事。</text></g><g transform="translate(28 554)" opacity="0"><animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;0.582;0.592;0.756;0.766;1" keySplines="0.42 0 0.58 1;0.42 0 0.58 1;0.42 0 0.58 1;0.42 0 0.58 1;0.42 0 0.58 1" dur="30s" begin="0s" repeatCount="indefinite" calcMode="spline"/><text x="0" y="0" font-family="Georgia, 'Noto Serif CJK SC', 'Songti SC', serif" font-size="30" font-weight="400" fill="#C2412D" text-anchor="start">4　leader：先筛一遍再给我</text><text x="0" y="44" font-family="system-ui, 'PingFang SC', 'Noto Sans CJK SC', sans-serif" font-size="28" font-weight="400" fill="#1F1D1A" text-anchor="start">要我拍板的事，它先筛选、</text><text x="0" y="82" font-family="system-ui, 'PingFang SC', 'Noto Sans CJK SC', sans-serif" font-size="28" font-weight="400" fill="#1F1D1A" text-anchor="start">整理一遍，再交到我手上。</text></g><g transform="translate(28 554)" opacity="0"><animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;0.776;0.786;0.97;0.98;1" keySplines="0.42 0 0.58 1;0.42 0 0.58 1;0.42 0 0.58 1;0.42 0 0.58 1;0.42 0 0.58 1" dur="30s" begin="0s" repeatCount="indefinite" calcMode="spline"/><text x="0" y="0" font-family="Georgia, 'Noto Serif CJK SC', 'Songti SC', serif" font-size="30" font-weight="400" fill="#C2412D" text-anchor="start">5　新 bot：先读员工手册</text><text x="0" y="44" font-family="system-ui, 'PingFang SC', 'Noto Sans CJK SC', sans-serif" font-size="28" font-weight="400" fill="#1F1D1A" text-anchor="start">新来的 bot 先读 leader 整理的手册，</text><text x="0" y="82" font-family="system-ui, 'PingFang SC', 'Noto Sans CJK SC', sans-serif" font-size="28" font-weight="400" fill="#1F1D1A" text-anchor="start">不用我从头交代一遍。</text></g></svg></p>
+
+<p><em>示意图：bot 有事先报给 leader，运营上的事 leader 拍板，只有核心决策才到我这里</em></p>
+
+<p>为什么这么做？入口只有一个，小事在 leader 那一层就消化了。到我这里的，已经是 leader 筛选过一遍、真要我拍板的事。</p>
+
+<p>还有一条经验：bot 在精不在多。每个 bot 分工清楚、各管一摊，比堆一大群职责重叠的 bot 好带得多。</p>
+
+<h2>二、用 dr eggbot 建新 bot、给团队做健康检查</h2>
+
+<p>第二件事，是加了一个专门的 bot：dr eggbot（<a href="https://x.ai/bot/_jOdbfkB16zxu7MRcmReE">x.ai/bot/_jOdbfkB16zxu7MRcmReE</a>）。</p>
+
+<p>我用它做两件事：</p>
+
+<ol>
+<li>创建新 bot。新 bot 的设定交给它按同一套标准来写，我就不用每个都从头手写一份；</li>
+<li>给整个 bot 团队做健康检查，看看各个 bot 的设定有没有走样、分工有没有重叠。</li>
+</ol>
+
+<p>上面那个大内总管的定位，也可以让 dr eggbot 帮你设定。</p>
+
+<h2>三、让 bot 用它自己的邮箱</h2>
+
+<p>第三件事，是让 bot 用它自己的邮箱。Grok bot 本身就带一个专用的收件邮箱，能读邮件、按邮件内容办事。我让 leader 把它用起来：以后 bot 注册什么服务，都用这个邮箱，不用我的。</p>
+
+<p>为什么这么做？bot 用的账号和我个人的账号分开管理。我们的手册里有一条安全红线，就是「公司账号和负责人个人账号完全分开」。出了事，容易分清是谁做的；我的个人账号也不用交给 bot。</p>
+
+<p>这个邮箱本身也有边界：bot 不能自己去申领新的邮箱地址，也不能直接用它往外发信，发信要先经我批准。</p>
+
+<h2>四、让 leader 整理一份新员工手册</h2>
+
+<p>第四件事，是让 leader 整理一份新员工手册。</p>
+
+<p>为什么要有手册？新 bot 一来先读它，不用我一遍遍交代；有了新经验，更新一次手册，整个团队一起跟上。</p>
+
+<p>手册的开头就写着：</p>
+
+<blockquote><p>所有 bot（尤其是新 bot）都先读这份文档……有新知识就随时更新。</p></blockquote>
+
+<p>我们的手册分三部分：</p>
+
+<ol>
+<li><strong>产品介绍</strong>：定位和目标用户、主要功能和页面、注册和激活、技术栈和部署、近期变更等。这部分可以先让开发那边的 agent 整理一份项目介绍，运营这边再站在自己的角度，在上面加上自己的信息。</li>
+<li><strong>运营团队</strong>：团队与分工、运营规则、运营群规则、安全红线、当前目标和进展等。</li>
+<li><strong>行为准则</strong>：每个 bot 都要守的十条，原文附在下面。</li>
+</ol>
+
+<p>「团队与分工」那一节大致是这样：</p>
+
+<ol>
+<li>负责人（我）：运营决策大部分授权给 leader，只有核心决策由我拍板——产品和隐私的方向，以及准则第 8 条里那几类不可逆的事；</li>
+<li>leader：运营队长，统筹、分派、汇总，不亲自做渠道；</li>
+<li>渠道 bot：每个平台各一个；</li>
+<li>数据 bot：负责网站数据；</li>
+<li>提需求 bot：网站和产品改动的唯一入口。它负责提需求，开发那边根据真实代码去做，它自己不做开发。反过来，开发那边需要运营配合的事（比如要一段文案），也是经它找到运营这边。这个双向协作，靠我开源的 cavil-loop（<a href="https://github.com/GigleAI/cavil-loop">https://github.com/GigleAI/cavil-loop</a>）和这个 bot（<a href="https://x.ai/bot/JrLKauAqSRAqNQtIP9BJQ">x.ai/bot/JrLKauAqSRAqNQtIP9BJQ</a>）搭配完成。</li>
+</ol>
+
+<p><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 874" width="640" height="874" role="img" aria-label="示意图：运营和开发怎么双向协作。需求经提需求 bot 和 cavil-loop 交给开发 AI；开发要文案或案例时，再反过来经提需求 bot 找运营" style="max-width:100%;height:auto"><rect width="640" height="874" fill="#F6F2EA"/><text x="22" y="60" font-family="Georgia, 'Noto Serif CJK SC', 'Songti SC', serif" font-size="36" font-weight="400" fill="#1F1D1A" text-anchor="start">运营和开发，双向协作</text><line x1="230" y1="184" x2="230" y2="218" stroke="#2F5D8A" stroke-width="3"/><path d="M222,208 L230,220 L238,208" fill="none" stroke="#2F5D8A" stroke-width="3"/><line x1="410" y1="220" x2="410" y2="186" stroke="#2F6A40" stroke-width="3"/><path d="M402,196 L410,184 L418,196" fill="none" stroke="#2F6A40" stroke-width="3"/><text x="164" y="211" font-family="system-ui, 'PingFang SC', 'Noto Sans CJK SC', sans-serif" font-size="24" font-weight="400" fill="#2F5D8A" text-anchor="end">需求</text><text x="476" y="211" font-family="system-ui, 'PingFang SC', 'Noto Sans CJK SC', sans-serif" font-size="24" font-weight="400" fill="#2F6A40" text-anchor="start">文案 / 案例</text><line x1="230" y1="312" x2="230" y2="346" stroke="#2F5D8A" stroke-width="3"/><path d="M222,336 L230,348 L238,336" fill="none" stroke="#2F5D8A" stroke-width="3"/><line x1="410" y1="348" x2="410" y2="314" stroke="#2F6A40" stroke-width="3"/><path d="M402,324 L410,312 L418,324" fill="none" stroke="#2F6A40" stroke-width="3"/><text x="164" y="339" font-family="system-ui, 'PingFang SC', 'Noto Sans CJK SC', sans-serif" font-size="24" font-weight="400" fill="#2F5D8A" text-anchor="end">需求</text><text x="476" y="339" font-family="system-ui, 'PingFang SC', 'Noto Sans CJK SC', sans-serif" font-size="24" font-weight="400" fill="#2F6A40" text-anchor="start">文案 / 案例</text><line x1="230" y1="440" x2="230" y2="474" stroke="#2F5D8A" stroke-width="3"/><path d="M222,464 L230,476 L238,464" fill="none" stroke="#2F5D8A" stroke-width="3"/><line x1="410" y1="476" x2="410" y2="442" stroke="#2F6A40" stroke-width="3"/><path d="M402,452 L410,440 L418,452" fill="none" stroke="#2F6A40" stroke-width="3"/><text x="164" y="467" font-family="system-ui, 'PingFang SC', 'Noto Sans CJK SC', sans-serif" font-size="24" font-weight="400" fill="#2F5D8A" text-anchor="end">需求</text><text x="476" y="467" font-family="system-ui, 'PingFang SC', 'Noto Sans CJK SC', sans-serif" font-size="24" font-weight="400" fill="#2F6A40" text-anchor="start">文案 / 案例</text><line x1="320" y1="568" x2="320" y2="602" stroke="#2F5D8A" stroke-width="3"/><path d="M312,592 L320,604 L328,592" fill="none" stroke="#2F5D8A" stroke-width="3"/><text x="336" y="595" font-family="system-ui, 'PingFang SC', 'Noto Sans CJK SC', sans-serif" font-size="24" font-weight="400" fill="#2F5D8A" text-anchor="start">PR</text><g transform="translate(180 96)"><rect width="280" height="84" rx="10" fill="#FFFDF8" stroke="#CFC7B8"/><text x="140" y="36" font-family="system-ui, 'PingFang SC', 'Noto Sans CJK SC', sans-serif" font-size="28" font-weight="600" fill="#1F1D1A" text-anchor="middle">运营团队</text><text x="140" y="68" font-family="system-ui, 'PingFang SC', 'Noto Sans CJK SC', sans-serif" font-size="24" font-weight="400" fill="#7A746A" text-anchor="middle">leader 和各渠道 bot</text></g><g transform="translate(180 224)"><rect width="280" height="84" rx="10" fill="#FFFDF8" stroke="#CFC7B8"/><text x="140" y="36" font-family="system-ui, 'PingFang SC', 'Noto Sans CJK SC', sans-serif" font-size="28" font-weight="600" fill="#1F1D1A" text-anchor="middle">提需求 bot</text><text x="140" y="68" font-family="system-ui, 'PingFang SC', 'Noto Sans CJK SC', sans-serif" font-size="24" font-weight="400" fill="#7A746A" text-anchor="middle">唯一的需求入口</text></g><g transform="translate(180 352)"><rect width="280" height="84" rx="10" fill="#FFFDF8" stroke="#CFC7B8"/><text x="140" y="36" font-family="system-ui, 'PingFang SC', 'Noto Sans CJK SC', sans-serif" font-size="28" font-weight="600" fill="#1F1D1A" text-anchor="middle">cavil-loop</text><text x="140" y="68" font-family="system-ui, 'PingFang SC', 'Noto Sans CJK SC', sans-serif" font-size="24" font-weight="400" fill="#7A746A" text-anchor="middle">在 GitHub 上派活</text></g><g transform="translate(180 480)"><rect width="280" height="84" rx="10" fill="#FFFDF8" stroke="#CFC7B8"/><text x="140" y="36" font-family="system-ui, 'PingFang SC', 'Noto Sans CJK SC', sans-serif" font-size="28" font-weight="600" fill="#1F1D1A" text-anchor="middle">开发 AI</text><text x="140" y="68" font-family="system-ui, 'PingFang SC', 'Noto Sans CJK SC', sans-serif" font-size="24" font-weight="400" fill="#7A746A" text-anchor="middle">Claude 写，Codex 审</text></g><g transform="translate(180 608)"><rect width="280" height="84" rx="10" fill="#FFFDF8" stroke="#CFC7B8"/><text x="140" y="36" font-family="system-ui, 'PingFang SC', 'Noto Sans CJK SC', sans-serif" font-size="28" font-weight="600" fill="#1F1D1A" text-anchor="middle">负责人</text><text x="140" y="68" font-family="system-ui, 'PingFang SC', 'Noto Sans CJK SC', sans-serif" font-size="24" font-weight="400" fill="#7A746A" text-anchor="middle">最后点合并</text></g><rect x="174" y="90" width="292" height="224" rx="12" fill="none" stroke="#C2412D" stroke-width="3"><animate attributeName="x" values="174;174;174;174;174;174;174;174;174;174;174;174;174" keyTimes="0;0.1417;0.1617;0.3033;0.3233;0.465;0.485;0.6267;0.6467;0.7883;0.8083;0.97;1" keySplines="0.42 0 0.58 1;0.42 0 0.58 1;0.42 0 0.58 1;0.42 0 0.58 1;0.42 0 0.58 1;0.42 0 0.58 1;0.42 0 0.58 1;0.42 0 0.58 1;0.42 0 0.58 1;0.42 0 0.58 1;0.42 0 0.58 1;0.42 0 0.58 1" dur="30s" begin="0s" repeatCount="indefinite" calcMode="spline"/><animate attributeName="y" values="90;90;218;218;474;474;218;218;90;90;474;474;90" keyTimes="0;0.1417;0.1617;0.3033;0.3233;0.465;0.485;0.6267;0.6467;0.7883;0.8083;0.97;1" keySplines="0.42 0 0.58 1;0.42 0 0.58 1;0.42 0 0.58 1;0.42 0 0.58 1;0.42 0 0.58 1;0.42 0 0.58 1;0.42 0 0.58 1;0.42 0 0.58 1;0.42 0 0.58 1;0.42 0 0.58 1;0.42 0 0.58 1;0.42 0 0.58 1" dur="30s" begin="0s" repeatCount="indefinite" calcMode="spline"/><animate attributeName="width" values="292;292;292;292;292;292;292;292;292;292;292;292;292" keyTimes="0;0.1417;0.1617;0.3033;0.3233;0.465;0.485;0.6267;0.6467;0.7883;0.8083;0.97;1" keySplines="0.42 0 0.58 1;0.42 0 0.58 1;0.42 0 0.58 1;0.42 0 0.58 1;0.42 0 0.58 1;0.42 0 0.58 1;0.42 0 0.58 1;0.42 0 0.58 1;0.42 0 0.58 1;0.42 0 0.58 1;0.42 0 0.58 1;0.42 0 0.58 1" dur="30s" begin="0s" repeatCount="indefinite" calcMode="spline"/><animate attributeName="height" values="224;224;224;224;96;96;224;224;224;224;224;224;224" keyTimes="0;0.1417;0.1617;0.3033;0.3233;0.465;0.485;0.6267;0.6467;0.7883;0.8083;0.97;1" keySplines="0.42 0 0.58 1;0.42 0 0.58 1;0.42 0 0.58 1;0.42 0 0.58 1;0.42 0 0.58 1;0.42 0 0.58 1;0.42 0 0.58 1;0.42 0 0.58 1;0.42 0 0.58 1;0.42 0 0.58 1;0.42 0 0.58 1;0.42 0 0.58 1" dur="30s" begin="0s" repeatCount="indefinite" calcMode="spline"/></rect><rect x="10" y="720" width="620" height="142" rx="12" fill="#EFE9DD"/><g transform="translate(28 762)" opacity="1"><animate attributeName="opacity" values="1;1;0;0" keyTimes="0;0.1417;0.1517;1" keySplines="0.42 0 0.58 1;0.42 0 0.58 1;0.42 0 0.58 1" dur="30s" begin="0s" repeatCount="indefinite" calcMode="spline"/><text x="0" y="0" font-family="Georgia, 'Noto Serif CJK SC', 'Songti SC', serif" font-size="30" font-weight="400" fill="#C2412D" text-anchor="start">1　运营要改网站：找提需求 bot</text><text x="0" y="44" font-family="system-ui, 'PingFang SC', 'Noto Sans CJK SC', sans-serif" font-size="28" font-weight="400" fill="#1F1D1A" text-anchor="start">leader 把需求交给提需求 bot，</text><text x="0" y="82" font-family="system-ui, 'PingFang SC', 'Noto Sans CJK SC', sans-serif" font-size="28" font-weight="400" fill="#1F1D1A" text-anchor="start">它只提需求，自己不写代码。</text></g><g transform="translate(28 762)" opacity="0"><animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;0.1617;0.1717;0.3033;0.3133;1" keySplines="0.42 0 0.58 1;0.42 0 0.58 1;0.42 0 0.58 1;0.42 0 0.58 1;0.42 0 0.58 1" dur="30s" begin="0s" repeatCount="indefinite" calcMode="spline"/><text x="0" y="0" font-family="Georgia, 'Noto Serif CJK SC', 'Songti SC', serif" font-size="30" font-weight="400" fill="#C2412D" text-anchor="start">2　提需求 bot：在 GitHub 开 issue</text><text x="0" y="44" font-family="system-ui, 'PingFang SC', 'Noto Sans CJK SC', sans-serif" font-size="28" font-weight="400" fill="#1F1D1A" text-anchor="start">issue 打上派活标签，</text><text x="0" y="82" font-family="system-ui, 'PingFang SC', 'Noto Sans CJK SC', sans-serif" font-size="28" font-weight="400" fill="#1F1D1A" text-anchor="start">cavil-loop 看到就派给开发 AI。</text></g><g transform="translate(28 762)" opacity="0"><animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;0.3233;0.3333;0.465;0.475;1" keySplines="0.42 0 0.58 1;0.42 0 0.58 1;0.42 0 0.58 1;0.42 0 0.58 1;0.42 0 0.58 1" dur="30s" begin="0s" repeatCount="indefinite" calcMode="spline"/><text x="0" y="0" font-family="Georgia, 'Noto Serif CJK SC', 'Songti SC', serif" font-size="30" font-weight="400" fill="#C2412D" text-anchor="start">3　开发 AI：先出方案，再写代码</text><text x="0" y="44" font-family="system-ui, 'PingFang SC', 'Noto Sans CJK SC', sans-serif" font-size="28" font-weight="400" fill="#1F1D1A" text-anchor="start">Claude 出方案、写代码，</text><text x="0" y="82" font-family="system-ui, 'PingFang SC', 'Noto Sans CJK SC', sans-serif" font-size="28" font-weight="400" fill="#1F1D1A" text-anchor="start">方案和代码都由 Codex 复审。</text></g><g transform="translate(28 762)" opacity="0"><animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;0.485;0.495;0.6267;0.6367;1" keySplines="0.42 0 0.58 1;0.42 0 0.58 1;0.42 0 0.58 1;0.42 0 0.58 1;0.42 0 0.58 1" dur="30s" begin="0s" repeatCount="indefinite" calcMode="spline"/><text x="0" y="0" font-family="Georgia, 'Noto Serif CJK SC', 'Songti SC', serif" font-size="30" font-weight="400" fill="#C2412D" text-anchor="start">4　开发要文案：反过来找运营</text><text x="0" y="44" font-family="system-ui, 'PingFang SC', 'Noto Sans CJK SC', sans-serif" font-size="28" font-weight="400" fill="#1F1D1A" text-anchor="start">开发 AI 在评论里写清要什么，</text><text x="0" y="82" font-family="system-ui, 'PingFang SC', 'Noto Sans CJK SC', sans-serif" font-size="28" font-weight="400" fill="#1F1D1A" text-anchor="start">cavil-loop 叫醒提需求 bot。</text></g><g transform="translate(28 762)" opacity="0"><animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;0.6467;0.6567;0.7883;0.7983;1" keySplines="0.42 0 0.58 1;0.42 0 0.58 1;0.42 0 0.58 1;0.42 0 0.58 1;0.42 0 0.58 1" dur="30s" begin="0s" repeatCount="indefinite" calcMode="spline"/><text x="0" y="0" font-family="Georgia, 'Noto Serif CJK SC', 'Songti SC', serif" font-size="30" font-weight="400" fill="#C2412D" text-anchor="start">5　提需求 bot：转给运营，再贴回</text><text x="0" y="44" font-family="system-ui, 'PingFang SC', 'Noto Sans CJK SC', sans-serif" font-size="28" font-weight="400" fill="#1F1D1A" text-anchor="start">运营给出文案或案例，</text><text x="0" y="82" font-family="system-ui, 'PingFang SC', 'Noto Sans CJK SC', sans-serif" font-size="28" font-weight="400" fill="#1F1D1A" text-anchor="start">提需求 bot 把答复贴回 GitHub。</text></g><g transform="translate(28 762)" opacity="0"><animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;0.8083;0.8183;0.97;0.98;1" keySplines="0.42 0 0.58 1;0.42 0 0.58 1;0.42 0 0.58 1;0.42 0 0.58 1;0.42 0 0.58 1" dur="30s" begin="0s" repeatCount="indefinite" calcMode="spline"/><text x="0" y="0" font-family="Georgia, 'Noto Serif CJK SC', 'Songti SC', serif" font-size="30" font-weight="400" fill="#C2412D" text-anchor="start">6　做完：运营过目，负责人合并</text><text x="0" y="44" font-family="system-ui, 'PingFang SC', 'Noto Sans CJK SC', sans-serif" font-size="28" font-weight="400" fill="#1F1D1A" text-anchor="start">PR 先经提需求 bot 给运营看，</text><text x="0" y="82" font-family="system-ui, 'PingFang SC', 'Noto Sans CJK SC', sans-serif" font-size="28" font-weight="400" fill="#1F1D1A" text-anchor="start">认可后由负责人合并上线。</text></g></svg></p>
+
+<p><em>示意图：运营和开发怎么双向协作。需求经提需求 bot 和 cavil-loop 交给开发 AI；开发要文案或案例时，再反过来经提需求 bot 找运营</em></p>
+
+<p>分工做好很重要，尤其要定好每个 bot「不做什么」。有一次我让 leader 去开一个功能需求，结果提需求 bot 自己哼哧哼哧地做起了功能实现。Grok bot 适合做创意脑暴和事务执行，像编程开发这类活，还是交给更专业的 Claude 和 Codex 更合适。</p>
+
+<p>下面是我们的行为准则，原样照录，每条后面我补了一句为什么。</p>
+
+<ol>
+<li><p><strong>总是用中文和用户沟通。</strong> 包括汇报、问题、卡片里的文字。代码、命令、专有名词保持原样。</p>
+
+<p>为什么：我读中文最快；专有名词保持原样，是因为翻译了反而对不上原来的东西。</p></li>
+<li><p><strong>工具顺序：CLI / MCP / API 优先，浏览器最后。</strong> 先查有没有连接器（GetDynamicTools、SearchPlugins）、官方 API 或命令行工具；都没有、或者确实走不通，才用浏览器。走浏览器时在汇报里一句话说明为什么。</p>
+
+<p>为什么：接口拿到的结果更稳定，同样的事下次还能照样做；在网页上点来点去，页面一改版就可能失败。</p></li>
+<li><p><strong>把任务沉淀成技能。</strong> 用户或 leader 交代了一个会重复的多步任务，就用 UpdateSkill 存成技能，之后照技能做，长对话里也保持一致。做法变了就更新技能。技能里只写通用步骤，不写密码、密钥。用户要求时，可以把技能备份到一个私有 GitHub 仓库。</p>
+
+<p>为什么：同一件事每次都现想做法，做出来就会不一样；存成技能，第十次和第一次做得一样。</p></li>
+<li><p><strong>定时任务尽量用脚本，有变化才唤醒 bot。</strong> 能用脚本判断「有没有新东西」的（拉数据、对比快照、查状态），就写成脚本在电脑上跑，只有结果变了才通过 webhook 类型的 routine 唤醒 bot 去分析和汇报。必须由 bot 自己做的（登录后台、写周报）才用定时 routine，频率用够用的最低档。</p>
+
+<p>为什么：判断「有没有新东西」用不着 AI，交给脚本，能减少不必要的模型唤醒；真有变化，再让 bot 来分析。</p></li>
+<li><p><strong>汇报线。</strong> 有事先用 SendToAgent 报给 leader，由它拍板；用户在你的聊天里直接找你时直接回答。</p>
+
+<p>为什么：这就是第一节的大内总管。汇报线不写进准则，新 bot 不会自己知道。</p></li>
+<li><p><strong>没事就安静。</strong> 空跑不发消息，不发「无变化」。</p>
+
+<p>为什么：群里要是全是「无变化」，真正要看的那条消息就被淹了。有一次，数据 bot 在群里说明天会把一个问题查清楚。群聊快结束时，leader 判断没什么要补充的，就没有回复，因为只发一句「收到」，会把群里其他 bot 都叫醒。后来手册的运营群规则里也写上了：不发单纯的「收到」，一件事一条消息说完。</p></li>
+<li><p><strong>不编数据。</strong> 数字、引文、链接只写工具真实拿到的；拿不到就直说缺什么。失败不要写成「没问题」。</p>
+
+<p>为什么：bot 的汇报我不会每条都去核对，编一次，后面所有汇报我都没法信了。这条对 leader 自己也一样：它曾经跟我说某个页面链到了不该链的地方，后来自己核实，发现那只是一个通用的按钮，于是主动跟我更正了。</p></li>
+<li><p><strong>不可逆的事先批准。</strong> 对外发布或发消息、花钱、删除、改账号设置，都要有对应的批准（按各 bot 自己设定里写的批准人），批一条只做一条。</p>
+
+<p>为什么：这些事做错了收不回来。批一条只做一条，是为了不让一次批准被当成长期授权。有一次 leader 在群里要求大家在文案里写上一条优惠说明，负责某个平台的渠道 bot 指出：我明确说过这个平台不写这类内容，要改得我本人点头。leader 随即更正，这个平台按我的规矩来。对外发布的事，只有我本人的话才算批准，leader 也不例外。</p></li>
+<li><p><strong>时间。</strong> 一律用北京时间（UTC+8，和新加坡时间相同）并标明。</p>
+
+<p>为什么：bot 和各个服务各有各的时区，不标明的话，「明早 8 点」可能差出好几个小时。</p></li>
+<li><p><strong>秘密不进聊天。</strong> 密码、验证码、密钥只通过安全表单或密钥请求拿，不写进消息、技能或仓库。</p>
+
+<p>为什么：聊天记录、技能和仓库都会被反复读、反复转，秘密写进去就收不回来了。</p></li>
+</ol>
+
+<h2>最后</h2>
+
+<p>这几件事做下来，我现在基本只和 leader 说话。其他 bot 各干各的，有事找 leader；新来的 bot 先读手册。</p>
+
+<p>我留给自己的，只有那几类核心决策，以及 leader 也拿不了主意的事。</p>
+
+<p>AI 时代，最大的瓶颈是人类自己。所以要尽量减轻人类的负担，这样才能跑得更快。</p>
+
+<h2>彩蛋：最省心的派活方式，躺着给 leader 打电话</h2>
+
+<p>比起手打输入，我更推荐和 bot 打电话讨论：躺在床上给 leader 打个电话，口头把任务说清楚。过程中还可以让它帮我补充我没想到的点，最后落实成整理过的文字，自己拆成几个 issue 发出去，交给开发那边的 agent 去做。</p>
+
+<p><img src="/images/blog/2026-11-05-grok-bot-handbook/2-phone-call.png" alt="真实记录：凌晨在电话里让 leader 建 issue，它建好后打上派工标签，又按电话里的要求把需求逐条补全（已遮去 bot 名、项目名和项目内容，只截到这里）" /></p>
+
+<p><em>真实记录：凌晨在电话里让 leader 建 issue，它建好后打上派工标签，又按电话里的要求把需求逐条补全（已遮去 bot 名、项目名和项目内容，只截到这里）</em></p>
+
+<p>等我早上 8 点起来，已经处理了这么多 issue 和 PR：</p>
+
+<p><img src="/images/blog/2026-11-05-grok-bot-handbook/3-morning-board.png" alt="真实记录：早上 8 点的项目看板，这一轮迭代里的 issue 和 PR，每条都挂着「现在等谁处理」的标签" /></p>
+
+<p><em>真实记录：早上 8 点的项目看板，这一轮迭代里的 issue 和 PR，每条都挂着「现在等谁处理」的标签</em></p>
+
+<hr />
+
+<p>文中让 AI 程序员在 GitHub 上接需求、出方案、互相复审的那套流程叫 cavil-loop，已经开源：<strong><a href="https://github.com/GigleAI/cavil-loop">github.com/GigleAI/cavil-loop</a></strong>。</p>
+
+<p>最后做个广告，我们正在做一个 AI 家教，Gigle Tutor。是一个智能错题本+苏格拉底式的学伴，网址是 <strong><a href="https://tutor.gigle.ai">tutor.gigle.ai</a></strong>，手机、电脑的浏览器都能直接打开。现在还在 early access 阶段，每天都能免费领积分，新用户还有新人礼包，所以暂时用邀请码的方式开放。想试试的朋友，在评论区留个言，我把邀请码发给你。或是直接打开 <a href="https://tutor.gigle.ai">https://tutor.gigle.ai</a> 也可以。</p>
+<p><a rel="bookmark" href="http://luosky.com/2026/11/05/grok-bot-handbook/">&#9875; Permalink</a></p>]]></content>
+    </entry>
+
     <entry>
       
 
@@ -1526,46 +1687,6 @@ And that has made all the difference.</p>
 <p><a rel="bookmark" href="http://luosky.com/2011/10/06/fareware-steve-jobs/">&#9875; Permalink</a></p>]]></content>
     </entry>
   
-    <entry>
-      
-
-
-
-
-<title type="html"><![CDATA[First Week on Xcode ]]></title>
-<link href="http://luosky.com/2011/04/03/first-week-on-xcode-4/"/>
-<updated>2011-04-03T00:36:00+08:00</updated>
-<id>http://luosky.com/2011/04/03/first-week-on-xcode-4</id>
-
-      <content type="html"><![CDATA[<p>经历了上周的one week on rails,这周又切换回iOS了.自从更新了Xcode 4之后,就跑去做支付宝连接和学习Ruby on Rails去了,一直没有碰Xcode.</p>
-
-<p>Xcode 4相比Xcode 3变化好大,这一周花了N多时间在熟悉和折腾Xcode 4上.</p>
-
-<p>Xcode 4亮点很多,比如Interface Builder现在和Xcode整合在一起了,创建outlet只要拖动到代码里就搞定了,非常方便,让我不禁又重回xib的怀抱.还有其他不少改进.</p>
-
-<p>相关的文章已经很多了.这里就仅记录下碰到的问题,方便后来者:</p>
-
-<h3>无法自动补全 / 没有语法高亮 的问题:</h3>
-
-<p>在build settings里将precompile prefix header设为NO,删掉Derived Data目录(在Organizer里可以找到),等index完之后再看看</p>
-
-<h3>打开static library时出现 &#8220;workspace integrity&#8221;错误:</h3>
-
-<p>这一般是在打开了引用这个static library的项目的情况下打开这个static library项目导致的.关掉那个项目的xcode窗口即可.</p>
-
-<h3>按照文档创建workspace后将static library项目拖进workspace结果只是认成是一个文件的问题:</h3>
-
-<p>同上.因为这个static library 项目已经在别的xcode窗口中打开了.</p>
-
-<h3>带有static library的项目找不到lib的问题:</h3>
-
-<p>检查static library项目和主项目的building setting是否一致.比如主项目的building setting用的是自建的Distribution而不是Release,那么在static library里也得有这个Distribution名字的setting(并且由于前面的workspace integrity问题当时还没解决,无法打开该library项目,使得这个问题花了我n多时间才解决)</p>
-
-<h3>带有static library的项目用Organizer提交到app store时无法verify/share/submit的问题:</h3>
-
-<p>在static library的building settings里将skip install设为YES</p>
-<p><a rel="bookmark" href="http://luosky.com/2011/04/03/first-week-on-xcode-4/">&#9875; Permalink</a></p>]]></content>
-    </entry>
   
   
 </feed>
